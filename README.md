@@ -18,4 +18,4 @@ Make sure satisfy all requirement  and download, extract the Win10.rar ,install 
 ![Report Output](https://developermblog.files.wordpress.com/2020/06/report.png)
 ![Report](https://developermblog.files.wordpress.com/2020/06/account_list.png)
 # How to Guide
-For detailed FAQ and installation instructions refer [Developer Site](https://developerm.dev/codehats-bookkeeper_accounting_package/)
+For detailed FAQ and installation instructions refer [Developer Site](https://developerm.dev/book-keeper/)
