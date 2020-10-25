@@ -5,12 +5,12 @@ A personal accounting package for all [Windows], can be used personal and commer
 # Requirements
 Following are the basic requirements to install and use the `Book Keeper` accounting package
 - Windows 10 or later
-- Microsoft SQL Server
+- Microsoft Access
 - .Net Framework 4.5
 - Microsoft Office
 - Adobe Acrobat reader
-- 500 MB Freespace on C:\
-- XPS Viewver ( get one from Microsoft Store)
+- 500 MB Free space on C:\
+- XPS Viewer ( get one from Microsoft Store)
 # How to install
 Make sure satisfy all requirement  and download, extract the Win10.rar ,install in Administrator mode. For [Guide](https://developerm.dev/codehats-bookkeeper_accounting_package/)
 # Screen shots
@@ -18,4 +18,4 @@ Make sure satisfy all requirement  and download, extract the Win10.rar ,install 
 ![Report Output](https://developermblog.files.wordpress.com/2020/06/report.png)
 ![Report](https://developermblog.files.wordpress.com/2020/06/account_list.png)
 # How to Guide
-For detailed how tos and installation instructions refer [Developer Site](https://developerm.dev/codehats-bookkeeper_accounting_package/)
+For detailed FAQ and installation instructions refer [Developer Site](https://developerm.dev/codehats-bookkeeper_accounting_package/)
