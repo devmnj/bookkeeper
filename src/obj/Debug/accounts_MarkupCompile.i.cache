@@ -1,0 +1,20 @@
+﻿accounts
+
+
+winexe
+C#
+.cs
+E:\C# Projects\accounts\obj\Debug\
+accounts
+none
+false
+DEBUG;TRACE
+E:\C# Projects\accounts\App.xaml
+41-121670609
+21763444761
+601862038745
+851936601964
+accountRegistration.xaml;account_List.xaml;BankPayment.xaml;bankReceipt.xaml;bpReport.xaml;brReport.xaml;CashBook1.xaml;ChangeDate.xaml;ComboxStyle.xaml;Company.xaml;ComplaintRegistration.xaml;DayBook.xaml;dbconfiguration.xaml;EmpDirectory.xaml;EmployeeRegistration.xaml;GroupList.xaml;GroupRegistration.xaml;Income_Expense_Statement.xaml;journalposting.xaml;Loginform.xaml;loginPage.xaml;MainWindow.xaml;MiniReportPage.xaml;PackageManager.xaml;PayableandReceivables.xaml;Payment.xaml;PaymentReport.xaml;payroll.xaml;payrollreport.xaml;payroll_payments_deductions.xaml;ppReport.xaml;PrintDialogue.xaml;ReccurringEntries.xaml;Receipt.xaml;ReceiptReport.xaml;ReportForm.xaml;ReportListTemplateForm.xaml;ServiceRegistration.xaml;Template_Styles.xaml;trialBalance.xaml;Window1.xaml;
+
+False
+

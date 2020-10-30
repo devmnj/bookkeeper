@@ -1,0 +1,27 @@
+﻿<Window x:Class="accounts.EmpDirectory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d" KeyDown="Window_KeyDown"
+        Icon="images/Apps-addressbook-icon.png"
+        Title="Employees Directory" Height="436.5" Width="800" Background="AntiqueWhite" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,11">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="713*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Style="{StaticResource myDataGridUI}" Name="emp_grid" Margin="10,72,10,0" Grid.ColumnSpan="2"/>
+        <ComboBox KeyDown="cmb_cities_KeyDown" ItemsSource="{Binding}" IsEditable="True"  Name="cmb_cities" Height="21" Margin="221,46,310,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ComboBox Name="cmb_departments" KeyDown="cmb_departments_KeyDown" ItemsSource="{Binding}" IsEditable="True" Height="21" Margin="408,46,150,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Filters" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Height="37" Margin="10,30,0,0" VerticalAlignment="Top" Width="136" Grid.ColumnSpan="2"/>
+        <Label FontWeight="DemiBold" Content="Cities" HorizontalAlignment="Left" Height="25" Margin="221,16,0,0" VerticalAlignment="Top" Width="182" Grid.Column="1"/>
+        <Label FontWeight="DemiBold" Content="Departments" HorizontalAlignment="Left" Height="25" Margin="408,21,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <ComboBox KeyDown="cmb_jobs_KeyDown" ItemsSource="{Binding}" IsEditable="True"  x:Name="cmb_jobs" Height="21" Margin="34,46,497,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label FontWeight="DemiBold" Content="Jobs" HorizontalAlignment="Left" Height="25" Margin="70,21,0,0" VerticalAlignment="Top" Width="146" Grid.Column="1"/>
+        <ComboBox x:Name="cmb_orderby" KeyDown="cmb_orderby_KeyDown" ItemsSource="{Binding}" IsEditable="True" Height="21" Margin="568,46,10,0" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0,0.357"/>
+        <Label FontWeight="DemiBold" Content="Order by" Height="25" Margin="568,21,10,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+    </Grid>
+</Window>

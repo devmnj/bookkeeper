@@ -1,0 +1,30 @@
+﻿<Page x:Class="accounts.Journal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:accounts"
+      mc:Ignorable="d"
+      Title="Journal" Background="AntiqueWhite" Height="491" Width="604">
+
+    <Grid>
+        <Label Content="Journal Transactions" HorizontalAlignment="Left" Height="33" Margin="208,23,0,0" VerticalAlignment="Top"   Width="164" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Credit Account Short Name" HorizontalAlignment="Left" Height="27" Margin="31,92,0,0" VerticalAlignment="Top"   Width="212"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,117,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="31,151,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Cr.d Amount" HorizontalAlignment="Left" Height="27" Margin="33,194,0,0" VerticalAlignment="Top"   Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,221,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Debit Account Short Name" HorizontalAlignment="Left" Height="27" Margin="309,93,0,0" VerticalAlignment="Top"   Width="212"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="309,117,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="309,151,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Dr.d Amount" HorizontalAlignment="Left" Height="27" Margin="309,194,0,0" VerticalAlignment="Top"   Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="309,221,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Post Date" HorizontalAlignment="Left" Height="27" Margin="31,41,0,0" VerticalAlignment="Top"   Width="72"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,63,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="67" Margin="33,272,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="538"/>
+        <Label Content="Narration" HorizontalAlignment="Left" Height="27" Margin="31,245,0,0" VerticalAlignment="Top"   Width="262"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="35" Margin="110,368,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Height="35" Margin="233,368,0,0" VerticalAlignment="Top" Width="113"  />
+        <Button Content="Exit" HorizontalAlignment="Left" Height="35" Margin="361,368,0,0" VerticalAlignment="Top" Width="113"  />
+    </Grid>
+</Page>

@@ -1,0 +1,1555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96AEC461-81C6-49F9-A25E-B1C998CEA3F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>accounts</RootNamespace>
+    <AssemblyName>bookkeeper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://developerm.dev</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Book Keeper</ProductName>
+    <PublisherName>CodeHat</PublisherName>
+    <SuiteName>Accounts Only</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>accounts.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Thalita-Torres-Office-Archive-folders.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3F88F926528ACD20D7ED21EF993463F53B737578</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>accounts_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="Spire.Common, Version=10.5.7.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\Spire.XLS.10.5.7\lib\net40\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=7.11.0.41040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.Doc.7.11.0\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.Doc.7.11.0\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.11.0.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.Doc.7.11.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Document.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\DocX.1.6.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>packages\DocX.1.6.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManager.xaml.cs">
+      <DependentUpon>AccountManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="accountRegistration.xaml.cs">
+      <DependentUpon>accountRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="account_List.xaml.cs">
+      <DependentUpon>account_List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackupService.cs" />
+    <Compile Include="BankPayment.xaml.cs">
+      <DependentUpon>BankPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="bankReceipt.xaml.cs">
+      <DependentUpon>bankReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BinarySerialization.cs" />
+    <Compile Include="bpReport.xaml.cs">
+      <DependentUpon>bpReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="brReport.xaml.cs">
+      <DependentUpon>brReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDate.xaml.cs">
+      <DependentUpon>ChangeDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommonActions.cs" />
+    <Compile Include="CashBook1.xaml.cs">
+      <DependentUpon>CashBook1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Company.xaml.cs">
+      <DependentUpon>Company.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="customConverter.cs" />
+    <Compile Include="DayBook.xaml.cs">
+      <DependentUpon>DayBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dbconfiguration.xaml.cs">
+      <DependentUpon>dbconfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Accounts.cs" />
+    <Compile Include="DB\BankReceipt.cs" />
+    <Compile Include="DB\BankPayment.cs" />
+    <Compile Include="DB\Company.cs" />
+    <Compile Include="DB\Connection.cs" />
+    <Compile Include="DB\Departments.cs" />
+    <Compile Include="DB\Employee.cs" />
+    <Compile Include="DB\Groups.cs" />
+    <Compile Include="DB\Journal.cs" />
+    <Compile Include="DB\MonthlyPayroll.cs" />
+    <Compile Include="DB\Payment.cs" />
+    <Compile Include="DB\PayrollVoucher.cs" />
+    <Compile Include="DB\Receipt.cs" />
+    <Compile Include="DB\Task.cs" />
+    <Compile Include="DB\Transactions.cs" />
+    <Compile Include="EmployeeRegistration.xaml.cs">
+      <DependentUpon>EmployeeRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupList.xaml.cs">
+      <DependentUpon>GroupList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupRegistration.xaml.cs">
+      <DependentUpon>GroupRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="iniProfile.cs" />
+    <Compile Include="journalposting.xaml.cs">
+      <DependentUpon>journalposting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="ModelViews\ModelViews.cs" />
+    <Compile Include="ModelViews\ViewBase.cs" />
+    <Compile Include="NarrationConverter.cs" />
+    <Compile Include="ObserVableDictionary.cs" />
+    <Compile Include="PackageManager.xaml.cs">
+      <DependentUpon>PackageManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PayableandReceivables.xaml.cs">
+      <DependentUpon>PayableandReceivables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReport.xaml.cs">
+      <DependentUpon>PaymentReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="payroll.xaml.cs">
+      <DependentUpon>payroll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="payrollreport.xaml.cs">
+      <DependentUpon>payrollreport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="payroll_payments_deductions.xaml.cs">
+      <DependentUpon>payroll_payments_deductions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PckageClass.cs" />
+    <Compile Include="ppReport.xaml.cs">
+      <DependentUpon>ppReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintDialogue.xaml.cs">
+      <DependentUpon>PrintDialogue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="public_members.cs" />
+    <Compile Include="Receipt.xaml.cs">
+      <DependentUpon>Receipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptReport.xaml.cs">
+      <DependentUpon>ReceiptReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExport\WordExport.cs" />
+    <Compile Include="ReportListTemplateForm.xaml.cs">
+      <DependentUpon>ReportListTemplateForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SerializeHelper.cs" />
+    <Compile Include="trialBalance.xaml.cs">
+      <DependentUpon>trialBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels_Variables.cs" />
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XmlSerializationHelper.cs" />
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AccountManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="accountRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="account_List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BankPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="bankReceipt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="bpReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="brReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CashBook1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComboxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Company.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DayBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dbconfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="journalposting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PackageManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PayableandReceivables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaymentReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="payroll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="payrollreport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="payroll_payments_deductions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ppReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintDialogue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Receipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReceiptReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportListTemplateForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Template_Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="trialBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Views\images\Zoom.png" />
+    <Resource Include="Views\images\zip.png" />
+    <Resource Include="Views\images\Windows.png" />
+    <Resource Include="Views\images\Windows-8-icon.png" />
+    <Resource Include="Views\images\Weather.png" />
+    <Resource Include="Views\images\wallet.ico" />
+    <Resource Include="Views\images\waiting.png" />
+    <Resource Include="Views\images\Users.png" />
+    <Resource Include="Views\images\user_delete.png" />
+    <Resource Include="Views\images\user_black.png" />
+    <Resource Include="Views\images\user_add.png" />
+    <Resource Include="Views\images\User.png" />
+    <Resource Include="Views\images\up.png" />
+    <Resource Include="Views\images\Unbutu.png" />
+    <Resource Include="Views\images\Twitter.png" />
+    <Resource Include="Views\images\TV.png" />
+    <Resource Include="Views\images\trash.ico" />
+    <Resource Include="Views\images\Train.png" />
+    <Resource Include="Views\images\Toxic.png" />
+    <Resource Include="Views\images\Tools.png" />
+    <Resource Include="Views\images\Toma4025-Rumax-Folder-multimedia.ico" />
+    <Resource Include="Views\images\Toma4025-Rumax-Desk.ico" />
+    <Resource Include="Views\images\tick.ico" />
+    <Resource Include="Views\images\thumb2-4k-blue-and-gray-material-design-android-lollipop.jpg" />
+    <Resource Include="Views\images\Thalita-Torres-Office-Archive-folders.ico" />
+    <None Include="Views\images\Thalita-Torres-Office-Archive-folders.icns" />
+    <Resource Include="Views\images\Terminal.png" />
+    <Resource Include="Views\images\Terminal.ico" />
+    <Resource Include="Views\images\Telephone.png" />
+    <Resource Include="Views\images\task-notes-icon.png" />
+    <Resource Include="Views\images\tag.png" />
+    <Resource Include="Views\images\system-preferences-icon.png" />
+    <Resource Include="Views\images\System-Equalizer-icon.png" />
+    <Resource Include="Views\images\Suprise.png" />
+    <Resource Include="Views\images\supplies-icon.png" />
+    <Resource Include="Views\images\Superman.png" />
+    <Resource Include="Views\images\Sunny.png" />
+    <Resource Include="Views\images\Strawberry.png" />
+    <Resource Include="Views\images\Stop.png" />
+    <Resource Include="Views\images\stop.ico" />
+    <Resource Include="Views\images\statistics.ico" />
+    <Resource Include="Views\images\stat-icon.png" />
+    <Resource Include="Views\images\Star2.png" />
+    <Resource Include="Views\images\star.png" />
+    <Resource Include="Views\images\Spade.png" />
+    <Resource Include="Views\images\Skull.png" />
+    <Resource Include="Views\images\shoppingcart.png" />
+    <Resource Include="Views\images\Shopping.png" />
+    <Resource Include="Views\images\Settings.png" />
+    <Resource Include="Views\images\settings-icon.png" />
+    <Resource Include="Views\images\select.png" />
+    <Resource Include="Views\images\search.png" />
+    <Resource Include="Views\images\search.ico" />
+    <Resource Include="Views\images\search-icon.png" />
+    <Resource Include="Views\images\save.png" />
+    <Resource Include="Views\images\save.ico" />
+    <Resource Include="Views\images\Save-icon.png" />
+    <Resource Include="Views\images\Save-icon %281%29.png" />
+    <Resource Include="Views\images\Save-as-icon.png" />
+    <Resource Include="Views\images\Save-as-icon %281%29.png" />
+    <Resource Include="Views\images\safety.png" />
+    <Resource Include="Views\images\Sad.png" />
+    <Resource Include="Views\images\RSS.png" />
+    <Resource Include="Views\images\Right.png" />
+    <Resource Include="Views\images\Rewind.png" />
+    <Resource Include="Views\images\Reset.png" />
+    <Resource Include="Views\images\Reports-icon.png" />
+    <Resource Include="Views\images\removable-icon.png" />
+    <Resource Include="Views\images\refresh.png" />
+    <Resource Include="Views\images\recycle_bin_green.png" />
+    <Resource Include="Views\images\recycle_bin_full.png" />
+    <Resource Include="Views\images\recycle_bin_blue.png" />
+    <Resource Include="Views\images\Recycle.png" />
+    <Resource Include="Views\images\Recycle-Bin-empty-icon.png" />
+    <Resource Include="Views\images\Record.png" />
+    <Resource Include="Views\images\Rain.png" />
+    <Resource Include="Views\images\Radioactive.png" />
+    <Resource Include="Views\images\Quicktime.png" />
+    <Resource Include="Views\images\Queen.png" />
+    <Resource Include="Views\images\Puzzle.png" />
+    <Resource Include="Views\images\Public-Folder-icon.png" />
+    <Resource Include="Views\images\Product-documentation-icon.png" />
+    <Resource Include="Views\images\printer.png" />
+    <Resource Include="Views\images\print.ico" />
+    <Resource Include="Views\images\Power.png" />
+    <Resource Include="Views\images\Pointer.png" />
+    <Resource Include="Views\images\plus.ico" />
+    <Resource Include="Views\images\Play.png" />
+    <Resource Include="Views\images\Plant.png" />
+    <Resource Include="Views\images\Plane.png" />
+    <Resource Include="Views\images\Places-user-trash-icon.png" />
+    <Resource Include="Views\images\Places-user-home-icon.png" />
+    <Resource Include="Views\images\Places-user-home-icon %283%29.png" />
+    <Resource Include="Views\images\Places-user-desktop-icon.png" />
+    <Resource Include="Views\images\Places-user-desktop-icon %281%29.png" />
+    <Resource Include="Views\images\Places-user-bookmarks-icon.png" />
+    <Resource Include="Views\images\Places-start-here-pclinuxos-icon.png" />
+    <Resource Include="Views\images\Places-start-here-arch-icon.png" />
+    <Resource Include="Views\images\Places-folder-yellow-icon.png" />
+    <Resource Include="Views\images\Places-folder-wine-icon.png" />
+    <Resource Include="Views\images\Places-folder-wine-icon %281%29.png" />
+    <Resource Include="Views\images\Places-folder-txt-icon.png" />
+    <Resource Include="Views\images\Places-folder-tar-icon.png" />
+    <Resource Include="Views\images\Places-folder-open-icon.png" />
+    <Resource Include="Views\images\Places-folder-open-icon %282%29.png" />
+    <Resource Include="Views\images\Places-folder-open-icon %281%29.png" />
+    <Resource Include="Views\images\Places-folder-locked-icon.png" />
+    <Resource Include="Views\images\Places-folder-green-icon.png" />
+    <Resource Include="Views\images\Places-folder-dropbox-icon.png" />
+    <Resource Include="Views\images\Places-folder-cyan-icon.png" />
+    <Resource Include="Views\images\Places-folder-cyan-icon %281%29.png" />
+    <Resource Include="Views\images\Places-folder-brown-icon.png" />
+    <Resource Include="Views\images\Pin.png" />
+    <Resource Include="Views\images\Pharmacy-icon.png" />
+    <Resource Include="Views\images\Petalart-Business-Tag-sale.ico" />
+    <Resource Include="Views\images\person-icon.png" />
+    <Resource Include="Views\images\pencil.ico" />
+    <Resource Include="Views\images\Pen.png" />
+    <Resource Include="Views\images\pdf-icon.png" />
+    <Resource Include="Views\images\pdf-icon %281%29.png" />
+    <Resource Include="Views\images\Paw.png" />
+    <Resource Include="Views\images\Pause.png" />
+    <Resource Include="Views\images\ordering.ico" />
+    <Resource Include="Views\images\onebit_30.png" />
+    <Resource Include="Views\images\onebit_29.png" />
+    <Resource Include="Views\images\onebit_28.png" />
+    <Resource Include="Views\images\onebit_27.png" />
+    <Resource Include="Views\images\onebit_26.png" />
+    <Resource Include="Views\images\onebit_25.png" />
+    <Resource Include="Views\images\onebit_24.png" />
+    <Resource Include="Views\images\onebit_23.png" />
+    <Resource Include="Views\images\onebit_22.png" />
+    <Resource Include="Views\images\onebit_21.png" />
+    <Resource Include="Views\images\onebit_20.png" />
+    <Resource Include="Views\images\onebit_19.png" />
+    <Resource Include="Views\images\onebit_18.png" />
+    <Resource Include="Views\images\onebit_17.png" />
+    <Resource Include="Views\images\onebit_16.png" />
+    <Resource Include="Views\images\onebit_15.png" />
+    <Resource Include="Views\images\onebit_14.png" />
+    <Resource Include="Views\images\onebit_13.png" />
+    <Resource Include="Views\images\onebit_12.png" />
+    <Resource Include="Views\images\onebit_11.png" />
+    <Resource Include="Views\images\onebit_10.png" />
+    <Resource Include="Views\images\onebit_09.png" />
+    <Resource Include="Views\images\onebit_08.png" />
+    <Resource Include="Views\images\onebit_07.png" />
+    <Resource Include="Views\images\onebit_06.png" />
+    <Resource Include="Views\images\onebit_05.png" />
+    <Resource Include="Views\images\onebit_04.png" />
+    <Resource Include="Views\images\onebit_03.png" />
+    <Resource Include="Views\images\onebit_02.png" />
+    <Resource Include="Views\images\onebit_01.png" />
+    <Resource Include="Views\images\Office-Word-icon %281%29.png" />
+    <Resource Include="Views\images\office-icon.png" />
+    <Resource Include="Views\images\Notebook.png" />
+    <Resource Include="Views\images\NBC.png" />
+    <Resource Include="Views\images\Nature.png" />
+    <Resource Include="Views\images\My-Computer-icon.png" />
+    <Resource Include="Views\images\Moon.png" />
+    <Resource Include="Views\images\Monitor.png" />
+    <Resource Include="Views\images\monitor.ico" />
+    <Resource Include="Views\images\money.png" />
+    <Resource Include="Views\images\Money-icon.png" />
+    <Resource Include="Views\images\money-icon %281%29.png" />
+    <Resource Include="Views\images\money-bag-icon.png" />
+    <Resource Include="Views\images\Mimetypes-x-office-address-book-icon.png" />
+    <Resource Include="Views\images\Mimetypes-application-pdf-icon.png" />
+    <Resource Include="Views\images\Mimes-application-vnd.ms-excel-icon.png" />
+    <Resource Include="Views\images\Microsoft-Excel-icon %282%29.png" />
+    <Resource Include="Views\images\Mickey.png" />
+    <Resource Include="Views\images\measure.png" />
+    <Resource Include="Views\images\market-flow-icon.png" />
+    <Resource Include="Views\images\Manager-Suit-Red-Stripes-icon.png" />
+    <Resource Include="Views\images\Male.png" />
+    <Resource Include="Views\images\mail.png" />
+    <Resource Include="Views\images\MacBookAir-icon.png" />
+    <Resource Include="Views\images\Mac.png" />
+    <Resource Include="Views\images\lock.png" />
+    <Resource Include="Views\images\Location-MAILTO-icon.png" />
+    <Resource Include="Views\images\library bookmarked.png" />
+    <Resource Include="Views\images\letter.ico" />
+    <Resource Include="Views\images\Left.png" />
+    <Resource Include="Views\images\Leaf.png" />
+    <Resource Include="Views\images\label.ico" />
+    <Resource Include="Views\images\Knob Search.png" />
+    <Resource Include="Views\images\Knob-Refresh-icon.png" />
+    <Resource Include="Views\images\King.png" />
+    <Resource Include="Views\images\Keynote-icon.png" />
+    <Resource Include="Views\images\Key.png" />
+    <Resource Include="Views\images\key.ico" />
+    <Resource Include="Views\images\iPod Nano.png" />
+    <Resource Include="Views\images\iPad-Side-Newspaper-icon.png" />
+    <Resource Include="Views\images\Information.png" />
+    <Resource Include="Views\images\info.png" />
+    <Resource Include="Views\images\images.png" />
+    <Resource Include="Views\images\illustration-robot_53876-5576.jpg" />
+    <Resource Include="Views\images\ICQ.png" />
+    <Resource Include="Views\images\Iconshock-Real-Vista-Accounting-Open-safety-box.ico" />
+    <Resource Include="Views\images\Iconleak-Atrous-Calculator.ico" />
+    <Resource Include="Views\images\iconfinder_Warning_131773.png" />
+    <Resource Include="Views\images\iconfinder_To_do_list_131719.png" />
+    <Resource Include="Views\images\iconfinder_Text_replace_131820.png" />
+    <Resource Include="Views\images\iconfinder_Tag_131904.png" />
+    <Resource Include="Views\images\iconfinder_Synchronize_131872.png" />
+    <Resource Include="Views\images\iconfinder_Save_131694.png" />
+    <Resource Include="Views\images\iconfinder_Registration_131862.png" />
+    <Resource Include="Views\images\iconfinder_Preview_131689.png" />
+    <Resource Include="Views\images\iconfinder_Monitor_131888.png" />
+    <Resource Include="Views\images\iconfinder_Info_131908.png" />
+    <Resource Include="Views\images\iconfinder_Home_131778.png" />
+    <Resource Include="Views\images\iconfinder_Hints_131685.png" />
+    <Resource Include="Views\images\iconfinder_Erase_131842.png" />
+    <Resource Include="Views\images\iconfinder_Color_test_131769.png" />
+    <Resource Include="Views\images\iconfinder_Clipboard_131884.png" />
+    <Resource Include="Views\images\iconfinder_Check_boxes_131730.png" />
+    <Resource Include="Views\images\iconfinder_Cancel_131742.png" />
+    <Resource Include="Views\images\iconfinder_Back_131811.png" />
+    <Resource Include="Views\images\iconfinder_3d_bar_chart_131747.png" />
+    <Resource Include="Views\images\iconfinder.png" />
+    <Resource Include="Views\images\home.ico" />
+    <Resource Include="Views\images\Heart.png" />
+    <Resource Include="Views\images\Hat-icon.png" />
+    <Resource Include="Views\images\Hat-icon %282%29.png" />
+    <Resource Include="Views\images\Happy.png" />
+    <Resource Include="Views\images\Hamster.png" />
+    <Resource Include="Views\images\Hammy.png" />
+    <Resource Include="Views\images\group_remove.png" />
+    <Resource Include="Views\images\group_link.png" />
+    <Resource Include="Views\images\group_key.png" />
+    <Resource Include="Views\images\group_go.png" />
+    <Resource Include="Views\images\group_gear.png" />
+    <Resource Include="Views\images\group_error.png" />
+    <Resource Include="Views\images\group_edit.png" />
+    <Resource Include="Views\images\group_delete.png" />
+    <Resource Include="Views\images\group_add.png" />
+    <Resource Include="Views\images\group.png" />
+    <Resource Include="Views\images\Gordon-Irving-IWork-10-Keynote-on.ico" />
+    <Resource Include="Views\images\go.png" />
+    <Resource Include="Views\images\Girl.png" />
+    <Resource Include="Views\images\Ghost.png" />
+    <Resource Include="Views\images\GeneralPreferences.png" />
+    <Resource Include="Views\images\Game-casino-icon.png" />
+    <Resource Include="Views\images\Friends.png" />
+    <Resource Include="Views\images\Fork.png" />
+    <Resource Include="Views\images\Folders-OS-Documents-Metro-icon.png" />
+    <Resource Include="Views\images\folder_smart.png" />
+    <Resource Include="Views\images\folder_fonts_512.ico" />
+    <Resource Include="Views\images\folder_apple_with_file.png" />
+    <Resource Include="Views\images\folder_apple.png" />
+    <Resource Include="Views\images\folder_add.png" />
+    <Resource Include="Views\images\folder.png" />
+    <Resource Include="Views\images\Folder-Users-icon.png" />
+    <Resource Include="Views\images\Folder-Library-icon.png" />
+    <Resource Include="Views\images\Folder-Chart-icon.png" />
+    <Resource Include="Views\images\Flower.png" />
+    <Resource Include="Views\images\Flame.png" />
+    <Resource Include="Views\images\Fish.png" />
+    <Resource Include="Views\images\first-aid-kit-icon.png" />
+    <Resource Include="Views\images\Firewire.png" />
+    <Resource Include="Views\images\file-icon.png" />
+    <Resource Include="Views\images\Female.png" />
+    <Resource Include="Views\images\Fastfroward.png" />
+    <Resource Include="Views\images\Explorer.png" />
+    <Resource Include="Views\images\exit.png" />
+    <Resource Include="Views\images\Excel-icon.png" />
+    <Resource Include="Views\images\Excel-icon %282%29.png" />
+    <Resource Include="Views\images\eico_1_year_candle.png" />
+    <Resource Include="Views\images\Echo.png" />
+    <Resource Include="Views\images\Ebiene-E-Commerce-Piggy-bank.ico" />
+    <Resource Include="Views\images\Duck.png" />
+    <Resource Include="Views\images\Dragon2.png" />
+    <Resource Include="Views\images\Dragon.png" />
+    <Resource Include="Views\images\download.png" />
+    <Resource Include="Views\images\down.png" />
+    <Resource Include="Views\images\dollar-icon.png" />
+    <Resource Include="Views\images\document.png" />
+    <Resource Include="Views\images\Document-icon %281%29.png" />
+    <Resource Include="Views\images\Dice.png" />
+    <Resource Include="Views\images\Devices-video-display-icon.png" />
+    <Resource Include="Views\images\Devices-gnome-dev-symlink-icon.png" />
+    <Resource Include="Views\images\Devices-computer-icon.png" />
+    <Resource Include="Views\images\Deviantart.png" />
+    <Resource Include="Views\images\Delete.png" />
+    <Resource Include="Views\images\delete.ico" />
+    <Resource Include="Views\images\Database.png" />
+    <Resource Include="Views\images\Data-Meter-icon.png" />
+    <Resource Include="Views\images\Dashboard-icon.png" />
+    <Resource Include="Views\images\Custom-Icon-Design-Pretty-Office-9-Edit-validated.ico" />
+    <Resource Include="Views\images\Credit card.png" />
+    <Resource Include="Views\images\Creative Commons.png" />
+    <Resource Include="Views\images\control-panel-icon.png" />
+    <Resource Include="Views\images\Column-Chart-icon.png" />
+    <Resource Include="Views\images\Cloud.png" />
+    <Resource Include="Views\images\close-icon.png" />
+    <Resource Include="Views\images\clipboard.ico" />
+    <Resource Include="Views\images\choix-icon.png" />
+    <Resource Include="Views\images\Chess.png" />
+    <Resource Include="Views\images\Checkmark-icon.png" />
+    <Resource Include="Views\images\Check.png" />
+    <Resource Include="Views\images\chart-search-icon.png" />
+    <Resource Include="Views\images\chart-icon.png" />
+    <Resource Include="Views\images\Chart-Bar-Files-icon.png" />
+    <Resource Include="Views\images\Cellphone.png" />
+    <Resource Include="Views\images\CBS.png" />
+    <Resource Include="Views\images\Categories-system-help-icon.png" />
+    <Resource Include="Views\images\Categories-preferences-system-icon.png" />
+    <Resource Include="Views\images\Categories-preferences-other-icon.png" />
+    <Resource Include="Views\images\Categories-preferences-desktop-icon.png" />
+    <Resource Include="Views\images\Categories-applications-system-icon.png" />
+    <Resource Include="Views\images\Categories-applications-office-icon.png" />
+    <Resource Include="Views\images\Categories-applications-internet-icon.png" />
+    <Resource Include="Views\images\Categories-applications-games-icon.png" />
+    <Resource Include="Views\images\Categories-applications-development-icon.png" />
+    <Resource Include="Views\images\Cat.png" />
+    <Resource Include="Views\images\cash.png" />
+    <Resource Include="Views\images\Cart-remove-icon.png" />
+    <Resource Include="Views\images\Carrot.png" />
+    <Resource Include="Views\images\Car.png" />
+    <Resource Include="Views\images\calendar.png" />
+    <Resource Include="Views\images\calendar.ico" />
+    <Resource Include="Views\images\calculate.png" />
+    <Resource Include="Views\images\buy.ico" />
+    <Resource Include="Views\images\business-icon.png" />
+    <Resource Include="Views\images\Bunny.png" />
+    <Resource Include="Views\images\Bookmark-icon.png" />
+    <Resource Include="Views\images\Bomb.png" />
+    <Resource Include="Views\images\Blender.png" />
+    <Resource Include="Views\images\bklogo1.png" />
+    <Resource Include="Views\images\bklogo.png" />
+    <Resource Include="Views\images\BioHazard.png" />
+    <Resource Include="Views\images\Beauticons-The-Robbery-Money.ico" />
+    <Resource Include="Views\images\BBC.png" />
+    <Resource Include="Views\images\Bank-icon.png" />
+    <Resource Include="Views\images\Balance-icon.png" />
+    <Resource Include="Views\images\Balance-icon %281%29.png" />
+    <Resource Include="Views\images\Backup Green Button.png" />
+    <Resource Include="Views\images\Backup-IBM-Server-icon.png" />
+    <Resource Include="Views\images\back.png" />
+    <Resource Include="Views\images\avatar-default-icon.png" />
+    <Resource Include="Views\images\Automator-icon.png" />
+    <Resource Include="Views\images\arrow_top.png" />
+    <Resource Include="Views\images\arrow_next.png" />
+    <Resource Include="Views\images\arrow_down.png" />
+    <Resource Include="Views\images\arrow_back.png" />
+    <Resource Include="Views\images\archive-folders-icon.png" />
+    <Resource Include="Views\images\Apps-web-browser-icon.png" />
+    <Resource Include="Views\images\Apps-utilities-terminal-icon.png" />
+    <Resource Include="Views\images\Apps-utilities-terminal-icon %281%29.png" />
+    <Resource Include="Views\images\Apps-utilities-system-monitor-icon.png" />
+    <Resource Include="Views\images\Apps-terminator-icon.png" />
+    <Resource Include="Views\images\Apps-rekonq-icon.png" />
+    <Resource Include="Views\images\Apps-preferences-web-browser-identification-icon.png" />
+    <Resource Include="Views\images\Apps-preferences-desktop-theme-icon.png" />
+    <Resource Include="Views\images\Apps-midori-icon.png" />
+    <Resource Include="Views\images\Apps-libreoffice-writer-icon.png" />
+    <Resource Include="Views\images\Apps-libreoffice-impress-icon.png" />
+    <Resource Include="Views\images\Apps-kwalletmanager-icon.png" />
+    <Resource Include="Views\images\Apps-kmetronome-icon.png" />
+    <Resource Include="Views\images\Apps-kmail-icon.png" />
+    <Resource Include="Views\images\Apps-kdevelop-icon.png" />
+    <Resource Include="Views\images\Apps-inkscape-icon %281%29.png" />
+    <Resource Include="Views\images\Apps-gparted-icon.png" />
+    <Resource Include="Views\images\Apps-gnome-display-properties-icon.png" />
+    <Resource Include="Views\images\Apps-file-roller-icon.png" />
+    <Resource Include="Views\images\Apps-evolution-icon.png" />
+    <Resource Include="Views\images\Apps-dconf-editor-icon.png" />
+    <Resource Include="Views\images\Apps-addressbook-icon.png" />
+    <Resource Include="Views\images\Apps-accessories-text-editor-icon.png" />
+    <Resource Include="Views\images\Apps-accessories-calculator-icon.png" />
+    <Resource Include="Views\images\Appointment Urgent.png" />
+    <Resource Include="Views\images\Appointment Cool.png" />
+    <Resource Include="Views\images\Apple2.png" />
+    <Resource Include="Views\images\app-cal-icon.png" />
+    <Resource Include="Views\images\Antialiasfactory-Enterprise-Resource-Planning-Balance.ico" />
+    <Resource Include="Views\images\Annoyed.png" />
+    <Resource Include="Views\images\Angry.png" />
+    <Resource Include="Views\images\Alienware.png" />
+    <Resource Include="Views\images\Alarm.png" />
+    <Resource Include="Views\images\Aha-Soft-Financial-Money.ico" />
+    <Resource Include="Views\images\admin.png" />
+    <Resource Include="Views\images\addressbook.ico" />
+    <Resource Include="Views\images\address.ico" />
+    <Resource Include="Views\images\address books.png" />
+    <Resource Include="Views\images\Add.png" />
+    <Resource Include="Views\images\Add-Symbol-icon.png" />
+    <Resource Include="Views\images\Add-icon.png" />
+    <Resource Include="Views\images\Actions-system-run-icon.png" />
+    <Resource Include="Views\images\Actions-document-save-all-icon.png" />
+    <Resource Include="Views\images\Actions-document-save-all-icon %281%29.png" />
+    <Resource Include="Views\images\action_remove.png" />
+    <Resource Include="Views\images\action_delete.png" />
+    <Resource Include="Views\images\action_check.png" />
+    <Resource Include="Views\images\action_add.png" />
+    <Resource Include="Views\images\Accessibility.png" />
+    <Resource Include="Views\images\abstract-art-artistic-background-1103970 %281%29.jpg" />
+    <Resource Include="Views\images\ABC.png" />
+    <Resource Include="Views\images\6.png" />
+    <Resource Include="Views\images\49.png" />
+    <Resource Include="Views\images\48_64x64.png" />
+    <Resource Include="Views\images\3.png" />
+    <Resource Include="Views\images\26_64x64.png" />
+    <Resource Include="Views\images\16_32x32.png" />
+    <Resource Include="Views\images\1_64x64.png" />
+    <Resource Include="Views\images\1.jpg" />
+    <Resource Include="Views\images\036.png" />
+    <Resource Include="Views\images\035.png" />
+    <Resource Include="Views\images\034.png" />
+    <Resource Include="Views\images\033.png" />
+    <Resource Include="Views\images\032.png" />
+    <Resource Include="Views\images\031.png" />
+    <Resource Include="Views\images\030.png" />
+    <Resource Include="Views\images\029.png" />
+    <Resource Include="Views\images\028.png" />
+    <Resource Include="Views\images\027.png" />
+    <Resource Include="Views\images\026.png" />
+    <Resource Include="Views\images\025.png" />
+    <Resource Include="Views\images\024.png" />
+    <Resource Include="Views\images\023.png" />
+    <Resource Include="Views\images\022.png" />
+    <Resource Include="Views\images\021.png" />
+    <Resource Include="Views\images\020.png" />
+    <Resource Include="Views\images\019.png" />
+    <Resource Include="Views\images\018.png" />
+    <Resource Include="Views\images\017.png" />
+    <Resource Include="Views\images\016.png" />
+    <Resource Include="Views\images\015.png" />
+    <Resource Include="Views\images\014.png" />
+    <Resource Include="Views\images\013.png" />
+    <Resource Include="Views\images\012.png" />
+    <Resource Include="Views\images\011.png" />
+    <Resource Include="Views\images\010.png" />
+    <Resource Include="Views\images\009.png" />
+    <Resource Include="Views\images\008.png" />
+    <Resource Include="Views\images\007.png" />
+    <Resource Include="Views\images\006.png" />
+    <Resource Include="Views\images\005.png" />
+    <Resource Include="Views\images\004.png" />
+    <Resource Include="Views\images\003.png" />
+    <Resource Include="Views\images\002.png" />
+    <Resource Include="Views\images\001.png" />
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="accounts_TemporaryKey.pfx" />
+    <Content Include="DocTemplates\ACCOUNTLIST.dotx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DocTemplates\BankPayment.dotx" />
+    <Content Include="DocTemplates\BankPaymentReport.dotx" />
+    <Content Include="DocTemplates\BankReceipt.dotx" />
+    <Content Include="DocTemplates\BankReceiptReport.dotx" />
+    <Content Include="DocTemplates\CashLedger.dotx" />
+    <Content Include="DocTemplates\DayBook.dotx" />
+    <Content Include="DocTemplates\GroupReport.dotx" />
+    <Content Include="DocTemplates\JournalPosting.dotx" />
+    <Content Include="DocTemplates\JournalPostingReport.dotx" />
+    <Content Include="DocTemplates\MonthlyPayRoll.dotx" />
+    <Content Include="DocTemplates\MonthlyPayRollReport.dotx" />
+    <Content Include="DocTemplates\Payment.dotx" />
+    <Content Include="DocTemplates\PaymentReport.dotx" />
+    <Content Include="DocTemplates\PayRollVoucher.dotx" />
+    <Content Include="DocTemplates\PayRollVoucherReport.dotx" />
+    <Content Include="DocTemplates\Receipt.dotx" />
+    <Content Include="DocTemplates\ReceiptReport.dotx" />
+    <Content Include="DocTemplates\TrialBalance.dotx" />
+    <Content Include="fatctory_licence.pk" />
+    <None Include="images\Thalita-Torres-Office-Archive-folders.icns" />
+    <Resource Include="images\bklogo1.png" />
+    <Resource Include="images\bklogo.png" />
+    <Resource Include="images\close.png" />
+    <Content Include="license.pk" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Categories-applications-office-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar-default-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-addressbook-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-gparted-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Data-Meter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\supplies-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\stat-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\money-bag-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\market-flow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\app-cal-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\dollar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\illustration-robot_53876-5576.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-accessories-calculator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings-icon.png" />
+    <Resource Include="images\system-preferences-icon.png" />
+    <Resource Include="images\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-inkscape-icon %281%29.png" />
+    <Resource Include="images\Apps-utilities-terminal-icon %281%29.png" />
+    <Resource Include="images\Categories-applications-development-icon.png" />
+    <Resource Include="images\Categories-system-help-icon.png" />
+    <Resource Include="images\Devices-video-display-icon.png" />
+    <Resource Include="images\Places-folder-txt-icon.png" />
+    <Resource Include="images\Places-user-home-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\control-panel-icon.png" />
+    <Resource Include="images\task-notes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Places-folder-green-icon.png" />
+    <Resource Include="images\Places-folder-open-icon.png" />
+    <Resource Include="images\Places-folder-yellow-icon.png" />
+    <Resource Include="images\removable-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-gnome-display-properties-icon.png" />
+    <Resource Include="images\Apps-web-browser-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Categories-preferences-system-icon.png" />
+    <Resource Include="images\Chart-Bar-Files-icon.png" />
+    <Resource Include="images\Manager-Suit-Red-Stripes-icon.png" />
+    <Resource Include="images\pdf-icon.png" />
+    <Resource Include="images\Product-documentation-icon.png" />
+    <Resource Include="images\Windows-8-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-kwalletmanager-icon.png" />
+    <Resource Include="images\Apps-preferences-desktop-theme-icon.png" />
+    <Resource Include="images\person-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Apps-dconf-editor-icon.png" />
+    <Resource Include="images\Apps-evolution-icon.png" />
+    <Resource Include="images\Apps-file-roller-icon.png" />
+    <Resource Include="images\Apps-kmail-icon.png" />
+    <Resource Include="images\Apps-libreoffice-impress-icon.png" />
+    <Resource Include="images\Apps-libreoffice-writer-icon.png" />
+    <Resource Include="images\Automator-icon.png" />
+    <Resource Include="images\Backup-IBM-Server-icon.png" />
+    <Resource Include="images\business-icon.png" />
+    <Resource Include="images\Cart-remove-icon.png" />
+    <Resource Include="images\Categories-preferences-other-icon.png" />
+    <Resource Include="images\chart-search-icon.png" />
+    <Resource Include="images\Devices-computer-icon.png" />
+    <Resource Include="images\Folder-Chart-icon.png" />
+    <Resource Include="images\Game-casino-icon.png" />
+    <Resource Include="images\Places-folder-tar-icon.png" />
+    <Resource Include="images\Places-folder-wine-icon.png" />
+    <Resource Include="images\Places-start-here-pclinuxos-icon.png" />
+    <Resource Include="images\Recycle-Bin-empty-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Knob-Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\folder_fonts_512.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="onebit_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Bank-icon.png" />
+    <Resource Include="images\choix-icon.png" />
+    <Resource Include="images\Folder-Users-icon.png" />
+    <Resource Include="images\Pharmacy-icon.png" />
+    <Resource Include="images\Public-Folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\addressbook.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\address.ico" />
+    <Resource Include="images\buy.ico" />
+    <Resource Include="images\calendar.ico" />
+    <Resource Include="images\clipboard.ico" />
+    <Resource Include="images\key.ico" />
+    <Resource Include="images\label.ico" />
+    <Resource Include="images\letter.ico" />
+    <Resource Include="images\plus.ico" />
+    <Resource Include="images\print.ico" />
+    <Resource Include="images\search.ico" />
+    <Resource Include="images\statistics.ico" />
+    <Resource Include="images\stop.ico" />
+    <Resource Include="images\tick.ico" />
+    <Resource Include="images\trash.ico" />
+    <Resource Include="images\wallet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Hat-icon %282%29.png" />
+    <Resource Include="images\Hat-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\back.png" />
+    <Resource Include="images\down.png" />
+    <Resource Include="images\go.png" />
+    <Resource Include="images\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ordering.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\iconfinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Checkmark-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pencil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\monitor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\User.png" />
+    <Resource Include="images\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Credit card.png" />
+    <Resource Include="images\exit.png" />
+    <Resource Include="images\folder_smart.png" />
+    <Resource Include="images\GeneralPreferences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\group.png" />
+    <Resource Include="images\lock.png" />
+    <Resource Include="images\user_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\action_add.png" />
+    <Resource Include="images\action_check.png" />
+    <Resource Include="images\action_delete.png" />
+    <Resource Include="images\action_remove.png" />
+    <Resource Include="images\arrow_back.png" />
+    <Resource Include="images\arrow_down.png" />
+    <Resource Include="images\arrow_next.png" />
+    <Resource Include="images\arrow_top.png" />
+    <Resource Include="images\save.png" />
+    <Resource Include="images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Friends.png" />
+    <Resource Include="images\Notebook.png" />
+    <Resource Include="images\Shopping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_09.png" />
+    <Resource Include="images\onebit_10.png" />
+    <Resource Include="images\onebit_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\16_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1_64x64.png" />
+    <Resource Include="images\26_64x64.png" />
+    <Resource Include="images\3.png" />
+    <Resource Include="images\48_64x64.png" />
+    <Resource Include="images\49.png" />
+    <Resource Include="images\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Knob Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\onebit_01.png" />
+    <Resource Include="images\onebit_02.png" />
+    <Resource Include="images\onebit_03.png" />
+    <Resource Include="images\onebit_04.png" />
+    <Resource Include="images\onebit_05.png" />
+    <Resource Include="images\onebit_06.png" />
+    <Resource Include="images\onebit_07.png" />
+    <Resource Include="images\onebit_08.png" />
+    <Resource Include="images\onebit_15.png" />
+    <Resource Include="images\onebit_16.png" />
+    <Resource Include="images\onebit_19.png" />
+    <Resource Include="images\onebit_21.png" />
+    <Resource Include="images\onebit_22.png" />
+    <Resource Include="images\onebit_23.png" />
+    <Resource Include="images\onebit_24.png" />
+    <Resource Include="images\onebit_25.png" />
+    <Resource Include="images\onebit_26.png" />
+    <Resource Include="images\onebit_28.png" />
+    <Resource Include="images\onebit_29.png" />
+    <Resource Include="images\onebit_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\shoppingcart.png" />
+    <Resource Include="images\star.png" />
+    <Resource Include="images\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\admin.png" />
+    <Resource Include="images\calculate.png" />
+    <Resource Include="images\measure.png" />
+    <Resource Include="images\safety.png" />
+    <Resource Include="images\waiting.png" />
+    <Resource Include="images\zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Appointment Cool.png" />
+    <Resource Include="images\Appointment Urgent.png" />
+    <Resource Include="images\Backup Green Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\eico_1_year_candle.png" />
+    <Resource Include="images\folder_apple.png" />
+    <Resource Include="images\folder_apple_with_file.png" />
+    <Resource Include="images\recycle_bin_blue.png" />
+    <Resource Include="images\recycle_bin_full.png" />
+    <Resource Include="images\recycle_bin_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\001.png" />
+    <Resource Include="images\002.png" />
+    <Resource Include="images\003.png" />
+    <Resource Include="images\004.png" />
+    <Resource Include="images\005.png" />
+    <Resource Include="images\006.png" />
+    <Resource Include="images\007.png" />
+    <Resource Include="images\008.png" />
+    <Resource Include="images\009.png" />
+    <Resource Include="images\010.png" />
+    <Resource Include="images\011.png" />
+    <Resource Include="images\012.png" />
+    <Resource Include="images\013.png" />
+    <Resource Include="images\014.png" />
+    <Resource Include="images\015.png" />
+    <Resource Include="images\016.png" />
+    <Resource Include="images\017.png" />
+    <Resource Include="images\018.png" />
+    <Resource Include="images\019.png" />
+    <Resource Include="images\020.png" />
+    <Resource Include="images\021.png" />
+    <Resource Include="images\022.png" />
+    <Resource Include="images\023.png" />
+    <Resource Include="images\024.png" />
+    <Resource Include="images\025.png" />
+    <Resource Include="images\026.png" />
+    <Resource Include="images\027.png" />
+    <Resource Include="images\028.png" />
+    <Resource Include="images\029.png" />
+    <Resource Include="images\030.png" />
+    <Resource Include="images\031.png" />
+    <Resource Include="images\032.png" />
+    <Resource Include="images\033.png" />
+    <Resource Include="images\034.png" />
+    <Resource Include="images\035.png" />
+    <Resource Include="images\036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\address books.png" />
+    <Resource Include="images\folder.png" />
+    <Resource Include="images\library bookmarked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\folder_add.png" />
+    <Resource Include="images\info.png" />
+    <Resource Include="images\printer.png" />
+    <Resource Include="images\user_black.png" />
+    <Resource Include="images\user_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\group_add.png" />
+    <Resource Include="images\group_delete.png" />
+    <Resource Include="images\group_edit.png" />
+    <Resource Include="images\group_error.png" />
+    <Resource Include="images\group_gear.png" />
+    <Resource Include="images\group_go.png" />
+    <Resource Include="images\group_key.png" />
+    <Resource Include="images\group_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ABC.png" />
+    <Resource Include="images\Accessibility.png" />
+    <Resource Include="images\Add.png" />
+    <Resource Include="images\Alarm.png" />
+    <Resource Include="images\Alienware.png" />
+    <Resource Include="images\Angry.png" />
+    <Resource Include="images\Annoyed.png" />
+    <Resource Include="images\Apple2.png" />
+    <Resource Include="images\BBC.png" />
+    <Resource Include="images\BioHazard.png" />
+    <Resource Include="images\Blender.png" />
+    <Resource Include="images\Bomb.png" />
+    <Resource Include="images\Bunny.png" />
+    <Resource Include="images\Car.png" />
+    <Resource Include="images\Carrot.png" />
+    <Resource Include="images\Cat.png" />
+    <Resource Include="images\CBS.png" />
+    <Resource Include="images\Cellphone.png" />
+    <Resource Include="images\Check.png" />
+    <Resource Include="images\Chess.png" />
+    <Resource Include="images\Cloud.png" />
+    <Resource Include="images\Creative Commons.png" />
+    <Resource Include="images\Delete.png" />
+    <Resource Include="images\Deviantart.png" />
+    <Resource Include="images\Dice.png" />
+    <Resource Include="images\Dragon.png" />
+    <Resource Include="images\Dragon2.png" />
+    <Resource Include="images\Duck.png" />
+    <Resource Include="images\Echo.png" />
+    <Resource Include="images\Explorer.png" />
+    <Resource Include="images\Fastfroward.png" />
+    <Resource Include="images\Female.png" />
+    <Resource Include="images\Firewire.png" />
+    <Resource Include="images\Fish.png" />
+    <Resource Include="images\Flame.png" />
+    <Resource Include="images\Flower.png" />
+    <Resource Include="images\Fork.png" />
+    <Resource Include="images\Ghost.png" />
+    <Resource Include="images\Girl.png" />
+    <Resource Include="images\Hammy.png" />
+    <Resource Include="images\Hamster.png" />
+    <Resource Include="images\Happy.png" />
+    <Resource Include="images\Heart.png" />
+    <Resource Include="images\ICQ.png" />
+    <Resource Include="images\Information.png" />
+    <Resource Include="images\iPod Nano.png" />
+    <Resource Include="images\Key.png" />
+    <Resource Include="images\King.png" />
+    <Resource Include="images\Leaf.png" />
+    <Resource Include="images\Left.png" />
+    <Resource Include="images\Mac.png" />
+    <Resource Include="images\Male.png" />
+    <Resource Include="images\Mickey.png" />
+    <Resource Include="images\Monitor.png" />
+    <Resource Include="images\Moon.png" />
+    <Resource Include="images\Nature.png" />
+    <Resource Include="images\NBC.png" />
+    <Resource Include="images\Pause.png" />
+    <Resource Include="images\Paw.png" />
+    <Resource Include="images\Pen.png" />
+    <Resource Include="images\Pin.png" />
+    <Resource Include="images\Plane.png" />
+    <Resource Include="images\Plant.png" />
+    <Resource Include="images\Play.png" />
+    <Resource Include="images\Pointer.png" />
+    <Resource Include="images\Power.png" />
+    <Resource Include="images\Puzzle.png" />
+    <Resource Include="images\Queen.png" />
+    <Resource Include="images\Quicktime.png" />
+    <Resource Include="images\Radioactive.png" />
+    <Resource Include="images\Rain.png" />
+    <Resource Include="images\Record.png" />
+    <Resource Include="images\Recycle.png" />
+    <Resource Include="images\Reset.png" />
+    <Resource Include="images\Rewind.png" />
+    <Resource Include="images\Right.png" />
+    <Resource Include="images\RSS.png" />
+    <Resource Include="images\Sad.png" />
+    <Resource Include="images\Settings.png" />
+    <Resource Include="images\Skull.png" />
+    <Resource Include="images\Spade.png" />
+    <Resource Include="images\Star2.png" />
+    <Resource Include="images\Stop.png" />
+    <Resource Include="images\Strawberry.png" />
+    <Resource Include="images\Sunny.png" />
+    <Resource Include="images\Superman.png" />
+    <Resource Include="images\Suprise.png" />
+    <Resource Include="images\Telephone.png" />
+    <Resource Include="images\Terminal.png" />
+    <Resource Include="images\Tools.png" />
+    <Resource Include="images\Toxic.png" />
+    <Resource Include="images\Train.png" />
+    <Resource Include="images\TV.png" />
+    <Resource Include="images\Twitter.png" />
+    <Resource Include="images\Unbutu.png" />
+    <Resource Include="images\Weather.png" />
+    <Resource Include="images\Windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Terminal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\group_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Actions-document-save-all-icon %281%29.png" />
+    <Resource Include="images\Actions-document-save-all-icon.png" />
+    <Resource Include="images\Actions-system-run-icon.png" />
+    <Resource Include="images\Add-icon.png" />
+    <Resource Include="images\Add-Symbol-icon.png" />
+    <Resource Include="images\Apps-accessories-text-editor-icon.png" />
+    <Resource Include="images\Apps-kdevelop-icon.png" />
+    <Resource Include="images\Apps-kmetronome-icon.png" />
+    <Resource Include="images\Apps-midori-icon.png" />
+    <Resource Include="images\Apps-preferences-web-browser-identification-icon.png" />
+    <Resource Include="images\Apps-rekonq-icon.png" />
+    <Resource Include="images\Apps-terminator-icon.png" />
+    <Resource Include="images\Apps-utilities-system-monitor-icon.png" />
+    <Resource Include="images\Apps-utilities-terminal-icon.png" />
+    <Resource Include="images\Bookmark-icon.png" />
+    <Resource Include="images\Categories-applications-games-icon.png" />
+    <Resource Include="images\Categories-applications-internet-icon.png" />
+    <Resource Include="images\Categories-applications-system-icon.png" />
+    <Resource Include="images\Categories-preferences-desktop-icon.png" />
+    <Resource Include="images\chart-icon.png" />
+    <Resource Include="images\close-icon.png" />
+    <Resource Include="images\Column-Chart-icon.png" />
+    <Resource Include="images\Custom-Icon-Design-Pretty-Office-9-Edit-validated.ico" />
+    <Resource Include="images\Dashboard-icon.png" />
+    <Resource Include="images\Devices-gnome-dev-symlink-icon.png" />
+    <Resource Include="images\Excel-icon.png" />
+    <Resource Include="images\first-aid-kit-icon.png" />
+    <Resource Include="images\Folder-Library-icon.png" />
+    <Resource Include="images\iconfinder_3d_bar_chart_131747.png" />
+    <Resource Include="images\iconfinder_Back_131811.png" />
+    <Resource Include="images\iconfinder_Cancel_131742.png" />
+    <Resource Include="images\iconfinder_Check_boxes_131730.png" />
+    <Resource Include="images\iconfinder_Clipboard_131884.png" />
+    <Resource Include="images\iconfinder_Color_test_131769.png" />
+    <Resource Include="images\iconfinder_Erase_131842.png" />
+    <Resource Include="images\iconfinder_Hints_131685.png" />
+    <Resource Include="images\iconfinder_Home_131778.png" />
+    <Resource Include="images\iconfinder_Info_131908.png" />
+    <Resource Include="images\iconfinder_Monitor_131888.png" />
+    <Resource Include="images\iconfinder_Preview_131689.png" />
+    <Resource Include="images\iconfinder_Registration_131862.png" />
+    <Resource Include="images\iconfinder_Save_131694.png" />
+    <Resource Include="images\iconfinder_Synchronize_131872.png" />
+    <Resource Include="images\iconfinder_Tag_131904.png" />
+    <Resource Include="images\iconfinder_Text_replace_131820.png" />
+    <Resource Include="images\iconfinder_To_do_list_131719.png" />
+    <Resource Include="images\iconfinder_Warning_131773.png" />
+    <Resource Include="images\Location-MAILTO-icon.png" />
+    <Resource Include="images\MacBookAir-icon.png" />
+    <Resource Include="images\Mimes-application-vnd.ms-excel-icon.png" />
+    <Resource Include="images\money-icon %281%29.png" />
+    <Resource Include="images\Money-icon.png" />
+    <Resource Include="images\My-Computer-icon.png" />
+    <Resource Include="images\Places-folder-brown-icon.png" />
+    <Resource Include="images\Places-folder-cyan-icon %281%29.png" />
+    <Resource Include="images\Places-folder-cyan-icon.png" />
+    <Resource Include="images\Places-folder-dropbox-icon.png" />
+    <Resource Include="images\Places-folder-locked-icon.png" />
+    <Resource Include="images\Places-folder-open-icon %281%29.png" />
+    <Resource Include="images\Places-folder-open-icon %282%29.png" />
+    <Resource Include="images\Places-folder-wine-icon %281%29.png" />
+    <Resource Include="images\Places-start-here-arch-icon.png" />
+    <Resource Include="images\Places-user-bookmarks-icon.png" />
+    <Resource Include="images\Places-user-desktop-icon %281%29.png" />
+    <Resource Include="images\Places-user-desktop-icon.png" />
+    <Resource Include="images\Places-user-home-icon.png" />
+    <Resource Include="images\Places-user-trash-icon.png" />
+    <Resource Include="images\Save-as-icon %281%29.png" />
+    <Resource Include="images\Save-as-icon.png" />
+    <Resource Include="images\Save-icon %281%29.png" />
+    <Resource Include="images\Save-icon.png" />
+    <Resource Include="images\search-icon.png" />
+    <Resource Include="images\System-Equalizer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Aha-Soft-Financial-Money.ico" />
+    <Resource Include="images\Beauticons-The-Robbery-Money.ico" />
+    <Resource Include="images\Ebiene-E-Commerce-Piggy-bank.ico" />
+    <Resource Include="images\Gordon-Irving-IWork-10-Keynote-on.ico" />
+    <Resource Include="images\Iconleak-Atrous-Calculator.ico" />
+    <Resource Include="images\Iconshock-Real-Vista-Accounting-Open-safety-box.ico" />
+    <Resource Include="images\Petalart-Business-Tag-sale.ico" />
+    <Resource Include="images\Toma4025-Rumax-Desk.ico" />
+    <Resource Include="images\Toma4025-Rumax-Folder-multimedia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Document-icon %281%29.png" />
+    <Resource Include="images\Excel-icon %282%29.png" />
+    <Resource Include="images\Folders-OS-Documents-Metro-icon.png" />
+    <Resource Include="images\Microsoft-Excel-icon %282%29.png" />
+    <Resource Include="images\Mimetypes-application-pdf-icon.png" />
+    <Resource Include="images\Mimetypes-x-office-address-book-icon.png" />
+    <Resource Include="images\office-icon.png" />
+    <Resource Include="images\Office-Word-icon %281%29.png" />
+    <Resource Include="images\pdf-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Balance-icon %281%29.png" />
+    <Resource Include="images\Balance-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Antialiasfactory-Enterprise-Resource-Planning-Balance.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\iPad-Side-Newspaper-icon.png" />
+    <Resource Include="images\Keynote-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Reports-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\archive-folders-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Thalita-Torres-Office-Archive-folders.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Thalita-Torres-Office-Archive-folders.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\thumb2-4k-blue-and-gray-material-design-android-lollipop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\abstract-art-artistic-background-1103970 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

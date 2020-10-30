@@ -1,0 +1,68 @@
+﻿<Window x:Class="accounts.PayrollADAL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d" KeyDown="Window_KeyDown"
+        Title="Payroll Payment - Advance/Allowance" Height="271" Width="448.667" Background="AliceBlue" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,6">
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,0,10,4"/>
+
+        <Label Content="Name" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="23" Margin="48,42,0,0" VerticalAlignment="Top" Width="47"/>
+        <Label Content="Type" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="28" Margin="59,73,0,0" VerticalAlignment="Top" Width="36"/>
+        <Label Content="Amount" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="28" Margin="41,106,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Narration"  HorizontalContentAlignment="Right"  Margin="33,145,0,0" HorizontalAlignment="Left" Width="62" Height="32" VerticalAlignment="Top"/>
+        <Label  Content="Entry No" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="41,8,0,191" Width="57"/>
+        <TextBox Style="{StaticResource NewUI}" Name="txt_entryno" Margin="104,10,273,0" TextWrapping="Wrap"  Text=" "   VerticalAlignment="Top" RenderTransformOrigin="0.49,0.611"/>
+        <ComboBox Name="cmb_emp_name" ItemsSource="{Binding}" IsEditable="True" Margin="103,42,22,0" Height="25" VerticalAlignment="Top"/>
+        <TextBox Name="txt_amount" Margin="103,110,215,0" TextWrapping="Wrap" Text=" " Height="25" VerticalAlignment="Top"/>
+        <TextBox Name="txt_narration" Margin="104,145,21,0" TextWrapping="Wrap" Text=" " Height="32" VerticalAlignment="Top"/>
+        <DatePicker Name="dtp_post_date" Margin="207,7,119,0" RenderTransformOrigin="0.5,0.5" Height="25" VerticalAlignment="Top">
+            <DatePicker.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.091"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DatePicker.RenderTransform>
+        </DatePicker>
+        <Button Click="btn_save_Click"  x:Name="btn_save"   Content="Save"  Margin="22,187,324,10" />
+        <Button   Click="btn_Reset_Click" x:Name="btn_Reset" Content="Reset" HorizontalAlignment="Left" Width="95"  Margin="123,187,0,10" RenderTransformOrigin="-0.172,0.494" />
+        <Button  Click="btn_update_Click"  x:Name="btn_update" Content="Update" HorizontalAlignment="Left" Width="96"  Margin="224,187,0,10" />
+        <Button Click="btn_del_Click"   x:Name="btn_del" Content="Delete"  Margin="325,188,19,10" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.515"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label  Content="Date" Margin="175,8,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35"/>
+        <ComboBox Name="cmb_type" IsEditable="False" Margin="103,77,22,0" Height="25" VerticalAlignment="Top">
+            <ComboBoxItem>
+                <TextBlock>BONUS</TextBlock>
+
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock>ADVANCE</TextBlock>
+
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock>DEDUCTION</TextBlock>
+
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock>ALLOWANCE</TextBlock>
+
+            </ComboBoxItem>
+        </ComboBox>
+        <Label  Content="Find" Margin="324,6,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="35"/>
+        <TextBox KeyDown="txt_find_eno_KeyDown" x:Name="txt_find_eno" Margin="356,8,21,0" TextWrapping="Wrap"  Text=" " Height="24" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.611"/>
+
+    </Grid>
+</Window>

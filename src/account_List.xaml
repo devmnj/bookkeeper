@@ -1,0 +1,123 @@
+﻿<Window x:Class="accounts.account_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts" ResizeMode="CanMinimize"
+         mc:Ignorable="d" KeyDown="Window_KeyDown"
+        Loaded="Window_Loaded"
+        Title="Account List" Height="589.006" Width="977.373" Background="AntiqueWhite" WindowStartupLocation="CenterOwner" Icon="images\addressbook.ico" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="436*"/>
+            <ColumnDefinition Width="533*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Style="{DynamicResource   ACGHeaderStyle}" MouseDoubleClick="acc_grid_MouseDoubleClick" IsReadOnly="True" x:Name="acc_grid" Margin="10,72,11.2,77.8" Grid.ColumnSpan="2" AutoGenerateColumns="False" GridLinesVisibility="None" AlternationCount="3" AlternatingRowBackground="Goldenrod" SelectionChanged="acc_grid_SelectionChanged" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True"  Header="ID" Width="50" Binding="{Binding DrAccount.ID}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True"  Header="Short Name" Width="220" Binding="{Binding DrAccount.Short_Name}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Name" Width="440" Binding="{Binding DrAccount.Name}" ></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Group" Width="180" Binding="{Binding DrAccount.Parent.Name}" ></DataGridTextColumn>
+
+            </DataGrid.Columns>
+
+            <DataGrid.RowDetailsTemplate  >
+                <DataTemplate >
+                    <Grid Background="AliceBlue">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"  />
+                            <ColumnDefinition Width="250"   />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition  />
+
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+
+
+                        </Grid.RowDefinitions>
+
+                        <TextBlock  Grid.Row="0" Grid.Column="0"  Text="Address" FontWeight="DemiBold" />
+                        <TextBlock  Grid.Row="0" Grid.Column="1" Text="{Binding DrAccount.Address }" />
+                        <TextBlock  Grid.Row="1" Grid.Column="0"  Text="City" FontWeight="DemiBold" />
+                        <TextBlock  Grid.Row="1" Grid.Column="1"  Text="{Binding DrAccount.City}"   />
+                        <TextBlock  Grid.Row="2" Grid.Column="0" Text="PhoneNo" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="2" Grid.Column="1" Text="{Binding DrAccount.Phoneno}"  />
+                        <TextBlock  Grid.Row="3" Grid.Column="0" Text="Cr. Limit" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="3" Grid.Column="1" Text="{Binding DrAccount.CrLimit}"  />
+                        <TextBlock  Grid.Row="4" Grid.Column="0" Text="Dr. Limit" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="1" Text="{Binding DrAccount.DrLimit}"  />
+
+                        <TextBlock  Grid.Row="0" Grid.Column="2" Text="Group" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="0" Grid.Column="3" Text="{Binding DrAccount.Parent.Name}"  />
+                        <TextBlock  Grid.Row="1" Grid.Column="2" Text="Group Wise Cr. Limit" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="1" Grid.Column="3" Text="{Binding DrAccount.Parent.GroupCr}"  />
+                        <TextBlock  Grid.Row="2" Grid.Column="2" Text="Group Wise Dr. Limit" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="2" Grid.Column="3" Text="{Binding DrAccount.Parent.GroupDr}"  />
+                        <TextBlock  Grid.Row="3" Grid.Column="2" Text="Discount Limit" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="3" Grid.Column="3" Text="{Binding DrAccount.MaxDisc}"  />
+                        <TextBlock  Grid.Row="4" Grid.Column="2" Text="Balance" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="3" Text="{Binding Balance,StringFormat=\{0:0.00\}}" FontWeight="DemiBold" Foreground="Red" />
+                    </Grid>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+
+        </DataGrid>
+        <ComboBox SelectionChanged="cmb_group_SelectionChanged"   Style="{StaticResource prent_and_groups}" x:Name="cmb_group" ItemsSource="{Binding AccountGroups}" SelectedItem="SelectedGroup" DisplayMemberPath="Name"    KeyDown="cmb_group_KeyDown" IsEditable="True"   Margin="0,41,180.2,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="200" RenderTransformOrigin="0.888,0.356" Grid.Column="1" Height="27"/>
+        <Label Content="Filters" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Height="37" Margin="10,30,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Style="{StaticResource LabelUI}" Content="Groups" HorizontalAlignment="Left" Height="30" Margin="154.2,11,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <StackPanel Visibility="Hidden" Margin="279.2,0,11.2,3.2"  Background="LightCoral" Grid.Column="1" Height="70" VerticalAlignment="Bottom" >
+            <TextBox x:Name="lblcr" Foreground="Beige" Text="" Background="Transparent" TextAlignment="Right" FontSize="14" BorderThickness="0" Height="29" />
+            <TextBox x:Name="lblTOTAL" Text="" Background="Transparent" TextAlignment="Right" FontSize="21" BorderThickness="0"   Height="28" />
+        </StackPanel>
+        <Button  ToolTip="Refresh Data" x:Name="refresh_data" Content=""   Margin="10,0,0,9.8" Click="refresh_data_Click" RenderTransformOrigin="0.422,0.385" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Left" Width="63" Height="63" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_12.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+        </Button>
+        <Label Style="{StaticResource LabelUI}" Content="Catagory" HorizontalAlignment="Left" Height="30" Margin="369.2,10,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <ComboBox SelectionChanged="cmb_catagory_SelectionChanged" Style="{StaticResource NewUI}" ItemsSource="{Binding}" ItemContainerStyle="{DynamicResource Combo+}" x:Name="cmb_catagory" GotFocus="cmb_catagory_GotFocus" KeyDown="cmb_catagory_KeyDown"   IsEditable="True"   Margin="368.2,41,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="155" RenderTransformOrigin="0.888,0.356" Grid.Column="1"/>
+        <ComboBox  SelectionChanged="cmb_city_SelectionChanged"  Style="{StaticResource NewUI}" ItemContainerStyle="{DynamicResource combo_item_Style1}" x:Name="cmb_city" ItemsSource="{Binding}" KeyDown="cmb_city_KeyDown"    IsEditable="True"   Margin="347,41,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="228" RenderTransformOrigin="0.888,0.356" Grid.ColumnSpan="2"/>
+        <Label  Style="{StaticResource LabelUI}" Content="City" HorizontalAlignment="Left" Height="30" Margin="347,11,0,0" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="2"/>
+        <Label Style="{StaticResource LabelUI}" Content="Phone No" HorizontalAlignment="Left" Height="31" Margin="111,10,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBox Style="{StaticResource NewUI}" Background="LightGreen" HorizontalAlignment="Left"   Margin="111,40,0,0" Name="txt_phoneno" TextWrapping="Wrap"   VerticalAlignment="Top" Width="219" RenderTransformOrigin="0.489,0.067"/>
+        <Button Style="{DynamicResource Standard}" ToolTip="Print" x:Name="btn_print" Click="btn_print_Click"   Margin="78,482,284.8,2.8" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/print.ico"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Word Document" x:Name="btn_doc" Content=""  Margin="152,483,213.8,8.8" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_doc_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Office-Word-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Excel" x:Name="btn_excel" Content=""  Margin="228,483,0,8.8" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Left" Width="70" Click="btn_excel_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Microsoft-Excel-icon (2).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as PDF" x:Name="btn_pdf" Content="" Click="btn_pdf_Click" Margin="303,483,63.8,9.8" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/pdf-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as XPS" x:Name="btn_xps" Content=""  Margin="378,487,529.2,9.8" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2" Click="btn_xps_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Folders-OS-Documents-Metro-icon.png"  />
+            </Button.Background>
+
+        </Button>
+
+    </Grid>
+</Window>

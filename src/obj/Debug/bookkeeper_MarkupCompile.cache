@@ -1,0 +1,20 @@
+﻿bookkeeper
+
+
+winexe
+C#
+.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\
+accounts
+none
+false
+DEBUG;TRACE
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\App.xaml
+351207209292
+21737503451
+70-342158211
+78-583679360
+About.xaml;AccountManager.xaml;accountRegistration.xaml;account_List.xaml;BankPayment.xaml;bankReceipt.xaml;bpReport.xaml;brReport.xaml;CashBook1.xaml;ChangeDate.xaml;ComboxStyle.xaml;Company.xaml;DayBook.xaml;dbconfiguration.xaml;EmployeeRegistration.xaml;GroupList.xaml;GroupRegistration.xaml;journalposting.xaml;MainWindow.xaml;PackageManager.xaml;PayableandReceivables.xaml;Payment.xaml;PaymentReport.xaml;payroll.xaml;payrollreport.xaml;payroll_payments_deductions.xaml;ppReport.xaml;PrintDialogue.xaml;Receipt.xaml;ReceiptReport.xaml;ReportListTemplateForm.xaml;styles.xaml;Template_Styles.xaml;trialBalance.xaml;Window1.xaml;
+
+False
+

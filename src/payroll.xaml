@@ -1,0 +1,231 @@
+﻿<Window x:Class="accounts.payroll"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+            KeyDown="Window_KeyDown"   
+        Loaded="Window_Loaded"
+        Icon="images/Places-folder-open-icon (1).png"
+        Title="Payroll Entry" Height="538" Width="637.219" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize" Background="LightCyan">
+    <Window.Resources>
+
+    </Window.Resources>
+
+    <Grid Margin="7,8,7,7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="359*"/>
+            <RowDefinition Height="36*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="222*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="349*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0,2,0,-2" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+
+        <Border BorderBrush="#FF3EAAC1" BorderThickness="1" Margin="8,0,12,9" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="53" VerticalAlignment="Bottom"/>
+
+        <Border BorderBrush="#FF3EAAC1" BorderThickness="1" Height="32" Margin="121,21,12,0" VerticalAlignment="Top" Grid.Column="2">
+            <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" Click="btn_movelast_Click" ToolTip="Show Last Receipts" x:Name="btn_movelast_Copy" Content=" " RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" Margin="201,1,0,0" HorizontalAlignment="Left" Width="28">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/up.png" x:Name="btn_login3"  />
+                </Button.Background>
+            </Button>
+        </Border>
+
+        <Button Style="{StaticResource Standard}" x:Name="btn_save" Click="btn_save_Click"  HorizontalAlignment="Right" Width="40"  Margin="0,0,124.8,16.8" BorderBrush="#FF8F7F7F" Height="40" VerticalAlignment="Bottom" Grid.RowSpan="2" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"/>
+            </Button.Background>
+        </Button>
+
+        <Label Style="{StaticResource LabelUI}"   Content="Cash Account" HorizontalAlignment="Left" Height="27" Margin="10,89,0,0" VerticalAlignment="Top"   Width="101"/>
+        <TextBox Style="{StaticResource NewUI}" IsTabStop="False" x:Name="txt_info" Height="50" Margin="15,121,234,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Grid.ColumnSpan="3"  />
+        <Label  Style="{StaticResource LabelUI}"   Content="Employee Name" HorizontalAlignment="Left" Height="32" Margin="10,57,0,0" VerticalAlignment="Top"   Width="114"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Basic Pay" HorizontalAlignment="Left" Height="27" Margin="11,179,0,0" VerticalAlignment="Top"   Width="63"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="V.No" HorizontalAlignment="Left" Height="27" Margin="10,2,0,0" VerticalAlignment="Top"   Width="47"/>
+        <TextBox IsTabStop="False" Style="{StaticResource NewUI}" IsReadOnly="True" x:Name="txt_jno" HorizontalAlignment="Left" Margin="11,25,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="56"/>
+        <TextBox Text="{Binding jpNarration, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_top_right_text}" KeyDown="txt_narration_KeyDown" Style="{StaticResource TextBoxUI}" TabIndex="9" x:Name="txt_narration" Margin="15,367,169,25" TextWrapping="Wrap" Grid.ColumnSpan="3" Height="Auto"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Narration" HorizontalAlignment="Left" Height="27" Margin="11,339,0,0" VerticalAlignment="Top"   Width="72" RenderTransformOrigin="0.556,0.926"/>
+        <Button Style="{StaticResource Standard}" Click="btn_Reset_Click" x:Name="btn_Reset"  Margin="0,0,169.8,16.8" RenderTransformOrigin="-0.172,0.494" Height="40" VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Right" Width="45" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/clipboard.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_update_Click" x:Name="btn_update1"  Margin="169,0,0,16.8" Height="40" VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Left" Width="40" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/tick.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_del_Click" x:Name="btn_delete"  Margin="214,0,0,17" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_17.png"/>
+            </Button.Background>
+        </Button>
+        <Label Style="{StaticResource LabelUI}"   Content="Post Date" HorizontalAlignment="Left" Height="27" Margin="117,-1,0,0" VerticalAlignment="Top"   Width="72"/>
+        <!--<ComboBox Style="{DynamicResource Combo}" TabIndex="1" GotFocus="cmb_cr_short_name_GotFocus" LostFocus="cmb_cr_short_name_LostFocus" KeyUp="cmb_cr_short_name_KeyUp" KeyDown="cmb_cr_short_name_KeyDown" ItemsSource="{Binding}" x:Name="cmb_cr_short_name" IsEditable="True" Height="21" Margin="26,94,315,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="#FFA04545">-->
+
+
+        <ComboBox SelectionChanged="cmb_dr_short_name_SelectionChanged" Style="{StaticResource employee}" Text="{Binding jpDrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" KeyDown="cmb_dr_short_name_KeyDown" TabIndex="1" KeyUp="cmb_dr_short_name_KeyUp" ItemsSource="{Binding Employees}" SelectedItem="SelectedEmployee" DisplayMemberPath="Account.Name" x:Name="cmb_dr_short_name" IsEditable="True"   Margin="174,57,168.8,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="27"/>
+        <DatePicker KeyUp="dtp_jdate_KeyUp"  Style="{StaticResource NewUI}" GotFocus="dtp_jdate_GotFocus" LostFocus="dtp_jdate_LostFocus" x:Name="dtp_jdate" TabIndex="0" HorizontalAlignment="Left"   Margin="117,26,0,0" VerticalAlignment="Top" Width="203" Grid.ColumnSpan="3"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_jnofind_KeyDown" x:Name="txt_jnofind" HorizontalAlignment="Left" Height="24" Margin="158,24,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="36" Grid.Column="2"/>
+        <Button Style="{StaticResource Standard}" x:Name="btn_find"   HorizontalAlignment="Left" Height="24" Margin="199,24,0,0" VerticalAlignment="Top" Width="29" BorderBrush="{x:Null}" Click="btn_find_Click" Grid.Column="2">
+            <!--<ImageBrush ImageSource="images/search.ico"/>-->
+            <Button.Background>
+                <ImageBrush ImageSource="images/search.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" x:Name="btn_movenext" BorderBrush="{x:Null}" ToolTip="Show Next Journal" Click="btn_movenext_Click" Margin="297,25,0,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Left" Width="27" Height="24" VerticalAlignment="Top" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/go.png" x:Name="btn_login2"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show Previous Journal" x:Name="btn_moveprevious" Click="btn_moveprevious_Click" Margin="267,25,0,0" RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="25" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/back.png" x:Name="btn_login1"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show First Journal" x:Name="btn_movefirst" Click="btn_movefirst_Click" Content=" " Margin="235,25,0,0" RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="27" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/down.png" x:Name="btn_login5"  />
+            </Button.Background>
+
+
+        </Button>
+        <Button Style="{StaticResource Standard}"  ToolTip="Print"  x:Name="btn_print" Click="btn_print_Click"   Content="" HorizontalAlignment="Right" Width="45" Margin="0,0,74.8,16.8" BorderBrush="#FF9C9292" Height="40" VerticalAlignment="Bottom" Grid.RowSpan="2" RenderTransformOrigin="0.504,0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="images/print.ico"    />
+            </Button.Background>
+        </Button>
+        <GroupBox x:Name="taskgroup" BorderBrush="LightPink" Header="Add to Task List" HorizontalAlignment="Right" Height="125" Margin="0,0,11.8,25" VerticalAlignment="Bottom" Width="152" Grid.Column="2">
+            <StackPanel Orientation="Vertical"  >
+                <Grid Background="Bisque">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+                    <CheckBox  Click="chk_isrecurr_Click" FontWeight="DemiBold" VerticalAlignment="Center" x:Name="chk_isrecurr" Grid.Row="0" Content="Yes" Grid.Column="0" Checked="chk_isrecurr_Checked" />
+                    <Button Style="{StaticResource Standard}" Grid.Column="1" Click="btn_task_add_Click" ToolTip="Add/Update " Name="btn_task_add" BorderBrush="{x:Null}"    Grid.Row="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="images/check.png"  Stretch="Uniform"   />
+                        </Button.Background>
+                    </Button>
+
+                    <Button Style="{StaticResource Standard}" ToolTip="Remove" Click="btn_task_del_Click"  Grid.Column="2" Name="btn_task_del"  Content=" " Grid.Row="0"  BorderBrush="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="images/close.png"  Stretch="Uniform"   />
+                        </Button.Background>
+                    </Button>
+
+                </Grid>
+                <!--<RadioButton x:Name="rbtn_daily1" IsChecked="True"  Content="Daily"/>
+                <RadioButton x:Name="rbtn_weekly1" Content="Weekly"/>
+                <RadioButton x:Name="rbtn_monthly1" Content="Monthly"/>-->
+                <Label Content="Label-Task Amount" Style="{DynamicResource LabelUI}" HorizontalContentAlignment="Center" Foreground="DarkGoldenrod"/>
+                <TextBox Background="LightGreen" x:Name="txt_task_label" Height="26" />
+                <TextBox Background="LightSteelBlue" x:Name="txt_task_Amount" Height="25" />
+
+                <!--<CheckBox x:Name="chk_active" Content="Activate"   Margin="0,0,47,0" />-->
+            </StackPanel>
+        </GroupBox>
+        <ComboBox SelectionChanged="CMB_CRACC_SelectionChanged" Style="{StaticResource NewUI}" Text="{Binding jpCrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" KeyUp="CMB_CRACC_KeyUp" KeyDown="CMB_CRACC_KeyDown" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" ItemsSource="{Binding Accounts}" SelectedItem="SelectedAccounts" DisplayMemberPath="Short_Name" TabIndex="2" IsEditable="True" x:Name="CMB_CRACC" HorizontalAlignment="Left"   Margin="117,89,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="3"/>
+        <Label   BorderBrush="{x:Null}" ToolTip="This is a Task, performed by TaskMaster" x:Name="lbl_taskflag"   Margin="121,25,0,0" RenderTransformOrigin="-0.421,0.583" Grid.Column="2" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="27">
+            <Label.Background>
+                <ImageBrush ImageSource="images/onebit_27.png"    />
+            </Label.Background>
+
+
+        </Label>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  x:Name="hist_task_lbl" Style="{StaticResource LabelUI}"   FontSize="14" Foreground="#FF8B4C00" Content="History" Margin="118,230,105,192" FontFamily="Trebuchet MS" Height="27" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="150" Grid.Column="2">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.649"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <ListBox MouseDoubleClick="lst_tasks_MouseDoubleClick" IsTabStop="False"  HorizontalContentAlignment="Stretch" ItemTemplate="{StaticResource ResourceKey=Tasks}"  Background="White" x:Name="lst_tasks" DataContext="{Binding}" ItemsSource="{Binding}"  Margin="0,125,9.8,155" HorizontalAlignment="Right" Width="154" Grid.Column="2"/>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}"   ToolTip="Show Cash Report" x:Name="btn_voucher_report" Content=" " Margin="209,53,126,0" RenderTransformOrigin="-0.421,0.583" Grid.Column="2" Height="36" VerticalAlignment="Top" Click="btn_voucher_report_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Mimes-application-vnd.ms-excel-icon.png" x:Name="btn_login6"  />
+            </Button.Background>
+        </Button>
+        <Button  Click="btn_dr_report_Click" Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show Cash Report" x:Name="btn_dr_report" Content=" " Margin="0,85,118.8,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Right" Width="45" Height="40" VerticalAlignment="Top" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Product-documentation-icon.png" x:Name="btn_login7"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}"    ToolTip="Report"  x:Name="btn_report"   Content="" Height="40" VerticalAlignment="Bottom"  Margin="15,0,0,16.8" RenderTransformOrigin="0.45,0.429" BorderBrush="#FF978888" Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Left" Width="40" Click="btn_report_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Places-folder-green-icon.png"    />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_emp_reg" Style="{StaticResource Standard}" ToolTip="Employee Registration" Content="" Click="btn_emp_reg_Click" Margin="60,0,0,16.8" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2" Height="40" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Apps-preferences-desktop-theme-icon.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_eid_KeyDown" x:Name="txt_eid" HorizontalAlignment="Left" Height="27" Margin="117,57,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="53"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Allowances" HorizontalAlignment="Left" Height="27" Margin="11,211,0,0" VerticalAlignment="Top"   Width="84"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Commission" HorizontalAlignment="Left" Height="27" Margin="11,243,0,0" VerticalAlignment="Top"   Width="84"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Advance" HorizontalAlignment="Left" Height="27" Margin="11,275,0,0" VerticalAlignment="Top"   Width="84"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="W.Days" HorizontalAlignment="Left" Height="27" Margin="53,176,0,0" VerticalAlignment="Top"   Width="60" Grid.Column="2"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Deductions" HorizontalAlignment="Left" Height="27" Margin="11,307,0,0" VerticalAlignment="Top"   Width="113"/>
+        <TextBox GotFocus="txt_commission_GotFocus" IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_commission_KeyDown" Style="{StaticResource NewUI}" TabIndex="6" x:Name="txt_commission"   Margin="117,243,341,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox GotFocus="txt_deductions_GotFocus" IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_deductions_KeyDown" Style="{StaticResource NewUI}" TabIndex="8" x:Name="txt_deductions"   Margin="117,307,341,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox GotFocus="txt_advancepaid_GotFocus" IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_advancepaid_KeyDown" Style="{StaticResource NewUI}" TabIndex="7" x:Name="txt_advancepaid"   Margin="117,275,341,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox IsTabStop="False"  IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_wh_KeyDown" Style="{StaticResource NewUI}" TabIndex="4" x:Name="txt_wh"   Margin="118,176,189,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.Column="2"/>
+        <TextBox TabIndex="4" IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_basicpay_KeyDown_1" Style="{StaticResource NewUI}"   x:Name="txt_basicpay"   Margin="117,179,341,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBox IsEnabled="True" GotFocus="txt_allowances_GotFocus" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"  KeyDown="txt_allowances_KeyDown" Style="{StaticResource NewUI}" TabIndex="5" x:Name="txt_allowances"   Margin="117,211,341,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Button TabIndex="3" KeyDown="btn_generate_payroll_KeyDown" Style="{StaticResource Standard}" Click="btn_generate_payroll_Click" x:Name="btn_generate_payroll"  Margin="0,121,169,0" RenderTransformOrigin="-0.172,0.494" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60" Grid.Column="2" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/ordering.ico"/>
+            </Button.Background>
+        </Button>
+        <Label  Style="{StaticResource LabelUI}"   Content="Hours" HorizontalAlignment="Left" Height="27" Margin="53,208,0,0" VerticalAlignment="Top"   Width="60" Grid.Column="2"/>
+        <TextBox IsTabStop="False"  IsEnabled="True" Text="{Binding jpDrAm, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_temp_Err_as_Tooltip_right}"   Style="{StaticResource NewUI}" TabIndex="4" x:Name="txt_wd"   Margin="118,208,189,0" TextWrapping="Wrap"   VerticalAlignment="Top" Grid.Column="2"/>
+        <Button x:Name="btn_posting" Style="{StaticResource Standard}" ToolTip="Payroll Posting" Content="" Click="btn_posting_Click" Margin="110,0,0,16.8" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2" Height="40" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Mimes-application-vnd.ms-excel-icon.png"/>
+            </Button.Background>
+        </Button>
+        <Button  Style="{StaticResource Standard}" ToolTip="Account Registration" Content="" Click="Button_Click" Margin="160,0,0,16.8" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2" Height="40" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/addressbook.ico"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Total" FontSize="18"  Style="{StaticResource LabelUI}"   HorizontalAlignment="Left" Height="36" Margin="37,326,0,0" VerticalAlignment="Top"   Width="78" Grid.Column="2" RenderTransformOrigin="0.513,0.25"/>
+        <TextBlock x:Name="txt_total" FontSize="18" Foreground="Red"   FontWeight="DemiBold"  TextAlignment="Right" HorizontalAlignment="Right" Margin="0,331,179,82" TextWrapping="Wrap" Text="0.00" Width="102" Grid.Column="2"/>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Word Document" x:Name="btn_doc" Content=""  Margin="211,0,0,16.8" RenderTransformOrigin="0.484,0.373"  Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_doc_Click" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Office-Word-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as PDF" x:Name="btn_pdf" Content="" Click="btn_pdf_Click" Margin="261,0,0,16.8" RenderTransformOrigin="0.484,0.373"   Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/pdf-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as XPS" x:Name="btn_xps" Content=""  Margin="311,0,0,16.8" RenderTransformOrigin="0.957,0.373"  Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_xps_Click" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="45" Grid.Column="2" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Folders-OS-Documents-Metro-icon.png"  />
+            </Button.Background>
+
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,620 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:accounts" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2" xmlns:Documents="clr-namespace:System.Windows.Documents;assembly=PresentationUI">
+
+    <Style x:Key="GoldeRodTextBlock" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="DarkGoldenrod"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+    <Style x:Key="GoldeRodText " TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+
+    </Style>
+    <Style x:Key="ColorfullGridCols" TargetType="Grid">
+        <Setter Property="Background" Value="white"/>
+    </Style>
+    
+    <Style x:Key="MenyStyle" TargetType="MenuItem">
+        <Setter Property="Background" Value="Silver"/>
+        <Setter Property="Selector.Background" Value="Silver"/>
+        <Style.Triggers>
+            <Trigger  Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Foreground" Value="Bisque"/>
+            </Trigger>
+            <Trigger  Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Black"/>
+                <Setter Property="Foreground" Value="DarkOliveGreen"/>
+            </Trigger>
+           
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="PPGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="RowStyle" Value="{DynamicResource PPGRowStyle}"/>
+        <Setter Property="AlternatingRowBackground" Value="Chartreuse"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource PPGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="PPGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightYellow"/>
+    </Style>
+    <Style x:Key="PPGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="Ivory"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+        
+
+    </Style>
+
+    <Style x:Key="ACGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="RowStyle" Value="{DynamicResource ACGRowStyle}"/>
+        <Setter Property="AlternatingRowBackground" Value="BlanchedAlmond"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource ACGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="ACGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightYellow"/>
+    </Style>
+    <Style x:Key="ACGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="Ivory"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+
+
+    <Style x:Key="BRRGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="RowStyle" Value="{DynamicResource BRRGRowStyle}"/>
+        <Setter Property="AlternatingRowBackground" Value="BlanchedAlmond"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource BRRGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="BRRRGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightYellow"/>
+    </Style>
+    <Style x:Key="BRRGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="LightGreen"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+    <Style x:Key="BPAYRGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="RowStyle" Value="{DynamicResource BPAYRGRowStyle}"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="AlternatingRowBackground" Value="BlanchedAlmond"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource BPAYRGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="BPAYRGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightYellow"/>
+    </Style>
+    <Style x:Key="BPAYRGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="LightGreen"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+
+    <Style x:Key="PAYRGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="RowStyle" Value="{DynamicResource PAYRGRowStyle}"/>
+        <Setter Property="AlternatingRowBackground" Value="BlanchedAlmond"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource PAYRGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="PAYRGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightSteelBlue"/>
+    </Style>
+    <Style x:Key="PAYRGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="Lavender"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+    <Style x:Key="RCRGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="RowStyle" Value="{DynamicResource RCRGRowStyle}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource RCGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="RCRGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightCyan"/>
+    </Style>
+    <Style x:Key="RCGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="LemonChiffon"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+    <Style x:Key="FotterPanel" TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="AliceBlue"/>
+    </Style>
+
+    <Style x:Key="CBGHeaderStyle" TargetType="{x:Type DataGrid}">
+        <Setter Property="RowStyle" Value="{DynamicResource CBGRowStyle}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ColumnHeaderStyle" Value="{DynamicResource CBGColumnHeaderStyle}" />
+
+    </Style>
+    <Style x:Key="CBGRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="Background" Value="LightCyan"/>
+    </Style>
+    <Style x:Key="CBGColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Background" Value="LightGreen" />
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontWeight" Value="DemiBold" />
+
+    </Style>
+
+
+    <ControlTemplate x:Key="Error_temp_Err_ass_Tooltip" TargetType="{x:Type Control}" >
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Right" Foreground="Green" Text="Invalid !"  ToolTip="{Binding AdornedElement.(Validation.Errors)[0].ErrorContent, ElementName=placeholder}"/>
+            <AdornedElementPlaceholder x:Name="placeholder"/>
+        </DockPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="Error_temp_Err_as_Tooltip_right" TargetType="{x:Type Control}" >
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Right"  HorizontalAlignment="Right" Foreground="Green" Text="Invalid !"  ToolTip="{Binding AdornedElement.(Validation.Errors)[0].ErrorContent, ElementName=placeholder}"/>
+            <AdornedElementPlaceholder x:Name="placeholder"/>
+        </DockPanel>
+    </ControlTemplate>
+    <ControlTemplate  x:Key="Error_tenmp_Error_right_bottom_text" TargetType="{x:Type Control}">
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Right" Foreground="Green" Text="{Binding AdornedElement.(Validation.Errors)[0].ErrorContent, ElementName=placeholder}"/>
+            <AdornedElementPlaceholder x:Name="placeholder"/>
+        </DockPanel>
+    </ControlTemplate>
+    <ControlTemplate  x:Key="Error_tenmp_Error_top_right_text" TargetType="{x:Type Control}">
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Right" Foreground="Green" Text="{Binding AdornedElement.(Validation.Errors)[0].ErrorContent, ElementName=placeholder}"/>
+            <AdornedElementPlaceholder x:Name="placeholder"/>
+        </DockPanel>
+    </ControlTemplate>
+    <Style x:Key="myDataGridUI" TargetType="{x:Type DataGrid}">
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="ComboBoxUI" TargetType="{x:Type ComboBox}">
+        <Setter Property="Background" Value="White"/>
+        <Style.Triggers>
+            <Trigger Property = "IsMouseOver" Value="True">
+                <Setter Property="Background" Value="AliceBlue"/>
+            </Trigger>
+            <Trigger Property = "IsFocused" Value="True">
+                <Setter Property="Background" Value="LightGreen" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TextBoxUI" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Height" Value="27" />
+        <Setter Property="FontSize" Value="14" />
+        <Style.Triggers>
+            <Trigger Property = "IsMouseOver" Value="True">
+                <Setter Property="Background" Value="AliceBlue"/>
+            </Trigger>
+            <Trigger Property = "IsFocused" Value="True">
+                <Setter Property="Background" Value="LightGreen" />
+
+
+            </Trigger>
+
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="LabelUI" TargetType="{x:Type Control}">
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <Style x:Key="Button1" TargetType="Button">
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"  >
+                                <Border Padding="1"      Opacity="130" OpacityMask="AliceBlue" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="NewUI" TargetType="{x:Type Control}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Height" Value="27"/>
+        <Setter Property="Validation.ErrorTemplate" >
+            <Setter.Value>
+                <ControlTemplate >
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Right" Foreground="Red" Text="Invalid !"  ToolTip="{Binding AdornedElement.(Validation.Errors)[0].ErrorContent, ElementName=placeholder}"/>
+                        <AdornedElementPlaceholder x:Name="placeholder"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="White"/>
+        <Style.Triggers>
+            <Trigger Property = "IsMouseOver" Value="True">
+                <Setter Property="Background" Value="AliceBlue"/>
+            </Trigger>
+            <Trigger Property = "IsFocused" Value="True">
+                <Setter Property="Background" Value="LightGreen" />
+            </Trigger>
+
+
+
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MainWindow" TargetType="{x:Type Button}">
+         
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"  >
+                                <!--<Border Padding="1" BorderThickness="1"   BorderBrush="DarkRed" Opacity="30" OpacityMask="Gray" />-->
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <!--<Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"  >
+                                <Border Padding="1" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"   />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>-->
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Standard" TargetType="{x:Type Button}">
+        <Setter Property="BorderBrush" Value="DarkGreen"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"  >
+                                <Border Padding="1" BorderThickness="1"   BorderBrush="DarkRed" Opacity="30" OpacityMask="Gray" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <!--<Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Background="{TemplateBinding Background}"  >
+                                <Border Padding="1" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"   />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>-->
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="GridUI" TargetType="{x:Type DataGrid}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGrid}">
+                    <Grid Background="{TemplateBinding Background}"/>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="Tasks">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image   Source="images/onebit_20.png"   Grid.Column="0" Grid.Row="0"   />
+            <TextBlock   FontSize="13"  Grid.Row="0" Grid.Column="1" Text="{Binding T_LABEL}" VerticalAlignment="Center"  />
+            <Image   Source="images/money.png"    Grid.Column="0" Grid.Row="1" Width="25" Height="25"/>
+            <TextBlock FontSize="13"   Grid.Row="1" Grid.Column="1" Text="{Binding T_AMOUNT, StringFormat=\{0:0.00\}}" VerticalAlignment="Center" />
+
+        </Grid>
+    </DataTemplate>
+
+
+
+    <DataTemplate x:Key="tr_History">
+        <Border x:Name="border" BorderBrush="LightSlateGray" BorderThickness="1" Background="AliceBlue"
+          Padding="5" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="11" Grid.Row="0" Grid.Column="0" Text="V.No   "/>
+                <TextBlock FontSize="11" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding eno}" />
+                <TextBlock FontSize="11" Grid.Row="1" Grid.Column="0" Text="Date   "/>
+                <TextBlock FontSize="11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding edate, StringFormat=\{0:dd/MM/yyyy\}}"/>
+                <TextBlock FontSize="11" Grid.Row="2" Grid.Column="0" Text="Rs     "/>
+                <TextBlock FontSize="11" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding amount, StringFormat=\{0:0.00\}}"/>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="tr_History2">
+        <Border x:Name="border" BorderBrush="LightSlateGray" BorderThickness="1" Background="AliceBlue"
+          Padding="5" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="40"/>
+                    <ColumnDefinition Width="93" />
+
+                </Grid.ColumnDefinitions>
+                <Image Source="images/027.png" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding eno}" />
+                <Image Source="images/calendar.png" Grid.Column="0" Grid.Row="1"/>
+                <TextBlock FontSize="13" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding edate, StringFormat=\{0:dd/MM/yyyy\}}"/>
+                <Image Source="images\Money-icon.png" Grid.Column="0" Grid.Row="2"/>
+                <TextBlock FontSize="13" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding amount, StringFormat=\{0:0.00\}}"/>
+
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <DataTemplate x:Key="tr_History3">
+        <Border x:Name="border" BorderBrush="LightSlateGray" BorderThickness="1" Background="AliceBlue"
+          Padding="5" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="40"/>
+                    <ColumnDefinition Width="80" />
+
+                </Grid.ColumnDefinitions>
+                <Image Source="images/027.png" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding eno}" />
+                <Image Source="images/calendar.png" Grid.Column="0" Grid.Row="1"/>
+                <TextBlock FontSize="13" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding edate, StringFormat=\{0:dd/MM/yyyy\}}"/>
+                <Image Source="images\Money-icon.png" Grid.Column="0" Grid.Row="2"/>
+                <TextBlock FontSize="13" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding amount, StringFormat=\{0:0.00\}}"/>
+
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <DataTemplate x:Key="tr_History5">
+        <Border x:Name="border" BorderBrush="LightSlateGray" BorderThickness="1" Background="AliceBlue"
+          Padding="5" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="40"/>
+                    <ColumnDefinition Width="70" />
+
+                </Grid.ColumnDefinitions>
+                <Image Source="images/027.png" Grid.Column="0" Grid.Row="0"/>
+                <TextBlock FontSize="13" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding eno}" />
+                <Image Source="images/calendar.png" Grid.Column="0" Grid.Row="1"/>
+                <TextBlock FontSize="13" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding edate, StringFormat=\{0:dd/MM/yyyy\}}"/>
+                <Image Source="images\Money-icon.png" Grid.Column="0" Grid.Row="2"/>
+                <TextBlock FontSize="13" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding amount, StringFormat=\{0:0.00\}}"/>
+
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+
+
+    <DataTemplate x:Key="IEX_REPORT">
+        <Border x:Name="border" BorderBrush="LightSlateGray" BorderThickness="1" Background="AliceBlue"
+          Padding="5" Margin="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="11" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding acid}" />
+                <TextBlock FontSize="11" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding Account}"/>
+                <TextBlock FontSize="11" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" Foreground="DarkGreen" Text="{Binding dr_amount, StringFormat=\{0:0.00\}}"/>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <Style x:Key="WidgetStyle" TargetType="{x:Type TextBlock}" >
+        <Setter Property="FontFamily" Value="Trebuchet MS"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+
+
+
+
+    </Style>
+    <Style x:Key="WidgetStyleRed" TargetType="{x:Type TextBlock}" >
+        <Setter Property="FontFamily" Value="Trebuchet MS"/>
+        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <!--<Setter Property="TextAlignment" Value="Right"/>-->
+
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+
+
+
+
+    </Style>
+
+    <Style x:Key="rightAlignedColumn" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextAlignment" Value="Right" />
+    </Style>
+
+
+    <Style x:Key="DocumentViewerStyle1" BasedOn="{x:Null}" TargetType="{x:Type DocumentViewer}">
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="ContextMenu" Value="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerContextMenu, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DocumentViewer}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Focusable="False">
+                        <Grid Background="{TemplateBinding Background}" KeyboardNavigation.TabNavigation="Local">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ContentControl Grid.Column="0" Focusable="{TemplateBinding Focusable}" Grid.Row="0" Style="{DynamicResource ContentControlStyle1}" TabIndex="0"/>
+                            <ScrollViewer x:Name="PART_ContentHost" CanContentScroll="true" Grid.Column="0" Focusable="{TemplateBinding Focusable}" HorizontalScrollBarVisibility="Auto" IsTabStop="true" Grid.Row="1" TabIndex="1"/>
+                            <DockPanel Grid.Row="1">
+                                <FrameworkElement DockPanel.Dock="Right" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"/>
+                                <Rectangle Height="10" Visibility="Visible" VerticalAlignment="top">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                            <LinearGradientBrush.GradientStops>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="#66000000" Offset="0"/>
+                                                    <GradientStop Color="Transparent" Offset="1"/>
+                                                </GradientStopCollection>
+                                            </LinearGradientBrush.GradientStops>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                            </DockPanel>
+                            <ContentControl x:Name="PART_FindToolBarHost" Grid.Column="0" Focusable="{TemplateBinding Focusable}" Grid.Row="2" TabIndex="2"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ContentControlStyle1" TargetType="{x:Type ContentControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <ToolBar Focusable="{TemplateBinding Focusable}" ToolBarTray.IsLocked="True" Language="en-us" KeyboardNavigation.TabNavigation="Continue" Uid="ToolBar_2">
+                        <Button x:Name="PrintButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerPrintButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" Command="ApplicationCommands.Print" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="0" ToolTip="Print (Ctrl+P)" Uid="Button_14" VerticalAlignment="Center" Width="24"/>
+                        <Button x:Name="CopyButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerCopyButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" Command="ApplicationCommands.Copy" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="1" ToolTip="Copy (Ctrl+C)" Uid="Button_15" VerticalAlignment="Center" Width="24"/>
+                        <Separator Uid="Separator_110"/>
+                        <Button x:Name="ZoomInButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerZoomInButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" Command="NavigationCommands.IncreaseZoom" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="3" ToolTip="Increase the size of the content (Ctrl +)" Uid="Button_16" VerticalAlignment="Center" Width="24"/>
+                        <Button x:Name="ZoomOutButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerZoomOutButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" Command="NavigationCommands.DecreaseZoom" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="4" ToolTip="Decrease the size of the content (Ctrl -)" Uid="Button_17" VerticalAlignment="Center" Width="24"/>
+                        <Separator Uid="Separator_111"/>
+                        <Button x:Name="ActualSizeButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerActualSizeButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="100.0" Command="NavigationCommands.Zoom" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="5" ToolTip="100% (Ctrl+1)" Uid="Button_18" VerticalAlignment="Center" Width="24"/>
+                        <Button x:Name="PageWidthButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerPageWidthButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" Command="DocumentViewer.FitToWidthCommand" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="6" ToolTip="Page Width (Ctrl+2)" Uid="Button_19" VerticalAlignment="Center" Width="24"/>
+                        <Button x:Name="WholePageButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerWholePageButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="1" Command="DocumentViewer.FitToMaxPagesAcrossCommand" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="7" ToolTip="Whole Page (Ctrl+3)" Uid="Button_20" VerticalAlignment="Center" Width="24"/>
+                        <Button x:Name="TwoPagesButton" Background="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerTwoPagesButton, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" CommandTarget="{Binding TemplatedParent, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="2" Command="DocumentViewer.FitToMaxPagesAcrossCommand" IsTabStop="True" Margin="2" Padding="2" Style="{DynamicResource {ComponentResourceKey ResourceId=PUIDocumentViewerButtonStyle, TypeInTargetAssembly={x:Type Documents:PresentationUIStyleResources}}}" ToolTipService.ShowOnDisabled="True" TabIndex="8" ToolTip="Two Pages (Ctrl+4)" Uid="Button_21" VerticalAlignment="Center" Width="24"/>
+                        <Separator Uid="Separator_111"/>
+                        <Button x:Name="bt_xps"  Height="30" Width="34"   >
+                            <Button.Background>
+                                <ImageBrush ImageSource="images/Folders-OS-Documents-Metro-icon.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btn_pdf"   Height="31" Width="34"   >
+                            <Button.Background>
+                                <ImageBrush ImageSource="images/pdf-icon.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="btn_doc"  Command="DocumentViewer.Zoom" Width="35" Height="29" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="images/Office-Word-icon (1).png"/>
+                            </Button.Background>
+                        </Button>
+                    </ToolBar>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>
+    

@@ -1,0 +1,73 @@
+﻿<Window x:Class="accounts.AccountManager" KeyDown="Window_KeyDown"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Title="Account Manager" Height="481.991" Width="800" WindowStartupLocation="CenterOwner" Background="LightSteelBlue" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" Grid.Column="1" Text="SELECT ACCOUNTS" Style="{DynamicResource GoldeRodTextBlock }" Foreground="Black" FontWeight="DemiBold"/>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="3" Text="TRANSACTIONS" TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock }" Foreground="Black" FontWeight="DemiBold"/>
+        <ListBox SelectionMode="Multiple" x:Name="lst_ac"  
+                Style="{DynamicResource  prent_and_groups_List}"   Background="LightGreen" SelectedItem="SlectedAccount" ItemsSource="{Binding Accounts}"   Grid.Row="1" Grid.Column="1"  Grid.RowSpan="3"    >
+                
+            <ListBox.ItemTemplate> 
+                
+                <DataTemplate>
+                    <!--<DataTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="IsSelected" Value="True"/>
+                        </Trigger>
+                    </DataTemplate.Triggers>-->
+                    <ListBoxItem>
+                <CheckBox  Click="CheckBox_Click"  IsChecked="{Binding IsChecked}" Content="{Binding Short_Name}"/>
+                    </ListBoxItem>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <DataGrid x:Name="detailGrid" Style="{DynamicResource PAYRGHeaderStyle}" IsReadOnly="True" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="3" Grid.RowSpan="5" AutoGenerateColumns="False" AlternationCount="2" AlternatingRowBackground="Aquamarine">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Account Name" Width="200" Binding="{Binding CrAccount.Name}"/> 
+                <DataGridTextColumn Width="150" Header="Dr.Amount" Binding="{Binding Dr_Amount}"/>
+                <DataGridTextColumn Width="150" Header="Cr.Amount" Binding="{Binding Cr_Amount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel  HorizontalAlignment="Stretch"
+                    Grid.Column="1" Grid.RowSpan="2"  Orientation="Vertical" Grid.Row="4">
+            <TextBlock Height="5" />
+            <ToggleButton x:Name="tbtn_unselectall" Click="tbtn_unselectall_Click" Height="35" FontSize="14" Content="Unselect all"/>
+            <TextBlock Height="5"   />
+            <ToggleButton  x:Name="tbtn_" Height="35" FontSize="14" Content="Select All" Checked="tbtn__Checked"/>
+            <TextBlock Height="3.3" />
+            <CheckBox x:Name="chk_clear_entries" Content="Clear Vouchers also" FontSize="14" ></CheckBox>
+            <Button x:Name="btn_clear" FontSize="14" Height="35" Content="Clear Account" Click="btn_clear_Click"  />
+            <!--<Button x:Name="btn_reset" FontSize="14" Height="35" Content="Reset" Click="btn_reset_Click"  />-->
+
+        </StackPanel>
+
+
+
+    </Grid>
+
+</Window>

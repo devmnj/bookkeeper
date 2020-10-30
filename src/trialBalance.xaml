@@ -1,0 +1,81 @@
+﻿<Window x:Class="accounts.trialBalance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+    KeyDown="Window_KeyDown"
+        Title="Trial Balance" Height="563.606" ResizeMode="CanMinimize" Width="793.772" Background="LightSteelBlue" WindowStartupLocation="CenterOwner" Icon="images/Product-documentation-icon.png" >
+    <Window.Resources>
+
+
+        <CollectionViewSource x:Key="ItemCollectionViewSource" CollectionViewType="{x:Type ListCollectionView}"/>
+        <local:AmountBackGroundConverter  x:Key="RowBackGroundConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Button Style="{StaticResource Standard}"  ToolTip="Refresh Data" x:Name="refresh_data" Content="" Click="refresh_data_Click" Margin="10,446,701.2,14.4" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_12.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+        </Button>
+        <StackPanel Margin="0,446,6,0"  Background="LightCoral" HorizontalAlignment="Right" Width="162" Height="82" VerticalAlignment="Top" >
+            <TextBox x:Name="lblcr" FontWeight="DemiBold" Foreground="Beige" Text="0.00" Background="Transparent" TextAlignment="Right" FontSize="18" BorderThickness="0" Margin="0,0,10,0" Height="28" />
+            <TextBox Foreground="DarkBlue" x:Name="lbldr" Text="0.00" Background="Transparent" TextAlignment="Right" FontWeight="DemiBold" FontSize="18" BorderThickness="0" Margin="0,0,10,0" Height="24" />
+        </StackPanel>
+        <DataGrid IsReadOnly="True" AlternatingRowBackground="LightGoldenrodYellow" AlternationCount="3" Style="{StaticResource PAYRGHeaderStyle}" x:Name="group_acc_grid"  DataContext="{StaticResource ItemCollectionViewSource}"
+            ItemsSource="{Binding}"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False" Margin="8,10,6,0" Height="431" VerticalAlignment="Top">
+
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}" >
+                    <Setter Property="Background" Value="{Binding Item.Cr_Amount, Converter={StaticResource RowBackGroundConverter}, RelativeSource={RelativeSource self}}" />
+                </Style>
+            </DataGrid.RowStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding CrAccount.ID}" Header="ID" FontWeight="Bold"/>
+                <DataGridTextColumn Binding="{Binding CrAccount.Name}" Header="Account" Width="250" />
+                <DataGridTextColumn ElementStyle="{StaticResource rightAlignedColumn}" Binding="{Binding Dr_Amount,StringFormat=\{0:0.00\}}" Header="Dr" Width="140" />
+                <DataGridTextColumn  ElementStyle="{StaticResource rightAlignedColumn}" Binding="{Binding Cr_Amount,StringFormat=\{0:0.00\}}" Header="Cr" Width="140" />
+
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Style="{DynamicResource Standard}" ToolTip="Print" x:Name="btn_print" Content="" Click="btn_print_Click" Margin="86,446,621.2,14.4" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/print.ico"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Word Document" x:Name="btn_doc" Content=""  Margin="166,450,543.2,14.4" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_doc_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Office-Word-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Excel" x:Name="btn_excel" Content=""  Margin="244,450,0,14.4" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Left" Width="70" Click="btn_excel_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Microsoft-Excel-icon (2).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as PDF" x:Name="btn_pdf" Content="" Click="btn_pdf_Click" Margin="319,450,393.2,14.4" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/pdf-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as XPS" x:Name="btn_xps" Content=""  Margin="399,456,319.2,19.4" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_xps_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Folders-OS-Documents-Metro-icon.png"  />
+            </Button.Background>
+
+        </Button>
+
+    </Grid>
+</Window>

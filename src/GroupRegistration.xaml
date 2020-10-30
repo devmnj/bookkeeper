@@ -1,0 +1,102 @@
+﻿<Window x:Class="accounts.GroupRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d" Background="AntiqueWhite" KeyDown="Window_KeyDown"
+        Icon="images/Categories-applications-office-icon.png"
+        Loaded="Window_Loaded"
+        Title="GroupRegistration" Height="358.546" Width="486.292" ResizeMode="CanMinimize" VerticalContentAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <local:CustomConverter x:Key="mycustomconv"/>
+        <local:StringToDoubleValidationRule x:Key="myrule"/>
+
+    </Window.Resources>
+    <Grid Background="AntiqueWhite" Margin="10,10,8,0" Height="299" VerticalAlignment="Top">
+        <Border BorderBrush="Black" BorderThickness="1"/>
+        <Border BorderBrush="#FF3EAAC1" BorderThickness="1" Margin="10,246,10,0" Height="46" VerticalAlignment="Top"/>
+
+        <Label Content="Code" HorizontalAlignment="Left" Height="27" Margin="94,95,0,0" VerticalAlignment="Top"   Width="72"/>
+        <TextBox IsTabStop="False"  HorizontalAlignment="Left" x:Name="txt_code" Height="24" Margin="137,96,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="72" FontSize="11"/>
+        <Label Content="Group Name" HorizontalAlignment="Left" Height="27" Margin="10,6,0,0" VerticalAlignment="Top"   Width="137"  Style="{StaticResource LabelUI}"    />
+        <Label Content="Sub Group&#xA;" HorizontalAlignment="Left" Height="27" Margin="10,55,0,0" VerticalAlignment="Top"   Width="75"  Style="{StaticResource LabelUI}"  />
+        <ListBox KeyUp="sub_list_KeyUp" KeyDown="sub_list_KeyDown" TabIndex="1" Style="{StaticResource prent_and_groups_List}" x:Name="sub_list" ItemsSource="{Binding AccountGroups}" SelectedItem="SelectedGroup"  DisplayMemberPath="Name" Margin="10,82,142,138" FontSize="11" Height="Auto" SelectionChanged="sub_list_SelectionChanged"/>
+        <!--</ListBox>-->
+
+        <Label Content="Cr Lock" HorizontalAlignment="Left" Height="27" Margin="337,5,0,0" VerticalAlignment="Top"   Width="52"  Style="{StaticResource LabelUI}"  />
+        <TextBox  KeyDown="txt_crlock_KeyUp" TabIndex="2" Text="{Binding crLock, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource NewUI}" x:Name="txt_crlock"     Margin="337,30,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="11"/>
+        <TextBox  KeyDown="txt_drlock_KeyUp" TabIndex="3" Text="{Binding drLock, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource NewUI}" x:Name="txt_drlock" Margin="337,81,10,191" TextWrapping="Wrap"   FontSize="11"/>
+        <Label Content="Disc Limit" Height="26" Margin="337,108,52,0" VerticalAlignment="Top"  Style="{StaticResource LabelUI}"  />
+        <TextBox KeyDown="txt_disc_KeyUp" TabIndex="4" Style="{StaticResource NewUI}" Text="{Binding dPercentage, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" x:Name="txt_disc"  Margin="337,134,10,0" TextWrapping="Wrap"    VerticalAlignment="Top" FontSize="11" >
+            <!--<Binding Path="dPercentage" UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                    <local:StringToDoubleValidationRule/>
+                </Binding.ValidationRules>
+            </Binding>-->
+        </TextBox>
+
+
+        <Label Content="Dr Lock" HorizontalAlignment="Left" Height="27" Margin="337,54,0,0" VerticalAlignment="Top"   Width="89"  Style="{StaticResource LabelUI}"  />
+        <ComboBox TabIndex="0"   SelectedItem="SelectedGroup"   ItemsSource="{Binding AccountGroups}"  DisplayMemberPath="Name" Text="{Binding gName}" x:Name="txt_gname" KeyDown="txt_gname_KeyDown"   HorizontalAlignment="Left" Style="{StaticResource prent_and_groups1}" Margin="10,30,0,0" VerticalAlignment="Top" Width="310" IsEditable="True" Background="{x:Null}" BorderBrush="{x:Null}" SelectionChanged="txt_gname_SelectionChanged" Height="27"/>
+        <Button Style="{StaticResource Standard}" Click="btn_save_Click" ToolTip="Save"  x:Name="btn_save"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="61,252,0,-40" BorderBrush="#FF837D7D">
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"    />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}"  Click="btn_reset_Click"  x:Name="btn_Reset" ToolTip="Reset" Content="" Height="35" VerticalAlignment="Top"  Margin="15,252,0,-40" RenderTransformOrigin="0.512,0.571" BorderBrush="#FFA8A2A2" HorizontalAlignment="Left" Width="43" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/clipboard.ico"    />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}"  Click="btn_edit_Click" ToolTip="Update"  x:Name="btn_update"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="106,252,0,-40" RenderTransformOrigin="-0.5,0.486" BorderBrush="#FF978888">
+            <Button.Background>
+                <ImageBrush ImageSource="images/tick.ico"    />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_del_Click" ToolTip="Delete"  x:Name="btn_delete"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="151,252,0,-40" RenderTransformOrigin="-0.325,0.429" BorderBrush="#FFA49595">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_17.png"    />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}"  Click="btn_report_Click" ToolTip="Report"  x:Name="btn_report"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="196,252,0,-40" RenderTransformOrigin="0.45,0.429" BorderBrush="#FF978888">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Places-folder-green-icon.png"    />
+            </Button.Background>
+        </Button>
+        <Label Content="Narration" HorizontalAlignment="Left" Height="27" Margin="10,161,0,0" VerticalAlignment="Top"   Width="75"  Style="{StaticResource LabelUI}"  />
+        <TextBox  KeyDown="txt_narration_KeyDown" TabIndex="6" Text="{Binding crLock, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource NewUI}" x:Name="txt_narration"  Height="55" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="11" Margin="10,186,142,0"/>
+        <Label Content="Catagory" HorizontalAlignment="Left" Height="27" Margin="337,167,0,0" VerticalAlignment="Top"   Width="75"  Style="{StaticResource LabelUI}"  />
+        <ComboBox TabIndex="5"   SelectedItem="{Binding g_name}"   ItemsSource="{Binding ''}"  Text="{Binding gName}" x:Name= "cmb_catagory" KeyDown="cmb_catagory_KeyDown" Style="{StaticResource NewUI}" Margin="0,199,10,0" VerticalAlignment="Top" IsEditable="True" Background="{x:Null}" BorderBrush="{x:Null}" SelectionChanged="txt_gname_SelectionChanged" HorizontalAlignment="Right" Width="115">
+            <ComboBoxItem>RECEIVABLE</ComboBoxItem>
+            <ComboBoxItem>PAYABLE</ComboBoxItem>
+            <ComboBoxItem>NONE</ComboBoxItem>
+
+
+        </ComboBox>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show Previous Payment" x:Name="btn_moveprevious" Click="btn_moveprevious_Click" Margin="0,259,85,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Right" Width="27" Height="24" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/back.png" x:Name="btn_login1"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" x:Name="btn_movenext" BorderBrush="{x:Null}" ToolTip="Show Next Payment" Click="btn_movenext_Click" Margin="0,259,53,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Right" Width="27" Height="24" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/go.png" x:Name="btn_login2"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" Click="btn_movelast_Click" ToolTip="Show Last Payment" x:Name="btn_movelast" Content=" " Margin="0,259,21,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Right" Width="27" Height="24" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/up.png" x:Name="btn_login4"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show First Payment" x:Name="btn_movefirst" Click="btn_movefirst_Click" Content=" " Margin="0,259,117,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Right" Width="27" Height="24" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/down.png" x:Name="btn_login5"  />
+            </Button.Background>
+
+
+        </Button>
+
+    </Grid>
+</Window>

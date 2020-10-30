@@ -1,0 +1,48 @@
+﻿<Window x:Class="accounts.Company"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Icon="images\iconfinder_Info_131908.png"
+        ResizeMode="CanMinimize"
+        KeyDown="Window_KeyDown"
+        Title="Company" Height="452" Width="706"  Background="LightBlue" WindowStartupLocation="CenterOwner" WindowState="Normal">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+            <TextBlock x:Name="txt_id" HorizontalAlignment="Left" Height="29" Margin="590,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38"/>
+        </Border>
+        <Label  Style="{StaticResource LabelUI}" Content="Company Name" Height="27" Margin="12,21,578,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Land Mark" HorizontalAlignment="Right" Height="27" Margin="0,53,578,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Place" HorizontalAlignment="Right" Height="27" Margin="0,85,579,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Street" HorizontalAlignment="Right" Height="27" Margin="0,117,579,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Post" HorizontalAlignment="Right" Height="27" Margin="0,149,579,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="PIN/ZIP Code" HorizontalAlignment="Right" Height="27" Margin="0,181,578,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="TAX ID" HorizontalAlignment="Right" Height="27" Margin="0,213,579,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="DLNO" HorizontalAlignment="Right" Height="27" Margin="0,245,578,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Email" HorizontalAlignment="Right" Height="27" Margin="0,310,582,0" VerticalAlignment="Top" RenderTransformOrigin="0.522,0.407"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Offiece No" HorizontalAlignment="Right" Height="27" Margin="0,342,578,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="Mobile" HorizontalAlignment="Right" Height="27" Margin="0,374,579,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}" Content="EXP.NO" HorizontalAlignment="Right" Height="27" Margin="0,278,579,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_company" TabIndex="0"   Style="{StaticResource NewUI}" KeyDown="txt_company_KeyDown"   Margin="124,21,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_landmark" TabIndex="1"   Style="{StaticResource NewUI}" KeyDown="txt_landmark_KeyDown"   Margin="124,53,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_place" TabIndex="2"   Style="{StaticResource NewUI}" KeyDown="txt_place_KeyDown"   Margin="124,85,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="376"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_street" TabIndex="3"   Style="{StaticResource NewUI}" KeyDown="txt_street_KeyDown"   Margin="124,117,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="376"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_post" TabIndex="4"   Style="{StaticResource NewUI}" KeyDown="txt_post_KeyDown"   Margin="124,149,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="376"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_zipcode" TabIndex="5"   Style="{StaticResource NewUI}" KeyDown="txt_zipcode_KeyDown"   Margin="124,181,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="376"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_taxid" TabIndex="6"   Style="{StaticResource NewUI}" KeyDown="txt_taxid_KeyDown"   Margin="124,213,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="376"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_dlno" TabIndex="7"   Style="{StaticResource NewUI}" KeyDown="txt_dlno_KeyDown"   Margin="124,245,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_expno" TabIndex="8"   Style="{StaticResource NewUI}" KeyDown="txt_expno_KeyDown"   Margin="124,278,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_email" TabIndex="9"   Style="{StaticResource NewUI}" KeyDown="txt_email_KeyDown"   Margin="124,310,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_officeno" TabIndex="10"   Style="{StaticResource NewUI}" KeyDown="txt_officeno_KeyDown"   Margin="124,342,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_mobile" TabIndex="11"   Style="{StaticResource NewUI}" KeyDown="txt_mobile_KeyDown"   Margin="124,374,0,0" TextWrapping="Wrap" Text=" " RenderTransformOrigin="0.487,0.63" HorizontalAlignment="Left" Width="436"   VerticalAlignment="Top"/>
+        <Button Style="{StaticResource Standard}" Click="btn_save_Click" ToolTip="Save" TabIndex="12" x:Name="btn_save"   Content=""  Margin="637,23,18,360" BorderBrush="#FF837D7D">
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"    />
+            </Button.Background>
+        </Button>
+        <Label HorizontalAlignment="Right" Style="{StaticResource LabelUI}" Content="Financial Year" Height="27" Margin="578,61,12,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="cal_fyear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="505,83,0,0" Height="155" Width="177" TabIndex="12" />
+    </Grid>
+</Window>

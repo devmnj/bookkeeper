@@ -1,0 +1,515 @@
+G:\repos\c#\accounts\bin\Debug\accounts.exe.config
+G:\repos\c#\accounts\bin\Debug\accounts.exe
+G:\repos\c#\accounts\bin\Debug\accounts.pdb
+G:\repos\c#\accounts\obj\Debug\accounts.csprojAssemblyReference.cache
+G:\repos\c#\accounts\obj\Debug\accountRegistration.g.cs
+G:\repos\c#\accounts\obj\Debug\CashBook1.g.cs
+G:\repos\c#\accounts\obj\Debug\DayBook.g.cs
+G:\repos\c#\accounts\obj\Debug\EmpDirectory.g.cs
+G:\repos\c#\accounts\obj\Debug\EmployeeRegistration.g.cs
+G:\repos\c#\accounts\obj\Debug\GroupRegistration.g.cs
+G:\repos\c#\accounts\obj\Debug\journalposting.g.cs
+G:\repos\c#\accounts\obj\Debug\loginPage.g.cs
+G:\repos\c#\accounts\obj\Debug\MainWindow.g.cs
+G:\repos\c#\accounts\obj\Debug\MiniReportPage.g.cs
+G:\repos\c#\accounts\obj\Debug\Payment.g.cs
+G:\repos\c#\accounts\obj\Debug\PaymentReport.g.cs
+G:\repos\c#\accounts\obj\Debug\PayrollADAL.g.cs
+G:\repos\c#\accounts\obj\Debug\Receipt.g.cs
+G:\repos\c#\accounts\obj\Debug\ReceiptReport.g.cs
+G:\repos\c#\accounts\obj\Debug\ReportForm.g.cs
+G:\repos\c#\accounts\obj\Debug\ReportListTemplateForm.g.cs
+G:\repos\c#\accounts\obj\Debug\App.g.cs
+G:\repos\c#\accounts\obj\Debug\accounts_MarkupCompile.cache
+G:\repos\c#\accounts\obj\Debug\accounts_MarkupCompile.lref
+G:\repos\c#\accounts\obj\Debug\App.baml
+G:\repos\c#\accounts\obj\Debug\accountRegistration.baml
+G:\repos\c#\accounts\obj\Debug\CashBook1.baml
+G:\repos\c#\accounts\obj\Debug\DayBook.baml
+G:\repos\c#\accounts\obj\Debug\EmpDirectory.baml
+G:\repos\c#\accounts\obj\Debug\EmployeeRegistration.baml
+G:\repos\c#\accounts\obj\Debug\GroupRegistration.baml
+G:\repos\c#\accounts\obj\Debug\journalposting.baml
+G:\repos\c#\accounts\obj\Debug\loginPage.baml
+G:\repos\c#\accounts\obj\Debug\MainWindow.baml
+G:\repos\c#\accounts\obj\Debug\MiniReportPage.baml
+G:\repos\c#\accounts\obj\Debug\Payment.baml
+G:\repos\c#\accounts\obj\Debug\PaymentReport.baml
+G:\repos\c#\accounts\obj\Debug\PayrollADAL.baml
+G:\repos\c#\accounts\obj\Debug\Receipt.baml
+G:\repos\c#\accounts\obj\Debug\ReceiptReport.baml
+G:\repos\c#\accounts\obj\Debug\ReportForm.baml
+G:\repos\c#\accounts\obj\Debug\ReportListTemplateForm.baml
+G:\repos\c#\accounts\obj\Debug\Template_Styles.baml
+G:\repos\c#\accounts\obj\Debug\accounts.g.resources
+G:\repos\c#\accounts\obj\Debug\accounts.MDIParent1.resources
+G:\repos\c#\accounts\obj\Debug\accounts.Properties.Resources.resources
+G:\repos\c#\accounts\obj\Debug\accounts.csproj.GenerateResource.cache
+G:\repos\c#\accounts\obj\Debug\accounts.exe
+G:\repos\c#\accounts\obj\Debug\accounts.pdb
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accountRegistration.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\account_List.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\BankPayment.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\bankReceipt.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\bpReport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\brReport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\CashBook1.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ChangeDate.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ComplaintRegistration.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\DayBook.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\EmpDirectory.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\EmployeeRegistration.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\GroupList.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\GroupRegistration.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Income_Expense_Statement.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\journalposting.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\loginPage.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\MainWindow.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\MiniReportPage.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\PayableandReceivables.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Payment.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\PaymentReport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payroll.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payrollreport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payroll_payments_deductions.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ppReport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReccurringEntries.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Receipt.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReceiptReport.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReportForm.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReportListTemplateForm.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ServiceRegistration.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\trialBalance.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Window1.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\App.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts_MarkupCompile.cache
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts_MarkupCompile.lref
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\accounts.exe.config
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\accounts.exe
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\accounts.pdb
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Castle.Core.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\CodeReason.Reports.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\FakeItEasy.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Castle.Core.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\CodeReason.Reports.pdb
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\FakeItEasy.xml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.csprojAssemblyReference.cache
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\BPReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\CBReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\DBReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\DynamicReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\JReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\PAYReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\RCReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\DayBookReportViewer.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\App.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accountRegistration.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\account_List.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\BankPayment.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\bankReceipt.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\bpReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\brReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\CashBook1.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ChangeDate.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ComboxStyle.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ComplaintRegistration.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\DayBook.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\DayBookReportViewer.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\EmpDirectory.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\EmployeeRegistration.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\GroupList.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\GroupRegistration.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Income_Expense_Statement.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\journalposting.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\loginPage.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\MainWindow.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\MiniReportPage.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\PayableandReceivables.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Payment.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\PaymentReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payroll.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payrollreport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\payroll_payments_deductions.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ppReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReccurringEntries.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Receipt.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReceiptReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReportForm.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ReportListTemplateForm.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\ServiceRegistration.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Template_Styles.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\trialBalance.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Window1.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.g.resources
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.MDIParent1.resources
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.Properties.Resources.resources
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.csproj.GenerateResource.cache
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.csproj.CopyComplete
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.exe
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\accounts.pdb
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\BRReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\PRReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\PRVReport.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Company.g.cs
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Company.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\RCPrint.baml
+E:\DeveloperM\zipla\repos\c#\accounts\obj\Debug\Templates\PAPrint.baml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\GemBox.Document.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\GemBox.Spreadsheet.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.Charting.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.Xps.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\GemBox.Document.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\GemBox.Spreadsheet.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.Charting.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\de\PdfSharp.resources.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\de\PdfSharp.Charting.resources.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Apitron.PDF.Kit.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp-wpf.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.Charting-wpf.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Apitron.PDF.Kit.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp-wpf.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\PdfSharp.Charting-wpf.xml
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\de\PdfSharp-wpf.resources.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\de\PdfSharp.Charting-wpf.resources.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Reports.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Xceed.Document.NET.dll
+E:\DeveloperM\zipla\repos\c#\accounts\bin\Debug\Xceed.Words.NET.dll
+E:\C# Projects\accounts\bin\Debug\DocTemplates\ACCOUNTLIST.dotx
+E:\C# Projects\accounts\bin\Debug\bookkeeper.exe.config
+E:\C# Projects\accounts\bin\Debug\bookkeeper.exe.manifest
+E:\C# Projects\accounts\bin\Debug\bookkeeper.application
+E:\C# Projects\accounts\bin\Debug\bookkeeper.exe
+E:\C# Projects\accounts\bin\Debug\bookkeeper.pdb
+E:\C# Projects\accounts\bin\Debug\Castle.Core.dll
+E:\C# Projects\accounts\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+E:\C# Projects\accounts\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+E:\C# Projects\accounts\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+E:\C# Projects\accounts\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+E:\C# Projects\accounts\bin\Debug\Reports.dll
+E:\C# Projects\accounts\bin\Debug\Spire.Common.dll
+E:\C# Projects\accounts\bin\Debug\Spire.Doc.dll
+E:\C# Projects\accounts\bin\Debug\Spire.License.dll
+E:\C# Projects\accounts\bin\Debug\Spire.Pdf.dll
+E:\C# Projects\accounts\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\C# Projects\accounts\bin\Debug\Xceed.Document.NET.dll
+E:\C# Projects\accounts\bin\Debug\Xceed.Words.NET.dll
+E:\C# Projects\accounts\bin\Debug\Spire.XLS.dll
+E:\C# Projects\accounts\bin\Debug\Microsoft.mshtml.dll
+E:\C# Projects\accounts\bin\Debug\Castle.Core.xml
+E:\C# Projects\accounts\bin\Debug\Spire.Common.xml
+E:\C# Projects\accounts\bin\Debug\Spire.Doc.xml
+E:\C# Projects\accounts\bin\Debug\Spire.License.xml
+E:\C# Projects\accounts\bin\Debug\Spire.XLS.xml
+E:\C# Projects\accounts\obj\Debug\accountRegistration.g.cs
+E:\C# Projects\accounts\obj\Debug\account_List.g.cs
+E:\C# Projects\accounts\obj\Debug\BankPayment.g.cs
+E:\C# Projects\accounts\obj\Debug\bankReceipt.g.cs
+E:\C# Projects\accounts\obj\Debug\bpReport.g.cs
+E:\C# Projects\accounts\obj\Debug\brReport.g.cs
+E:\C# Projects\accounts\obj\Debug\CashBook1.g.cs
+E:\C# Projects\accounts\obj\Debug\ChangeDate.g.cs
+E:\C# Projects\accounts\obj\Debug\Company.g.cs
+E:\C# Projects\accounts\obj\Debug\ComplaintRegistration.g.cs
+E:\C# Projects\accounts\obj\Debug\DayBook.g.cs
+E:\C# Projects\accounts\obj\Debug\dbconfiguration.g.cs
+E:\C# Projects\accounts\obj\Debug\EmpDirectory.g.cs
+E:\C# Projects\accounts\obj\Debug\EmployeeRegistration.g.cs
+E:\C# Projects\accounts\obj\Debug\GroupList.g.cs
+E:\C# Projects\accounts\obj\Debug\GroupRegistration.g.cs
+E:\C# Projects\accounts\obj\Debug\Income_Expense_Statement.g.cs
+E:\C# Projects\accounts\obj\Debug\journalposting.g.cs
+E:\C# Projects\accounts\obj\Debug\Loginform.g.cs
+E:\C# Projects\accounts\obj\Debug\loginPage.g.cs
+E:\C# Projects\accounts\obj\Debug\MainWindow.g.cs
+E:\C# Projects\accounts\obj\Debug\MiniReportPage.g.cs
+E:\C# Projects\accounts\obj\Debug\PackageManager.g.cs
+E:\C# Projects\accounts\obj\Debug\PayableandReceivables.g.cs
+E:\C# Projects\accounts\obj\Debug\Payment.g.cs
+E:\C# Projects\accounts\obj\Debug\PaymentReport.g.cs
+E:\C# Projects\accounts\obj\Debug\payroll.g.cs
+E:\C# Projects\accounts\obj\Debug\payrollreport.g.cs
+E:\C# Projects\accounts\obj\Debug\payroll_payments_deductions.g.cs
+E:\C# Projects\accounts\obj\Debug\ppReport.g.cs
+E:\C# Projects\accounts\obj\Debug\PrintDialogue.g.cs
+E:\C# Projects\accounts\obj\Debug\ReccurringEntries.g.cs
+E:\C# Projects\accounts\obj\Debug\Receipt.g.cs
+E:\C# Projects\accounts\obj\Debug\ReceiptReport.g.cs
+E:\C# Projects\accounts\obj\Debug\ReportForm.g.cs
+E:\C# Projects\accounts\obj\Debug\ReportListTemplateForm.g.cs
+E:\C# Projects\accounts\obj\Debug\ServiceRegistration.g.cs
+E:\C# Projects\accounts\obj\Debug\trialBalance.g.cs
+E:\C# Projects\accounts\obj\Debug\Window1.g.cs
+E:\C# Projects\accounts\obj\Debug\App.g.cs
+E:\C# Projects\accounts\obj\Debug\bookkeeper_Content.g.cs
+E:\C# Projects\accounts\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\C# Projects\accounts\obj\Debug\bookkeeper_MarkupCompile.cache
+E:\C# Projects\accounts\obj\Debug\bookkeeper_MarkupCompile.lref
+E:\C# Projects\accounts\obj\Debug\App.baml
+E:\C# Projects\accounts\obj\Debug\accountRegistration.baml
+E:\C# Projects\accounts\obj\Debug\account_List.baml
+E:\C# Projects\accounts\obj\Debug\BankPayment.baml
+E:\C# Projects\accounts\obj\Debug\bankReceipt.baml
+E:\C# Projects\accounts\obj\Debug\bpReport.baml
+E:\C# Projects\accounts\obj\Debug\brReport.baml
+E:\C# Projects\accounts\obj\Debug\CashBook1.baml
+E:\C# Projects\accounts\obj\Debug\ChangeDate.baml
+E:\C# Projects\accounts\obj\Debug\ComboxStyle.baml
+E:\C# Projects\accounts\obj\Debug\Company.baml
+E:\C# Projects\accounts\obj\Debug\ComplaintRegistration.baml
+E:\C# Projects\accounts\obj\Debug\DayBook.baml
+E:\C# Projects\accounts\obj\Debug\dbconfiguration.baml
+E:\C# Projects\accounts\obj\Debug\EmpDirectory.baml
+E:\C# Projects\accounts\obj\Debug\EmployeeRegistration.baml
+E:\C# Projects\accounts\obj\Debug\GroupList.baml
+E:\C# Projects\accounts\obj\Debug\GroupRegistration.baml
+E:\C# Projects\accounts\obj\Debug\Income_Expense_Statement.baml
+E:\C# Projects\accounts\obj\Debug\journalposting.baml
+E:\C# Projects\accounts\obj\Debug\Loginform.baml
+E:\C# Projects\accounts\obj\Debug\loginPage.baml
+E:\C# Projects\accounts\obj\Debug\MainWindow.baml
+E:\C# Projects\accounts\obj\Debug\MiniReportPage.baml
+E:\C# Projects\accounts\obj\Debug\PackageManager.baml
+E:\C# Projects\accounts\obj\Debug\PayableandReceivables.baml
+E:\C# Projects\accounts\obj\Debug\Payment.baml
+E:\C# Projects\accounts\obj\Debug\PaymentReport.baml
+E:\C# Projects\accounts\obj\Debug\payroll.baml
+E:\C# Projects\accounts\obj\Debug\payrollreport.baml
+E:\C# Projects\accounts\obj\Debug\payroll_payments_deductions.baml
+E:\C# Projects\accounts\obj\Debug\ppReport.baml
+E:\C# Projects\accounts\obj\Debug\PrintDialogue.baml
+E:\C# Projects\accounts\obj\Debug\ReccurringEntries.baml
+E:\C# Projects\accounts\obj\Debug\Receipt.baml
+E:\C# Projects\accounts\obj\Debug\ReceiptReport.baml
+E:\C# Projects\accounts\obj\Debug\ReportForm.baml
+E:\C# Projects\accounts\obj\Debug\ReportListTemplateForm.baml
+E:\C# Projects\accounts\obj\Debug\ServiceRegistration.baml
+E:\C# Projects\accounts\obj\Debug\Template_Styles.baml
+E:\C# Projects\accounts\obj\Debug\trialBalance.baml
+E:\C# Projects\accounts\obj\Debug\Window1.baml
+E:\C# Projects\accounts\obj\Debug\bookkeeper.g.resources
+E:\C# Projects\accounts\obj\Debug\accounts.MDIParent1.resources
+E:\C# Projects\accounts\obj\Debug\accounts.Properties.Resources.resources
+E:\C# Projects\accounts\obj\Debug\accounts.csproj.GenerateResource.cache
+E:\C# Projects\accounts\obj\Debug\bookkeeper.TrustInfo.xml
+E:\C# Projects\accounts\obj\Debug\bookkeeper.exe.manifest
+E:\C# Projects\accounts\obj\Debug\bookkeeper.application
+E:\C# Projects\accounts\obj\Debug\accounts.csproj.CopyComplete
+E:\C# Projects\accounts\obj\Debug\bookkeeper.exe
+E:\C# Projects\accounts\obj\Debug\bookkeeper.pdb
+E:\C# Projects\accounts\obj\Debug\accounts.csprojAssemblyReference.cache
+E:\C# Projects\accounts\obj\Debug\doct_registration.g.cs
+E:\C# Projects\accounts\obj\Debug\doct_registration.baml
+E:\C# Projects\codehats-bookkeeper\bin\Debug\DocTemplates\ACCOUNTLIST.dotx
+E:\C# Projects\codehats-bookkeeper\bin\Debug\bookkeeper.exe.config
+E:\C# Projects\codehats-bookkeeper\bin\Debug\bookkeeper.exe.manifest
+E:\C# Projects\codehats-bookkeeper\bin\Debug\bookkeeper.application
+E:\C# Projects\codehats-bookkeeper\bin\Debug\bookkeeper.exe
+E:\C# Projects\codehats-bookkeeper\bin\Debug\bookkeeper.pdb
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Castle.Core.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.Common.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.Doc.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.License.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.Pdf.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Xceed.Document.NET.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Xceed.Words.NET.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.XLS.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Microsoft.mshtml.dll
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Castle.Core.xml
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.Common.xml
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.Doc.xml
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.License.xml
+E:\C# Projects\codehats-bookkeeper\bin\Debug\Spire.XLS.xml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\About.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\AccountManager.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accountRegistration.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\account_List.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\BankPayment.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bankReceipt.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bpReport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\brReport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\CashBook1.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ChangeDate.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Company.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\DayBook.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\dbconfiguration.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\EmployeeRegistration.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\GroupList.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\GroupRegistration.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\journalposting.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\MainWindow.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PackageManager.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PayableandReceivables.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Payment.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PaymentReport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payroll.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payrollreport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payroll_payments_deductions.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ppReport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PrintDialogue.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Receipt.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ReceiptReport.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ReportListTemplateForm.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\trialBalance.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Window1.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\App.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper_Content.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper_MarkupCompile.cache
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper_MarkupCompile.lref
+E:\C# Projects\codehats-bookkeeper\obj\Debug\App.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\About.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\AccountManager.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accountRegistration.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\account_List.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\BankPayment.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bankReceipt.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bpReport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\brReport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\CashBook1.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ChangeDate.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ComboxStyle.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Company.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\DayBook.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\dbconfiguration.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\EmployeeRegistration.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\GroupList.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\GroupRegistration.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\journalposting.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\MainWindow.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PackageManager.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PayableandReceivables.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Payment.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PaymentReport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payroll.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payrollreport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\payroll_payments_deductions.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ppReport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\PrintDialogue.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Receipt.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ReceiptReport.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\ReportListTemplateForm.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\styles.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Template_Styles.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\trialBalance.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\Window1.baml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.g.resources
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accounts.MDIParent1.resources
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accounts.Properties.Resources.resources
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accounts.csproj.GenerateResource.cache
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.TrustInfo.xml
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.exe.manifest
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.application
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accounts.csproj.CopyComplete
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.exe
+E:\C# Projects\codehats-bookkeeper\obj\Debug\bookkeeper.pdb
+E:\C# Projects\codehats-bookkeeper\obj\Debug\accounts.csprojAssemblyReference.cache
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\DocTemplates\ACCOUNTLIST.dotx
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\bookkeeper.exe.config
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\bookkeeper.exe.manifest
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\bookkeeper.application
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\bookkeeper.exe
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\bookkeeper.pdb
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Castle.Core.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.Common.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.Doc.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.License.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.Pdf.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Xceed.Document.NET.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Xceed.Words.NET.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.XLS.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Microsoft.mshtml.dll
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Castle.Core.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.Common.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.Doc.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.License.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\bin\Debug\Spire.XLS.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accounts.csprojAssemblyReference.cache
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\About.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\AccountManager.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accountRegistration.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\account_List.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\BankPayment.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bankReceipt.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bpReport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\brReport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\CashBook1.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ChangeDate.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Company.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\DayBook.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\dbconfiguration.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\EmployeeRegistration.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\GroupList.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\GroupRegistration.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\journalposting.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\MainWindow.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PackageManager.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PayableandReceivables.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Payment.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PaymentReport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payroll.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payrollreport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payroll_payments_deductions.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ppReport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PrintDialogue.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Receipt.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ReceiptReport.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ReportListTemplateForm.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\trialBalance.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Window1.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\App.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper_Content.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper_MarkupCompile.cache
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper_MarkupCompile.lref
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\App.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\About.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\AccountManager.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accountRegistration.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\account_List.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\BankPayment.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bankReceipt.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bpReport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\brReport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\CashBook1.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ChangeDate.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ComboxStyle.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Company.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\DayBook.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\dbconfiguration.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\EmployeeRegistration.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\GroupList.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\GroupRegistration.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\journalposting.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\MainWindow.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PackageManager.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PayableandReceivables.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Payment.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PaymentReport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payroll.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payrollreport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\payroll_payments_deductions.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ppReport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\PrintDialogue.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Receipt.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ReceiptReport.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\ReportListTemplateForm.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\styles.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Template_Styles.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\trialBalance.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\Window1.baml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.g.resources
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accounts.MDIParent1.resources
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accounts.Properties.Resources.resources
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accounts.csproj.GenerateResource.cache
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.TrustInfo.xml
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.exe.manifest
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.application
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\accounts.csproj.CopyComplete
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.exe
+E:\Python Projects\GitHub_projects\C#\bookkeeper\src\obj\Debug\bookkeeper.pdb

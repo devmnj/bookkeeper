@@ -1,0 +1,28 @@
+﻿<Window x:Class="accounts.ComplaintRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Title="ComplaintRegistration" Height="476.667" Width="760" WindowStartupLocation="CenterOwner" Background="LightBlue" >
+    <Grid>
+        <Label  Style="{StaticResource LabelUI}"   Content="Date" HorizontalAlignment="Left" Height="27" Margin="10,45,0,0" VerticalAlignment="Top"   Width="47"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Invoice" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top"   Width="52"/>
+        <TextBox IsReadOnly="True" IsTabStop="False" Style="{StaticResource NewUI}"   x:Name="txt_jno" HorizontalAlignment="Left" Margin="62,13,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="73"/>
+        <DatePicker KeyUp="dtp_jdate_KeyUp"  Style="{StaticResource NewUI}"    x:Name="dtp_jdate" TabIndex="0" HorizontalAlignment="Left"   Margin="62,45,0,0" VerticalAlignment="Top" Width="156"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Name" HorizontalAlignment="Left" Height="27" Margin="249,10,0,0" VerticalAlignment="Top"   Width="58"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Mobile" HorizontalAlignment="Left" Height="27" Margin="249,45,0,0" VerticalAlignment="Top"   Width="58"/>
+        <TextBox   x:Name="txt_unitp1"   Margin="324,13,177,0" TextWrapping="Wrap" Text="{Binding rcDAmount, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Height="26"/>
+        <TextBox   x:Name="txt_unitp1_Copy"   Margin="324,44,177,0" TextWrapping="Wrap" Text="{Binding rcDAmount, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Height="26"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Delivery Date" HorizontalAlignment="Left" Height="27" Margin="18,314,0,0" VerticalAlignment="Top"   Width="109"/>
+        <DatePicker KeyUp="dtp_jdate_KeyUp"  Style="{StaticResource NewUI}"    x:Name="dtp_jdate_Copy" TabIndex="0" HorizontalAlignment="Left"   Margin="18,343,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox   x:Name="txt_unitp1_Copy1"   Margin="213,314,16,0" TextWrapping="Wrap" Text="{Binding rcDAmount, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Height="56"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Summary" HorizontalAlignment="Left" Height="27" Margin="132,314,0,0" VerticalAlignment="Top"   Width="76"/>
+        <DataGrid HorizontalAlignment="Left" Height="135" Margin="46,90,0,0" CanUserAddRows="True" VerticalAlignment="Top" Width="395">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,69 @@
+﻿<Window x:Class="accounts.ReccurringEntries"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Title="Task Master"    Icon="images/cash.png" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner"     Height="414" Width="601.886" Background="LightGoldenrodYellow" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <CollectionViewSource x:Key="gridViewsource" CollectionViewType="ListCollectionView"/>
+
+    </Window.Resources>
+    <Grid HorizontalAlignment="Left" Width="582" Margin="10,0,0,7" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="505*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFF4F4F5" Margin="402,115,0,0" Stroke="Black" Height="206" VerticalAlignment="Top" HorizontalAlignment="Left" Width="166" Grid.ColumnSpan="2"/>
+
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="253" Margin="0,115,0,0" Stroke="Black" VerticalAlignment="Top" Width="395"/>
+
+        <DataGrid Style="{StaticResource myDataGridUI}" MouseDoubleClick="taskGrid_MouseDoubleClick" HorizontalAlignment="Left" x:Name="taskGrid"  ItemsSource="{Binding}" Height="100" Margin="0,10,0,0" VerticalAlignment="Top" Width="568" SelectionChanged="DataGrid_SelectionChanged" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="R.No" IsReadOnly="True" Binding="{Binding ID}" />
+                <DataGridTextColumn Header="Entryno"  IsReadOnly="True" Binding="{Binding ENO}" />
+                <DataGridTextColumn Header="Entry Name" IsReadOnly="True" Binding="{Binding ENTRY}" Width="150" />
+                <DataGridTextColumn Header="Mode" Width="100" IsReadOnly="True" Binding="{Binding MODE}" />
+                <DataGridCheckBoxColumn Header="Active" Width="60" IsReadOnly="True" Binding="{Binding ACTIVE}" />
+                <DataGridTextColumn Header="Last Palyed"  Width="90" IsReadOnly="True" Binding="{Binding LAST_TASK_DATE}"  />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <RadioButton x:Name="opt_daily" IsChecked="True"  Content="Daily" HorizontalAlignment="Left" Height="21" Margin="309,153,0,0" VerticalAlignment="Top" Width="77"/>
+        <RadioButton x:Name="opt_weekly" Content="Weekly" HorizontalAlignment="Left" Height="21" Margin="309,179,0,0" VerticalAlignment="Top" Width="58"/>
+        <RadioButton x:Name="opt_monthly" Content="Monthly" HorizontalAlignment="Left" Height="21" Margin="309,205,0,0" VerticalAlignment="Top" Width="64"/>
+        <ListBox x:Name="lst_mode_config" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="135" Margin="10,146,0,0" VerticalAlignment="Top" Width="110"/>
+        <Calendar MouseDoubleClick="cal_modedates_MouseDoubleClick" KeyDown="cal_modedates_KeyDown"  TouchDown="cal_modedates_TouchDown" x:Name="cal_modedates" HorizontalAlignment="Left" Margin="125,144,0,0" VerticalAlignment="Top"/>
+        <Label Style="{StaticResource LabelUI}" Content="Mode Configurations" HorizontalAlignment="Left" Height="31" Margin="110,115,0,0" VerticalAlignment="Top" Width="211" FontFamily="Trebuchet MS" FontSize="14"/>
+        <Label Style="{StaticResource LabelUI}" Content="Holidays" HorizontalAlignment="Left" Height="31" Margin="416,115,0,0" VerticalAlignment="Top" Width="119" FontFamily="Trebuchet MS" FontSize="14" Grid.ColumnSpan="2"/>
+        <ListBox Name="lst_holidays" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="105" Margin="416,141,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="2"/>
+        <Button Click="btn_updateTask_Click" Style="{StaticResource Standard}"    ToolTip="Update Task"  x:Name="btn_updateTask"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="486,333,0,0" RenderTransformOrigin="0.45,0.429" BorderBrush="#FF978888" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/tick.ico"    />
+            </Button.Background>
+        </Button>
+        <Button Click="btn_deleteTask_Click" Style="{StaticResource Standard}"  ToolTip="Delete Task"  x:Name="btn_deleteTask"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="40"  Margin="27,333,0,0" RenderTransformOrigin="0.486,0.429" BorderBrush="#FFA49595" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_17.png"    />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_clear" Click="btn_clear_Click" Content="Clear" HorizontalAlignment="Left" Height="21" Margin="77,286,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button Click="btn_playTask_Click" Style="{StaticResource Standard}" ToolTip="Play the Task"  x:Name="btn_playTask"   Content="" Height="35" VerticalAlignment="Top"  Margin="444,333,24.6,0" BorderBrush="#FF958B8B" RenderTransformOrigin="0.459,0.514" Foreground="#FF8B7A7A">
+            <Button.Background>
+                <ImageBrush ImageSource="images\onebit_27.png"    />
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_clearAll" Click="btn_clearAll_Click" Content="Clear All" HorizontalAlignment="Left" Height="21" Margin="10,286,0,0" VerticalAlignment="Top" Width="62"/>
+        <Button Click="btn_refresh_Click" Style="{StaticResource Standard}" ToolTip="Refresh Task"  x:Name="btn_refresh"   Content="" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="37"  Margin="402,333,0,0" BorderBrush="#FF958B8B" RenderTransformOrigin="0.459,0.514" Foreground="#FF8B7A7A">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_12.png"    />
+            </Button.Background>
+        </Button>
+        <CheckBox x:Name="chk_active" Content="Activated"   Margin="309,231,0,0" HorizontalAlignment="Left" Width="77" Height="15" VerticalAlignment="Top" />
+        <Label Style="{StaticResource LabelUI}" Content="Tags" HorizontalAlignment="Left" Height="30" Margin="10,312,0,0" VerticalAlignment="Top" Width="53" FontFamily="Trebuchet MS" FontSize="14"/>
+        <TextBox Name="txt_tags" HorizontalAlignment="Left" Height="25" Margin="49,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="255"/>
+
+    </Grid>
+</Window>

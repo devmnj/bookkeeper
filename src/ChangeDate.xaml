@@ -1,0 +1,26 @@
+﻿<Window x:Class="accounts.ChangeDate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        KeyDown="Window_KeyDown"
+        mc:Ignorable="d"
+        Icon="images\calendar.ico"
+        Title="ChangeDate" Height="125.752" Width="286.307" Background="BlanchedAlmond"  WindowStartupLocation="CenterOwner" >
+    <Grid Margin="4,4,2,6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+
+        <Label Style="{StaticResource ResourceKey=LabelUI}" Background="Transparent" Content="Pic a Date" HorizontalAlignment="Left" Height="26" Margin="16,6,0,0" VerticalAlignment="Top" Width="83"/>
+        <DatePicker KeyUp="dtp_sysdate_KeyUp" TabIndex="0" Name="dtp_sysdate" Style="{StaticResource ResourceKey=NewUI}" HorizontalAlignment="Left" Margin="16,32,0,0" VerticalAlignment="Top" Width="188" Grid.RowSpan="2"/>
+        <Button TabIndex="1" x:Name="txt_sys_date" Click="txt_sys_date_Click" Style="{StaticResource Standard}" Margin="209,27,20,19"  RenderTransformOrigin="1.793,0.37" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

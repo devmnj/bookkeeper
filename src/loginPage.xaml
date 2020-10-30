@@ -1,0 +1,37 @@
+﻿<Page x:Class="accounts.loginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:accounts"
+      mc:Ignorable="d"
+      Title="loginPage" Background="LightCoral" Width="288.931" Height="153.538">
+
+    <Grid Height="144" VerticalAlignment="Top">
+
+        <Label FontSize="14" FontStyle="Normal" FontWeight="Bold" Foreground="Beige" Content="Employee Login" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.211,0.46"/>
+        <Label Style="{StaticResource LabelUI}" Content="Employee ID" HorizontalAlignment="Left" Height="28" Margin="16,58,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.086"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button Style="{StaticResource Standard}" TabIndex="1" Click="btn_in_Click" Name="btn_in" ToolTip="In" HorizontalAlignment="Left" Height="28" Margin="117,98,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.125,0.429">
+            <Button.Background>
+                <ImageBrush ImageSource="images/023.png" />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Name="btn_out" ToolTip="Out" HorizontalAlignment="Left" Margin="154,98,0,18" Width="32" Click="btn_out_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images/026.png" />
+            </Button.Background>
+        </Button>
+        <TextBlock TextAlignment="Right" FontWeight="DemiBold" FontSize="14"  HorizontalAlignment="Left" Height="28" Margin="27,98,0,0" TextWrapping="Wrap" x:Name="txtb_in" Text="{Binding [0]}" VerticalAlignment="Top" Width="85"/>
+        <TextBlock TextAlignment="Left" FontWeight="DemiBold" FontSize="14" HorizontalAlignment="Left" Height="24" Margin="191,102,0,0" TextWrapping="Wrap" x:Name="txtb_out" Text="{Binding [1]}" VerticalAlignment="Top" Width="75"/>
+        <ComboBox Style="{StaticResource NewUI}"   ItemsSource="{Binding}"  x:Name="cmb_eid" IsEditable="True"   Margin="117,57,23,0" VerticalAlignment="Top" TabIndex="0" IsTabStop="True"   KeyDown="cmb_eid_KeyDown"  />
+    </Grid>
+</Page>

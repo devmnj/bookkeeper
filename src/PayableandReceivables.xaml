@@ -1,0 +1,34 @@
+﻿<Window x:Class="accounts.PayableandReceivables"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+               Icon="images/Places-folder-txt-icon.png"
+        Title="Payable and Receivables" Height="465" Width="639.219" Background="MediumAquamarine" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize">
+
+    <Grid Margin="0,0,0,1">
+        <ListView Height="304" Margin="10,42,9.8,0" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox Style="{StaticResource NewUI}" Text="{Binding jpCrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" KeyUp="CMB_CRACC_KeyUp" KeyDown="CMB_CRACC_KeyDown" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" TabIndex="1" IsEditable="True" x:Name="CMB_CRACC" HorizontalAlignment="Left"   Margin="52,10,0,0" VerticalAlignment="Top" Width="181"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Filter" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top"   Width="66"/>
+        <Button Style="{StaticResource Standard}"  ToolTip="Refresh Data" x:Name="refresh_data" Content=""  Margin="10,351,544.8,7.2" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_12.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+        </Button>
+        <StackPanel Margin="0,351,9.8,7.2"  Background="LightCoral" HorizontalAlignment="Right" Width="173" >
+            <TextBox x:Name="lblcr" Foreground="Beige" Text="0.00" Background="Transparent" TextAlignment="Right" FontSize="14" BorderThickness="0" Margin="0,0,10,0" />
+            <TextBox Foreground="DarkBlue" x:Name="lbldr" Text="0.00" Background="Transparent" TextAlignment="Right" FontSize="14" BorderThickness="0" Margin="0,0,9.8,0" />
+            <TextBox x:Name="lblbalance" Text="0.00" FontWeight="Bold" Background="Transparent" TextAlignment="Right" FontSize="21" BorderThickness="0" Margin="0,0,10,0" Height="28" />
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="accounts.RecVoucher"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:accounts"
+      mc:Ignorable="d"
+      Title="RecVoucher" Background="AntiqueWhite" Width="333" Height="441">
+
+    <Grid>
+        <Label Content="Receipt Voucher" HorizontalAlignment="Center" Height="33" Margin="96,10,99,0" VerticalAlignment="Top"   Width="138" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Cash Account" HorizontalAlignment="Left" Height="27" Margin="31,82,0,0" VerticalAlignment="Top"   Width="212"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,105,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Cr.d Amount" HorizontalAlignment="Left" Height="27" Margin="31,209,0,0" VerticalAlignment="Top"   Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,232,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Cr Account" HorizontalAlignment="Left" Height="27" Margin="31,124,0,0" VerticalAlignment="Top"   Width="212"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,146,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="31,172,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Label Content="Post Date" HorizontalAlignment="Left" Height="27" Margin="31,41,0,0" VerticalAlignment="Top"   Width="72"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="31,63,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="145"/>
+        <Label Content="Narration" HorizontalAlignment="Left" Height="27" Margin="31,250,0,0" VerticalAlignment="Top"   Width="262"/>
+        <Label Content="Invoice No" HorizontalAlignment="Left" Height="27" Margin="190,41,0,0" VerticalAlignment="Top"   Width="72"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="190,63,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="103"/>
+        <TextBox HorizontalAlignment="Left" Height="43" Margin="31,273,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="262"/>
+        <Button Content="Save" HorizontalAlignment="Left" Height="26" Margin="35,331,0,0" VerticalAlignment="Top" Width="79"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Height="26" Margin="122,331,0,0" VerticalAlignment="Top" Width="80"  />
+        <Button Content="Exit" HorizontalAlignment="Left" Height="26" Margin="212,331,0,0" VerticalAlignment="Top" Width="80"  />
+
+    </Grid>
+</Page>

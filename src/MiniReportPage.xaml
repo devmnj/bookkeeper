@@ -1,0 +1,47 @@
+﻿<Page x:Class="accounts.MiniReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:accounts"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="MiniReportPage"   Width="666">
+
+    <Grid HorizontalAlignment="Left" Width="667">
+        <Label Foreground="Black" Content="Choose a Account" HorizontalAlignment="Left" Height="25" Margin="160,54,0,0" VerticalAlignment="Top" Width="132"/>
+        <ComboBox KeyDown="cmb_account_KeyDown" ItemsSource="{Binding}" Name="cmb_account"  IsEditable="True" HorizontalAlignment="Left" Height="24" Margin="160,79,0,0" VerticalAlignment="Top" Width="317"/>
+        <DataGrid  AutoGenerateColumns="False" Name="repotGrid" Margin="8,108,14,65">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="DATE" Width="100" Binding="{Binding t_date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="V.No" Width="100" Binding="{Binding eno}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Voucher" Width="100" Binding="{Binding entry}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Account" Width="100" Binding="{Binding led_id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Cr Amount" Width="100" Binding="{Binding cr}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dr Amount" Width="100" Binding="{Binding dr}"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Label Content="Quick Report" FontSize="20" FontWeight="Bold" Foreground="DarkGoldenrod" Height="42" Margin="269,0,259,0" VerticalAlignment="Top"/>
+        <ListView   Name="listViewFooter" Height="50" Margin="247,0,14,10" VerticalAlignment="Bottom" Background="{x:Null}" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns >
+                        <GridViewColumn   Header="Cr Amount Total" Width="110" DisplayMemberBinding="{Binding scr}"  />
+                        <GridViewColumn Header="Dr Amount Total" Width="110" DisplayMemberBinding="{Binding sdr}" />
+                        <GridViewColumn Header="Balance" Width="110" DisplayMemberBinding="{Binding bal}" />
+
+
+
+
+                    </GridView.Columns>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>

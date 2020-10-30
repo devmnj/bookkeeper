@@ -1,0 +1,40 @@
+﻿<Window x:Class="accounts.dbconfiguration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ShowInTaskbar="True"
+        
+        KeyDown="Window_KeyDown"
+        Title="DataBase Configuration" Background="LightSeaGreen" Height="444.4" Width="399.2" WindowStartupLocation="CenterOwner"  WindowState="Normal" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,-0.2,0" Height="284" VerticalAlignment="Top" HorizontalAlignment="Left" Width="393">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,5,0,-113" Width="366" Height="392" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="DB PATH" Height="28" Margin="18,10,272,0" VerticalAlignment="Top"/>
+        <TextBox   TabIndex="0"   Style="{StaticResource NewUI}"   x:Name="txt_instance"   Margin="18,38,25,0"   KeyDown="txt_instance_KeyDown" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="DB NAME" Height="29" Margin="18,65,272,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding}" TabIndex="1" KeyDown="txt_db_KeyDown" Style="{StaticResource NewUI}"   x:Name="txt_db"   Margin="18,94,102.6,0"  IsEditable="True" Text=" " VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="USER NAME" Height="29" Margin="18,116,272,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="2"  Style="{StaticResource NewUI}" KeyDown="txt_user_KeyDown" IsReadOnly="True"  x:Name="txt_user"   Margin="18,145,25,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="PASSWORD" Height="29" Margin="18,167,272,0" VerticalAlignment="Top"/>
+        <TextBox Style="{StaticResource NewUI}" TabIndex="3" KeyDown="PasswordBox_KeyDown" Name="txt_password" HorizontalAlignment="Left" Margin="18,196,0,0" VerticalAlignment="Top" Width="350" Height="27"/>
+        <Button Style="{StaticResource Standard}" x:Name="btn_createDB_check_db" Margin="296,92,0,0" ToolTip="Auto CreateDB" HorizontalAlignment="Left" Width="28" Height="29" VerticalAlignment="Top" Click="btn_createDB_check_db_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Database.png"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_save_Click" x:Name="btn_save"   Content="" HorizontalAlignment="Left" Width="51"  Margin="18,0,0,-103" RenderTransformOrigin="0.5,0.5" Height="46" VerticalAlignment="Bottom" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name ="tbl_satus"   HorizontalAlignment="Left" Height="20" Margin="80,362,0,-98" TextWrapping="Wrap"  VerticalAlignment="Top" Width="288"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="BACKUP FOLDER" Height="30" Margin="18,223,217,0" VerticalAlignment="Top"/>
+        <TextBox Style="{StaticResource NewUI}" TabIndex="4" KeyDown="txt_backup_KeyDown" x:Name="txt_backup" HorizontalAlignment="Left" Margin="18,247,0,0" VerticalAlignment="Top" Width="350" Height="27"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="BACKGROUND WALLAPAPER" Height="37" Margin="18,274,169,-27" VerticalAlignment="Top"/>
+        <TextBox Style="{StaticResource NewUI}" TabIndex="5" KeyDown="txt_backwall_KeyDown" x:Name="txt_backwall" HorizontalAlignment="Left" Margin="18,299,0,-42" VerticalAlignment="Top" Width="350" Height="27"/>
+
+    </Grid>
+</Window>

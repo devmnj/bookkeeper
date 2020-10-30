@@ -1,0 +1,123 @@
+﻿<Window x:Class="accounts.bpReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d" KeyDown="Window_KeyDown" ResizeMode="CanMinimize"
+        Title="Bank Payment Report" Height="566.606" Width="977.373" Background="AntiqueWhite" WindowStartupLocation="CenterOwner" Icon="images\Iconshock-Real-Vista-Accounting-Open-safety-box.ico" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="436*"/>
+            <ColumnDefinition Width="533*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Style="{StaticResource BPAYRGHeaderStyle}" MouseDoubleClick="rep_grid_MouseDoubleClick" x:Name="rep_grid" Margin="10,72,11,64" Grid.ColumnSpan="2" AutoGenerateColumns="False" AlternatingRowBackground="Turquoise" SelectionChanged="rep_grid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="160" Binding="{Binding Date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Voucher No" Width="90" Binding="{Binding pno}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dr A/c" Width="460" Binding="{Binding DrAccount.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Amount" Width="210" ElementStyle="{StaticResource rightAlignedColumn}" Binding="{Binding Amount}"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition  />
+                            <ColumnDefinition  />
+                            <ColumnDefinition  />
+                            <ColumnDefinition  />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+
+                        <TextBlock  Grid.Row="0" Grid.Column="0"  Text="Cr Account" FontWeight="DemiBold" />
+                        <TextBlock  Grid.Row="0" Grid.Column="1" Text="{Binding Cr_Account }" />
+                        <TextBlock  Grid.Row="1" Grid.Column="0"  Text="Narration" FontWeight="DemiBold" />
+                        <TextBlock  Grid.Row="1" Grid.Column="1"  Text="{Binding Narration}"   />
+                        <TextBlock  Grid.Row="2" Grid.Column="0" Text="Discount" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="2" Grid.Column="1" Text="{Binding DiscAmount}"  />
+                        <TextBlock  Grid.Row="3" Grid.Column="0" Text="Status" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="3" Grid.Column="1" Text="{Binding Status}"  />
+                        <TextBlock  Grid.Row="4" Grid.Column="0" Text="Bank Charge" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="4" Grid.Column="1" Text="{Binding BankCharge}"  />
+                        <TextBlock  Grid.Row="5" Grid.Column="0" Text="Cheq/DD" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="5" Grid.Column="1" Text="{Binding Type}"  />
+                        <TextBlock  Grid.Row="6" Grid.Column="0" Text="CHQ/DD No" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="6" Grid.Column="1" Text="{Binding CheqNo}"  />
+                        <TextBlock  Grid.Row="7" Grid.Column="0" Text="Journal Invoice" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="7" Grid.Column="1" Text="{Binding Invno}"  />
+                        <TextBlock  Grid.Row="8" Grid.Column="0" Text="Invoice Balance" FontWeight="DemiBold"/>
+                        <TextBlock  Grid.Row="8" Grid.Column="1" Text="{Binding InvBalance}"  />
+
+
+                    </Grid>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+        <ComboBox  SelectionChanged="cmb_ACCOUNTS_SelectionChanged" Style="{StaticResource accounts}" x:Name="cmb_ACCOUNTS" KeyDown="cmb_ACCOUNTS_KeyDown" ItemsSource="{Binding}" IsEditable="True" SelectedItem="SelectedAccount" DisplayMemberPath="Short_Name"  Margin="414,37,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="213" RenderTransformOrigin="0.888,0.356" Grid.ColumnSpan="2"/>
+        <Label Content="Filters" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Height="37" Margin="10,30,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Style="{StaticResource LabelUI}"   Content="Account" HorizontalAlignment="Left" Height="30" Margin="414,10,0,0" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="2"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="From" HorizontalAlignment="Left" Height="30" Margin="86,10,0,0" VerticalAlignment="Top" Width="60"/>
+        <DatePicker SelectedDateChanged="dtp_from_SelectedDateChanged" Style="{StaticResource NewUI}" KeyUp="dtp_from_KeyUp" Name="dtp_from" HorizontalAlignment="Left" Margin="84,37,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.519,0.333"  />
+        <DatePicker SelectedDateChanged="dtp_to_SelectedDateChanged" Style="{StaticResource NewUI}" KeyUp="dtp_to_KeyUp" Name="dtp_to" HorizontalAlignment="Left" Margin="243,37,0,0" VerticalAlignment="Top" Width="166"/>
+        <Label Style="{StaticResource LabelUI}"   Content="To" HorizontalAlignment="Left" Height="30" Margin="243,10,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button ToolTip="Refresh Data" x:Name="refresh_data" Content="" Click="refresh_data_Click_1" Margin="10,0,374.168,9.606" RenderTransformOrigin="0.5,0.504" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="49" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_12.png" Stretch="UniformToFill"/>
+            </Button.Background>
+
+        </Button>
+        <StackPanel Margin="351,0,11,3"  Background="LightCoral" Grid.Column="1" Height="61" VerticalAlignment="Bottom" >
+            <TextBox x:Name="lblcr" Foreground="Beige" Text="0.00" Background="Transparent" TextAlignment="Right" FontSize="14" BorderThickness="0" Margin="0,0,10,0" />
+            <TextBox x:Name="lblTOTAL" Text="0.00" Background="Transparent" TextAlignment="Right" FontSize="21" BorderThickness="0" Margin="0,0,10,0" Height="31" />
+        </StackPanel>
+        <ComboBox SelectionChanged="cmb_status_SelectionChanged" Style="{StaticResource NewUI}" x:Name="cmb_status" KeyDown="cmb_status_KeyDown" ItemsSource="{Binding}" IsEditable="True"  Margin="196,37,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="147" RenderTransformOrigin="0.888,0.356" Grid.Column="1"/>
+        <Label Style="{StaticResource LabelUI}"   Content="Status" HorizontalAlignment="Left" Height="30" Margin="196,10,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1"/>
+        <Button Style="{DynamicResource Standard}" ToolTip="Print" x:Name="btn_print" Content="" Click="btn_print_Click" Margin="67,0,0,4.606" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Left" Width="64" Height="54" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/print.ico"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Word Document" x:Name="btn_doc" Content=""  Margin="127,0,243.8,2.8" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_doc_Click" Height="56" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Office-Word-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as Excel" x:Name="btn_excel" Content=""  Margin="193,0,0,2.8" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" HorizontalAlignment="Left" Width="65" Click="btn_excel_Click" Height="56" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Microsoft-Excel-icon (2).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as PDF" x:Name="btn_pdf" Content="" Click="btn_pdf_Click" Margin="258,478,113.8,-0.2" RenderTransformOrigin="0.484,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen">
+            <Button.Background>
+                <ImageBrush ImageSource="images/pdf-icon (1).png"  />
+            </Button.Background>
+
+        </Button>
+        <Button Style="{DynamicResource Standard}" ToolTip="Save as XPS" x:Name="btn_xps" Content=""  Margin="328,0,47.8,4.8" RenderTransformOrigin="0.957,0.373" BorderBrush="{x:Null}" Foreground="{x:Null}" AutomationProperties.IsOffscreenBehavior="Onscreen" Click="btn_xps_Click" Height="49" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="images/Folders-OS-Documents-Metro-icon.png"  />
+            </Button.Background>
+
+        </Button>
+
+    </Grid>
+</Window>

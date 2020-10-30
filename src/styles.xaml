@@ -1,0 +1,346 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:accounts">
+    <Style x:Key="Combo+" TargetType="ComboBoxItem">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="AliceBlue" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="Background" Value="GreenYellow"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="List_Items" TargetType="ListBoxItem">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Ivory" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Background" Value="Crimson"/>
+            </Trigger>
+            <Trigger Property="IsSelected" Value="False">
+                <Setter Property="Foreground" Value="Violet"/>
+                <Setter Property="Background" Value="LightCyan"/>
+            </Trigger>
+            
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="combo_item_emp" TargetType="ComboBoxItem">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="Aquamarine" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="Background" Value="LightPink"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>    
+    <Style x:Key="combo_item_Style1" TargetType="ComboBoxItem">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="LightGoldenrodYellow" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="Background" Value="LightSalmon"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightSteelBlue"/>
+            </Trigger>
+                
+           
+
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="employee" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  combo_item_emp}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource emp_dep}">
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="prent_and_groups_List" TargetType="ListBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background" Value="AliceBlue"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  List_Items}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource parent_groupList}">
+        </Setter>
+    </Style>
+    
+    <Style x:Key="prent_and_groups" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  combo_item_Style1}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource parent_group}">
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="prent_and_groups1" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  Combo+}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource parent_group}">
+        </Setter>
+    </Style>
+    
+    
+    <DataTemplate x:Key="emp_dep">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding Account.Name}"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding Department.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding Desig}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="parent_group">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding Name}"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Falls under" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding ParentGroup.Name}" Foreground="Black" FontSize="5" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate><DataTemplate x:Key="parent_groupList">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding Name}"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <!--<StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">             
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding ParentGroup.Name}" Foreground="Black" FontSize="5" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>-->
+        </Grid>
+
+    </DataTemplate>
+
+    <DataTemplate x:Key="group_parent">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding Name}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding Name }"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding Parent.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding City}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+    
+    <!--Journal cr/ac-->
+    <Style x:Key="journal_Cr_accounts" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  Combo+}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource journal_acc_Cr}">
+        </Setter>
+    </Style>
+    
+    <DataTemplate x:Key="journal_acc_Cr">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding CrAccount.Name }"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.Parent.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding CrAccount.City}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+
+    <!--Receipts cr/ac-->
+    <Style x:Key="Receipt_Cr_accounts" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  Combo+}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource receipts_acc_Cr}">
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="receipts_acc_Cr">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding CrAccount.Name }"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.Parent.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding CrAccount.City}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+
+    <!--payment dr/ac-->
+    <Style x:Key="payment_dr_accounts" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource  Combo+}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource payment_acc_dr}">
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="payment_acc_dr">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding CrAccount.Name }"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding CrAccount.Parent.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding CrAccount.City}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+    
+    
+    <DataTemplate x:Key="acc_group">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel   Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding ID}"   FontSize="14" FontWeight="DemiBold"  Foreground="LightSlateGray"/>
+                <TextBlock Text=" " FontSize="10"  FontStyle="Italic"  Foreground="LightGoldenrodYellow"/>
+                <TextBlock Text="{Binding Name }"  FontSize="14" FontWeight="DemiBold"  Foreground="DarkRed"/>
+            </StackPanel>
+            <TextBlock Text="  " Grid.Column="1" Grid.Row="0" />
+            <StackPanel   Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="{Binding Parent.Name}" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+                <TextBlock Text=" / " FontSize="13" FontStyle="Italic" FontWeight="DemiBold" Foreground="DarkGreen"/>
+                <TextBlock Text="{Binding City}" Foreground="DarkOrchid" FontSize="13" FontStyle="Italic" FontWeight="ExtraLight"/>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+    <Style x:Key="accounts" TargetType="ComboBox">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource Combo+}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="ItemTemplate" Value="{DynamicResource acc_group}">
+            <!--  <SetterValue>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.Style>
+                            <Style TargetType="Grid">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="LightGray"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                                
+                            </Style>
+                        </Grid.Style>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16" MinHeight="16" MaxHeight="16" />
+                <RowDefinition Height="16" MinHeight="16" MaxHeight="16" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding MFR}" Grid.Row="0" FontWeight="Bold" />
+            <TextBlock Text="{Binding Name}" Grid.Row="1" FontStyle="Italic" Foreground="#FF555454" />
+        </Grid>
+        </Grid>
+        </DataTemplate>
+        </Setter.Value>-->
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

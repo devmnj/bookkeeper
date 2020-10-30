@@ -1,0 +1,88 @@
+﻿<Window x:Class="accounts.doct_registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Title="Doctor Registration" Height="455.6" Width="468.266" WindowStartupLocation="CenterOwner" ResizeMode="CanMinimize" Background="LightCyan">
+    <Grid>
+        <Border BorderBrush="#FF3EAAC1" BorderThickness="1" Margin="17,0,19.6,24.4" Height="53" VerticalAlignment="Bottom"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,7,9.6,9.8"/>
+
+        <Label  Style="{StaticResource LabelUI}"   Content="Entry.No" HorizontalAlignment="Left" Height="27" Margin="17,7,0,0" VerticalAlignment="Top"   Width="65"/>
+        <TextBox IsTabStop="False" Style="{StaticResource NewUI}" IsReadOnly="True" x:Name="txt_jno" HorizontalAlignment="Left" Margin="17,34,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="58"/>
+        <!--<ComboBox Style="{DynamicResource Combo}" TabIndex="1" GotFocus="cmb_cr_short_name_GotFocus" LostFocus="cmb_cr_short_name_LostFocus" KeyUp="cmb_cr_short_name_KeyUp" KeyDown="cmb_cr_short_name_KeyDown" ItemsSource="{Binding}" x:Name="cmb_cr_short_name" IsEditable="True" Height="21" Margin="26,94,315,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="#FFA04545">-->
+        <ComboBox Style="{StaticResource NewUI}" Text="{Binding jpDrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" KeyDown="cmb_dr_short_name_KeyDown" TabIndex="1" KeyUp="cmb_dr_short_name_KeyUp" ItemsSource="{Binding}" x:Name="cmb_dr_short_name" IsEditable="True"   Margin="17,87,19.6,0" VerticalAlignment="Top"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_eid_KeyDown" x:Name="txt_eid" HorizontalAlignment="Left" Height="27" Margin="95,34,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="100"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Reg.No" HorizontalAlignment="Left" Height="27" Margin="95,7,0,0" VerticalAlignment="Top"   Width="65"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Doctor Name" HorizontalAlignment="Left" Height="27" Margin="17,60,0,0" VerticalAlignment="Top"   Width="128"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Fee" HorizontalAlignment="Left" Height="27" Margin="17,276,0,0" VerticalAlignment="Top"   Width="78"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_eid_KeyDown" x:Name="txt_eid_Copy" HorizontalAlignment="Left" Height="27" Margin="17,304,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="94"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Hospital Name" HorizontalAlignment="Left" Height="27" Margin="17,168,0,0" VerticalAlignment="Top"   Width="128"/>
+        <ComboBox Style="{StaticResource NewUI}" Text="{Binding jpDrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" KeyDown="cmb_dr_short_name_KeyDown" TabIndex="1" KeyUp="cmb_dr_short_name_KeyUp" ItemsSource="{Binding}" x:Name="cmb_dr_short_name_Copy" IsEditable="True"   Margin="17,195,19.6,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Department / Speciality" HorizontalAlignment="Left" Height="27" Margin="17,114,0,0" VerticalAlignment="Top"   Width="150"/>
+        <ComboBox Style="{StaticResource NewUI}" Text="{Binding jpDrAc, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{StaticResource Error_tenmp_Error_right_bottom_text}" KeyDown="cmb_dr_short_name_KeyDown" TabIndex="1" KeyUp="cmb_dr_short_name_KeyUp" ItemsSource="{Binding}" x:Name="cmb_dr_short_name_Copy1" IsEditable="True"   Margin="17,141,19.6,0" VerticalAlignment="Top"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Consulting Time" HorizontalAlignment="Left" Height="27" Margin="117,277,0,0" VerticalAlignment="Top"   Width="110"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_eid_KeyDown" x:Name="txt_eid_Copy1" HorizontalAlignment="Left" Height="27" Margin="117,304,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="177"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Validity" HorizontalAlignment="Left" Height="27" Margin="299,277,0,0" VerticalAlignment="Top"   Width="78"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_eid_KeyDown" x:Name="txt_eid_Copy2" HorizontalAlignment="Left" Height="27" Margin="299,304,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="78"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="Phone No" HorizontalAlignment="Left" Height="27" Margin="17,222,0,0" VerticalAlignment="Top"   Width="128"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}"   x:Name="txt_eid_Copy3" HorizontalAlignment="Left" Height="27" Margin="17,249,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="169"/>
+        <Label  Style="{StaticResource LabelUI}"   Content="E-Mail" HorizontalAlignment="Left" Height="27" Margin="191,222,0,0" VerticalAlignment="Top"   Width="53"/>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}"  x:Name="txt_eid_Copy4" Height="27" Margin="191,249,19.6,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top"/>
+        <Button Style="{StaticResource Standard}" x:Name="btn_save" Click="btn_save_Click"  HorizontalAlignment="Right" Width="40"  Margin="0,0,349.6,29.8" BorderBrush="#FF8F7F7F" Height="40" VerticalAlignment="Bottom" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/save.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_Reset_Click" x:Name="btn_Reset"  Margin="0,0,394.6,29.4" RenderTransformOrigin="-0.172,0.494" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="45" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/clipboard.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_update1_Click" x:Name="btn_update1"  Margin="117,0,0,29.4" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="40" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/tick.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" Click="btn_delete_Click" x:Name="btn_delete"  Margin="162,0,0,29.4" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="43" >
+            <Button.Background>
+                <ImageBrush ImageSource="images/onebit_17.png"/>
+            </Button.Background>
+        </Button>
+        <Border BorderBrush="#FF3EAAC1" BorderThickness="1" Height="46" Margin="203,15,18.6,0" VerticalAlignment="Top">
+            <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" Click="btn_movelast_Copy_Click" ToolTip="Show Last Receipts" x:Name="btn_movelast_Copy" Content=" " RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" Margin="201.2,9.2,0,0" HorizontalAlignment="Left" Width="28">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/up.png" x:Name="btn_login3"  />
+                </Button.Background>
+            </Button>
+        </Border>
+        <TextBox  IsTabStop="False" Style="{StaticResource NewUI}" KeyDown="txt_jnofind_KeyDown" x:Name="txt_jnofind" HorizontalAlignment="Left" Height="24" Margin="231,25,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="45"/>
+        <Button Style="{StaticResource Standard}" x:Name="btn_find"   HorizontalAlignment="Left" Height="24" Margin="281,25,0,0" VerticalAlignment="Top" Width="29" BorderBrush="{x:Null}" Click="btn_find_Click">
+            <!--<ImageBrush ImageSource="images/search.ico"/>-->
+            <Button.Background>
+                <ImageBrush ImageSource="images/search.ico"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" x:Name="btn_movenext" BorderBrush="{x:Null}" ToolTip="Show Next Journal" Click="btn_movenext_Click" Margin="377,25,0,0" RenderTransformOrigin="-0.421,0.583" HorizontalAlignment="Left" Width="27" Height="24" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="images/go.png" x:Name="btn_login2"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show Previous Journal" x:Name="btn_moveprevious" Click="btn_moveprevious_Click" Margin="347,25,0,0" RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="25">
+            <Button.Background>
+                <ImageBrush ImageSource="images/back.png" x:Name="btn_login1"  />
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource Standard}" BorderBrush="{x:Null}" ToolTip="Show First Journal" x:Name="btn_movefirst" Click="btn_movefirst_Click" Content=" " Margin="317,25,0,0" RenderTransformOrigin="-0.421,0.583" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="27">
+            <Button.Background>
+                <ImageBrush ImageSource="images/down.png" x:Name="btn_login5"  />
+            </Button.Background>
+
+
+        </Button>
+
+    </Grid>
+</Window>

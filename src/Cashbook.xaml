@@ -1,0 +1,39 @@
+﻿<Window x:Class="accounts.Cashbook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"
+        mc:Ignorable="d"
+        Title="Cash Book" Height="566.606" Width="977.373" Background="AntiqueWhite" WindowStartupLocation="CenterOwner" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="436*"/>
+            <ColumnDefinition Width="533*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="rep_grid" Margin="10,72,11,12" Grid.ColumnSpan="2" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="100" Binding="{Binding Date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="V.No" Width="50" Binding="{Binding VNo}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Voucher Name" Width="160" Binding="{Binding Voucher}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Account" Width="360" Binding="{Binding Account}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Cr" Width="100" Binding="{Binding Cr_Amount}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dr" Width="100" Binding="{Binding Dr_Amount}"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="cmb_ACCOUNTS" KeyDown="cmb_ACCOUNTS_KeyDown" ItemsSource="{Binding}" IsEditable="True" Height="21" Margin="373,46,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="229" RenderTransformOrigin="0.888,0.356" Grid.ColumnSpan="2"/>
+        <Label Content="Filters" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Height="37" Margin="10,30,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="Account" HorizontalAlignment="Left" Height="25" Margin="373,16,0,0" VerticalAlignment="Top" Width="155" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmb_orderby" KeyDown="cmb_orderby_KeyDown" ItemsSource="{Binding}" IsEditable="True" Height="21" Margin="348,46,11,0" VerticalAlignment="Top" RenderTransformOrigin="0,0.357" Grid.Column="1"/>
+        <Label Content="Order by" Height="25" Margin="348,16,8,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="From" HorizontalAlignment="Left" Height="25" Margin="96,16,0,0" VerticalAlignment="Top" Width="60"/>
+        <DatePicker  Name="dtp_from" HorizontalAlignment="Left" Margin="96,43,0,0" VerticalAlignment="Top" Width="115"  />
+        <DatePicker Name="dtp_to" HorizontalAlignment="Left" Margin="244,43,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="To" HorizontalAlignment="Left" Height="25" Margin="244,16,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Catagory" HorizontalAlignment="Left" Height="30" Margin="169,16,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1"/>
+        <ComboBox x:Name="cmb_catagory" ItemsSource="{Binding}" KeyDown="cmb_catagory_KeyDown"  IsEditable="True" Height="21" Margin="171,46,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="172" RenderTransformOrigin="0.888,0.356" Grid.Column="1"/>
+
+    </Grid>
+</Window>

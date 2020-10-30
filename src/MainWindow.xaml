@@ -1,0 +1,531 @@
+﻿<Window x:Class="accounts.MainWindow"
+ 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:accounts"  
+       
+        Loaded="Window_Loaded"
+
+        mc:Ignorable="d" KeyDown="Window_KeyDown"
+        Title="{Binding FrontPanel[Softwarecaption]}" Height="813.283" Width="1947.5" WindowStartupLocation="CenterScreen" WindowState="Maximized"   Icon="images/archive-folders-icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="images\abstract-art-artistic-background-1103970 (1).jpg"/>
+    </Window.Background>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="428*"/>
+            <ColumnDefinition Width="1513*"/>
+        </Grid.ColumnDefinitions>
+        <Menu  Background="Silver" Foreground="Black" FontWeight="DemiBold" Height="19" VerticalAlignment="top" HorizontalAlignment="Left" Width="1931" Grid.ColumnSpan="2">
+            <MenuItem Header="File" Style="{DynamicResource MenyStyle}">
+                <MenuItem Header="About" Style="{DynamicResource MenyStyle}" />
+            </MenuItem>
+            <MenuItem  Header="Registration"  Style="{DynamicResource MenyStyle}">
+
+                <MenuItem Header="Groups Registration"  Name="menu_group_reg" Click="menu_group_reg_Click"  BorderThickness="0"    Style="{DynamicResource MenyStyle}" >
+
+                    <MenuItem.Icon >
+                        <Image Source="images/Categories-applications-office-icon.png" Height="20" Width="20"  />
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header="Account Registration" Style="{DynamicResource MenyStyle}" Name="menu_acc_reg" Click="menu_acc_reg_Click"  >
+                    <MenuItem.Icon>
+                        <Image Source="images\addressbook.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Employee Registration" Name="menu_emp_reg" Click="menu_emp_reg_Click"  BorderThickness="0"    Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon >
+                        <Image Source="images/Apps-preferences-desktop-theme-icon.png"  Height="20" Width="20"  />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!--<MenuItem Header="Entry"  Style="{DynamicResource MenyStyle}" >-->
+
+            <!--</MenuItem>-->
+            <MenuItem Header="Transactions" Style="{DynamicResource MenyStyle}" >
+                <MenuItem Name="menu_jounal" Click="menu_jounal_Click"   Header="Jounral Posting" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Places-folder-txt-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Receipt Voucher" Name="menu_receipt" Click="menu_receipt_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/onebit_14.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Payment Voucher" Name="menu_payment" Click="menu_payment_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/cash.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Bank Receipt Voucher" Name="menu_br" Click="menu_br_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Aha-Soft-Financial-Money.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Bank Payment Voucher" Name="menu_bp" Click="menu_bp_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Iconshock-Real-Vista-Accounting-Open-safety-box.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Payroll Voucher" Name="menu_payroll_voucher" Click="menu_payroll_voucher_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Mimes-application-vnd.ms-excel-icon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Monthly Payroll" Name="menu_monthlypayroll" Click="menu_monthlypayroll_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Places-folder-open-icon (1).png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+            </MenuItem>
+
+            <MenuItem Header="Reports"  Style="{DynamicResource MenyStyle}">
+                <MenuItem Header="Cash Book" Style="{DynamicResource MenyStyle}" Name="menu_cashbook"  Click="menu_cashbook_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images/Product-documentation-icon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Day Book" Name="menu_daybook" Click="menu_daybook_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Folder-Chart-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Receipt" Name="menu_receipt_report" Click="menu_receipt_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/onebit_14.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Payment" Name="menu_payment_report" Click="menu_payment_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/cash.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Bank Payment" Name="menu_bp_report" Click="menu_bp_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Iconshock-Real-Vista-Accounting-Open-safety-box.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Bank Receipt" Name="menu_br_report" Click="menu_br_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Aha-Soft-Financial-Money.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Payroll Voucher" Name="menu_par_vouchers" Click="menu_par_vouchers_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Mimes-application-vnd.ms-excel-icon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Monthly Payroll" Name="menu_monthlyPar_report" Click="menu_monthlyPar_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Places-folder-open-icon (1).png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Group Balance" Name="menu_groupBalance_report" Click="menu_groupBalance_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Categories-applications-office-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Trial Balance" Name="menu_trial_report" Click="menu_trial_report_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Apps-libreoffice-writer-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Account List" Name="menu_account_list" Click="menu_account_list_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images\addressbook.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Configure"  Style="{DynamicResource MenyStyle}">
+                <MenuItem Header="Company Settings" Name="menu_config_company" Click="menu_config_company_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Apps-inkscape-icon (1).png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Datbase Configuration" Name="menu_dbconfig" Click="menu_dbconfig_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/Categories-preferences-desktop-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Auto Create" Name="menu_autocreate" Click="menu_autocreate_Click" Style="{DynamicResource MenyStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="images/onebit_08.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Tools" Style="{DynamicResource MenyStyle}" Click="MenuItem_Click">
+
+                <MenuItem Header="Reresh" Name="menu_refresh" Click="menu_refresh_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/onebit_24.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem Header="Check for Errors" Name="menu_checkErr" Click="menu_checkErr_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Apps-inkscape-icon (1).png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Backup" Name="menu_backup" Click="menu_backup_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/database.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Package Manager" Name="menu_pkgmgr" Click="menu_pkgmgr_Click" Style="{DynamicResource MenyStyle}" >
+                    <MenuItem.Icon>
+                        <Image Source="images/Categories-applications-games-icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+            </MenuItem>
+
+        </Menu>
+        <ToolBar Background="Silver" Margin="0,19,0.8,0" Height="50" VerticalAlignment="Top" Grid.ColumnSpan="2"   >
+            <Button Style="{StaticResource MainWindow}" ToolTip="Group Registration" x:Name="Page1" Content="" Height="43" VerticalAlignment="Top" Width="48" Click="Page1_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Categories-applications-office-icon.png"/>
+                </Button.Background>
+
+            </Button>
+            <Button Style="{StaticResource MainWindow}" ToolTip="Account Registration" Content="" Height="43" VerticalAlignment="Top" Width="48" Click="accounts_click">
+                <Button.Background>
+                    <ImageBrush ImageSource="images\addressbook.ico"/>
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Payment Voucher" Content="" Height="43" VerticalAlignment="Top" Width="48" Click="pay_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/cash.png"/>
+                </Button.Background>
+
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Receipt Voucher" Content="" Height="43" VerticalAlignment="Top" Width="46" Click="receipt_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/onebit_14.png"/>
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Journal Andjustment Entry" Content="" VerticalAlignment="Top" Width="48" Click="Button_Click" Name="journal_btn" RenderTransformOrigin="-1.146,1.558" Height="43">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Places-folder-txt-icon.png" />
+                </Button.Background>
+            </Button>
+            <Button x:Name="bank_payment" Click="bank_payment_Click"  ToolTip="Bank Payment"    Style="{StaticResource MainWindow}" Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Iconshock-Real-Vista-Accounting-Open-safety-box.ico" />
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="bank_receipt" Click="bank_receipt_Click" ToolTip="Bank Receipt" Style="{StaticResource MainWindow}" Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Aha-Soft-Financial-Money.ico" />
+                </Button.Background>
+            </Button>
+            <!--<Button  Style="{StaticResource MainWindow}" Click="login_Click"  x:Name="login" ToolTip="Employee Login"   Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/avatar-default-icon.png" x:Name="btn_login"  />
+                </Button.Background>
+            </Button>-->
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Employee Registration" Click="Employee_reg_Click" x:Name="Employee_reg"   Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Apps-preferences-desktop-theme-icon.png" x:Name="btn_login1"  />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Payroll" Click="payroll_adv_Click" x:Name="payroll_adv"   Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Mimes-application-vnd.ms-excel-icon.png" x:Name="btn_login2"  />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Generate Monthly PayRoll"  x:Name="payroll_entry"  Click="payroll_entry_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48">
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Places-folder-open-icon (1).png"    />
+                </Button.Background>
+            </Button>
+            <Button    x:Name="group_accounts_setup"  Click="group_accounts_setup_Click" ToolTip="Auto create Groups and Accounts"  Content="" Height="43" VerticalAlignment="Top" Width="48" Style="{StaticResource MainWindow}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/onebit_08.PNG"/>
+                </Button.Background>
+            </Button>
+            <Button    x:Name="btn_refresh"  Click="btn_refresh_Click" ToolTip="Refresh"  Content="" Height="43" VerticalAlignment="Top" Width="48" Style="{StaticResource MainWindow}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/onebit_24.png"/>
+                </Button.Background>
+            </Button>
+            <Button    x:Name="btn_Configuration"  Click="btn_Configuration_Click" ToolTip="Configire Database"  Content="" Height="43" VerticalAlignment="Top" Width="48" Style="{StaticResource MainWindow}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Categories-preferences-desktop-icon.png"/>
+                </Button.Background>
+            </Button>
+            <Button    x:Name="btn_company"  Click="btn_company_Click" ToolTip="Company Settings"  Content="" Height="43" VerticalAlignment="Stretch" Style="{StaticResource MainWindow}" Width="48" Margin="0,0,0,4.8" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Apps-inkscape-icon (1).png"/>
+                </Button.Background>
+            </Button>
+
+            <Button    x:Name="btn_backup"  Click="btn_backup_Click" ToolTip="Back UP Database"  Content="" Height="43" VerticalAlignment="Stretch" Style="{StaticResource MainWindow}" Width="48" Margin="0,0,0,0.2" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/database.png"/>
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Cash Book"  x:Name="cashBook" Click="cashBook_Click"  Content="" VerticalAlignment="Stretch" Width="48" Margin="3,0,2,-0.2"   >
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Product-documentation-icon.png" x:Name="btn_login7"  />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Day Book"  x:Name="day_book"  Click="day_book_Click"  Content=""   Width="48" VerticalAlignment="Top" Height="44" Margin="2" >
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Folder-Chart-icon.png" x:Name="btn_login8"  />
+                </Button.Background>
+            </Button>
+            <Button    x:Name="group_accounts"  Click="group_accounts_Click" ToolTip="Group Account Report"  Content="" Height="43" VerticalAlignment="Top" Width="48" Style="{StaticResource MainWindow}" RenderTransformOrigin="0.5,0.5" Margin="0,2,0,-0.2" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.041"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Categories-applications-office-icon.png"/>
+                </Button.Background>
+            </Button>
+            <Button    Style="{StaticResource MainWindow}" x:Name="account_list" ToolTip="Account List"  Click="account_list_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,2,0,-0.2">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-360.086"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/addressbook.ico"/>
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Journal Report"  x:Name="Report_list"  Click="Report_list_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,2,0,-0.2">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="359.894"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Places-folder-txt-icon.png" x:Name="btn_login4"  />
+                </Button.Background>
+            </Button>
+            <Button   Style="{StaticResource MainWindow}" ToolTip="Receipt Report" x:Name="receipt_report"  Click="receipt_report_Click"   Content="" Height="43" VerticalAlignment="Top" Width="48" Margin="0,-1,0,0" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="360.41"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/onebit_14.png" x:Name="btn_login5"  />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Payment Report"  x:Name="pament_report"  Click="pament_report_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,2,0,-0.2">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="181.314"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/cash.png" x:Name="btn_login6"  />
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_bank_receipt_report" ToolTip="Bank Receipt Report" Click="btn_bank_receipt_report_Click" Content="" VerticalAlignment="Stretch" Width="48" RenderTransformOrigin="0.489,0.413" Margin="0,3,0,0.2">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.662"/>
+                        <TranslateTransform X="0.114" Y="-0.449"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Aha-Soft-Financial-Money.ico" />
+                </Button.Background>
+            </Button>
+            <Button x:Name="bank_paymentReport" Click="bank_paymentReport_Click" ToolTip="Bank Payment report" Style="{StaticResource MainWindow}" Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="361.817"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Iconshock-Real-Vista-Accounting-Open-safety-box.ico" />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Monthly Payroll Report"  x:Name="payroll_entry_report"  Click="payroll_entry_report_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,1,0,0">
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Places-folder-open-icon (1).png"    />
+                </Button.Background>
+            </Button>
+            <Button  Style="{StaticResource MainWindow}" ToolTip="Payroll Voucher Report" Click="payroll_voucherList_Click" x:Name="payroll_voucherList"   Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5">
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Mimes-application-vnd.ms-excel-icon.png"    />
+                </Button.Background>
+            </Button>
+            <!--<Button  Style="{StaticResource MainWindow}" ToolTip="Employee Directory"  x:Name="payroll_address"  Click="payroll_address_Click"  Content="" Height="43" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,1,0,0">
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Apps-addressbook-icon.png" x:Name="btn_login3"  />
+                </Button.Background>
+            </Button>-->
+            <Button    x:Name="btn_trial"  Click="btn_trial_Click" ToolTip="Trial Balance"  Content="" Height="43" VerticalAlignment="Top" Width="48" Style="{StaticResource MainWindow}" RenderTransformOrigin="0.5,0.5" Margin="0,1,0,0" >
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/onebit_16.png"/>
+                </Button.Background>
+            </Button>
+
+            <Button   Style="{StaticResource MainWindow}" ToolTip="Manage Account" x:Name="bt_managea_ccount"  Click="bt_managea_ccount_Click"   Content="" Height="45" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-0.2">
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/choix-icon.png" x:Name="btn_login3"  />
+                </Button.Background>
+            </Button>
+
+            <Button   Style="{StaticResource MainWindow}" ToolTip="About" x:Name="bt_Payables_rece"  Click="bt_Payables_rece_Click"   Content="" Height="45" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-0.2">
+
+                <Button.Background>
+                    <ImageBrush ImageSource="images/Toma4025-Rumax-Desk.ico" x:Name="btn_login"  />
+                </Button.Background>
+            </Button>
+
+        </ToolBar>
+        <TextBlock   x:Name="tbl_ontody" Margin="14,0,0,98" TextWrapping="Wrap" FontWeight="DemiBold" FontSize="17" Foreground="Gray" Text="{Binding Path=[0], StringFormat=\{0:ddd/MMM/yy\}}" RenderTransformOrigin="0.474,1.096" HorizontalAlignment="Left" Width="253" VerticalAlignment="Bottom">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.241"/>
+                    <TranslateTransform X="-0.058" Y="-0.007"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Grid Margin="10,0,34.8,27"  Background="LightGray" Height="63" VerticalAlignment="Bottom" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions  >
+                <ColumnDefinition Width="195*" ></ColumnDefinition>
+                <ColumnDefinition Width="195*" />
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+
+
+
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+                <ColumnDefinition Width="195*"/>
+
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock TextAlignment="Center" Foreground="Red"   FontWeight="DemiBold" Margin="0,1,5.2,1"/>
+            <TextBlock x:Name="txt_payments" MouseLeftButtonDown="txt_payments_MouseLeftButtonDown" TextAlignment="Center" Text="{Binding FrontPanel[PAy]}" Foreground="Black" FontSize="18" FontWeight="DemiBold" Margin="10,1,10.4,1" Grid.Row="1"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Payments"    FontWeight="DemiBold" Margin="0,0,0.2,1" Height="31" VerticalAlignment="Bottom"/>
+            <TextBlock Name="txt_receipts" TextAlignment="Center" Text="{Binding FrontPanel[REc]}" MouseLeftButtonDown="txt_receipts_MouseLeftButtonDown" Foreground="Black" FontSize="18" FontWeight="DemiBold" Margin="4.6,0,3.8,1" Height="30" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}"   Text="Receipts"   FontWeight="DemiBold" Margin="4.6,0,3.8,1" Grid.Column="1"/>
+            <TextBlock MouseLeftButtonDown="bankpayment_MouseLeftButtonDown"  x:Name="txt_bpayments" TextAlignment="Center" Text="{Binding FrontPanel[BPa]}" Foreground="Black" FontSize="18" FontWeight="DemiBold" Margin="10.2,0,10.2,1" Height="30" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="1"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Bank Payemnt"    FontWeight="DemiBold" Margin="1.2,0,1,1" Grid.Column="2"/>
+            <TextBlock x:Name="txt_breceipts" MouseLeftButtonDown="txt_breceipts_MouseLeftButtonDown" TextAlignment="Center" Text="{Binding FrontPanel[BRe]}" Foreground="Black" FontSize="18" FontWeight="DemiBold" Margin="9.8,0,6.6,1.2" Height="30" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Bank Receipts"   FontWeight="DemiBold" Margin="10,0,6.6,0" Grid.Column="3"/>
+            <TextBlock ToolTip="Live Receivable balance"  x:Name="txt_receivables" TextAlignment="Center" Text="{Binding FrontPanel[Receivable]}" MouseLeftButtonDown="txt_receivables_MouseLeftButtonDown"   FontSize="18" FontWeight="DemiBold" Margin="34,0,10,0" Height="31" VerticalAlignment="Bottom" Grid.Column="8" Grid.Row="1"/>
+            <TextBlock ToolTip="Live Receivable balance" TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Foreground="LightSeaGreen" Text="Receivable"   FontWeight="DemiBold" Margin="34,2,10,0" Grid.Column="8"/>
+            <TextBlock x:Name="txt_di" TextAlignment="Center" Text="{Binding FrontPanel[INC]}" MouseLeftButtonDown="txt_di_MouseLeftButtonDown"   FontSize="18" FontWeight="DemiBold" Margin="0,0,20,2" Height="31" VerticalAlignment="Bottom" Grid.Column="4" Grid.RowSpan="2"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Income"   FontWeight="DemiBold" Margin="0,0,20,2" Grid.Column="4"/>
+            <TextBlock x:Name="txt_exp" TextAlignment="Center" Text="{Binding FrontPanel[EXP]}"  MouseLeftButtonDown="txt_exp_MouseLeftButtonDown"  FontSize="18" FontWeight="DemiBold" Margin="0,0,20,2" Height="31" VerticalAlignment="Bottom" Grid.Column="5" Grid.RowSpan="2"/>
+            <TextBlock TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Expense"   FontWeight="DemiBold" Margin="0,0,20,2" Grid.Column="5"/>
+            <TextBlock x:Name="txt_cash" ToolTip="Live Cash balance" MouseLeftButtonDown="txt_cash_MouseLeftButtonDown" TextAlignment="Center" Text="{Binding FrontPanel[Cash]}"    FontSize="18" FontWeight="DemiBold" Margin="9.4,0,10.4,0" Height="31" VerticalAlignment="Bottom" Grid.Column="7" Grid.Row="1"/>
+            <TextBlock ToolTip="Live Cash balance"  TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Foreground="LightSeaGreen" Text="Cash in Hand"   FontWeight="DemiBold" Margin="9.4,2,10.4,0" Grid.Column="7"/>
+            <TextBlock x:Name="txt_bank" ToolTip="Live Bank balance"  MouseLeftButtonDown="txt_bank_MouseLeftButtonDown" TextAlignment="Center" Text="{Binding FrontPanel[Bank]}"    FontSize="18" FontWeight="DemiBold" Margin="0,0,19,2" Height="31" VerticalAlignment="Bottom" Grid.Column="6" Grid.RowSpan="2"/>
+            <TextBlock ToolTip="Live Bank balance" TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Bank A/c" Foreground="LightSeaGreen" FontWeight="DemiBold" Margin="0,0,19,2" Grid.Column="6"/>
+            <TextBlock MouseLeftButtonDown="txt_payable_MouseLeftButtonDown" x:Name="txt_payable" ToolTip="Live Payable balance"  TextAlignment="Center" Text="{Binding FrontPanel[Payable]}"    FontSize="18" FontWeight="DemiBold" Margin="9.6,0,10,1" Height="31" VerticalAlignment="Bottom" Grid.Column="9" Grid.Row="1"/>
+            <TextBlock ToolTip="Live Payable balance"  Foreground="LightSeaGreen" TextAlignment="Center" Style="{DynamicResource GoldeRodTextBlock}" Text="Payable"   FontWeight="DemiBold" Margin="9.6,2,10,0" Grid.Column="9" Height="30" VerticalAlignment="Top"/>
+
+        </Grid>
+
+        <StatusBar BorderThickness="1"  Background="Transparent" Margin="58,0,0,0" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1882" Grid.ColumnSpan="2"  >
+            <StatusBarItem/>
+            <StatusBarItem   HorizontalAlignment="Stretch" Margin="0,0,0,-0.4">
+                <TextBlock FontSize="14" HorizontalAlignment="Stretch" Foreground="Beige"   MouseDown="tbl_company_MouseDown" ToolTip="Click to Change Company Information"  Text="{Binding CompanyProfile[0].company,UpdateSourceTrigger=PropertyChanged}"   Name="tbl_company" RenderTransformOrigin="0.5,0.5"   Height="21">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="2.627"/>
+                            <RotateTransform Angle="360.342"/>
+                            <TranslateTransform X="0.427" Y="0.003"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="                            " Foreground="Beige" FontSize="14"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="tbl_fy" Text="            " Foreground="Beige" FontSize="14" Width="119"/>
+            </StatusBarItem>
+            <StatusBarItem Width="91">
+                <TextBlock Text="System Date" FontWeight="DemiBold" Width="94" Foreground="Beige"  FontSize="14" />
+            </StatusBarItem>
+            <StatusBarItem Width="122" Margin="0,0,0,-0.4"  >
+
+
+
+                <TextBlock  FontSize="14" ToolTip="Click here to change Date" FontWeight="DemiBold" MouseDown="txt_sys_date_MouseDown"  Width="117" x:Name="txt_sys_date" Text="{Binding [0] ,StringFormat=\{0:dd/MM/yyyy\}, UpdateSourceTrigger=Explicit}" Foreground="Bisque" Height="26"/>
+            </StatusBarItem>
+            <StatusBarItem Margin="0,0,0,-0.4" Width="233">
+                <TextBlock x:Name="tbl_scompany" FontSize="14" FontWeight="DemiBold" HorizontalAlignment="Stretch" Text="{Binding FrontPanel[Developer]}" Foreground="LightGoldenrodYellow"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock TextAlignment="Right" HorizontalAlignment="Right" Text="Version :" Foreground="LightGoldenrodYellow" FontSize="14" FontWeight="DemiBold" Height="26" Width="56" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="tbl_version" TextAlignment="Left" HorizontalAlignment="Left" Text="{Binding FrontPanel[Version]}" Foreground="LightGoldenrodYellow" FontSize="14" FontWeight="DemiBold" Height="26" Width="135" />
+            </StatusBarItem>
+
+
+            <StatusBarItem>
+                <TextBlock x:Name="tbl_LKEY" TextAlignment="Left" HorizontalAlignment="Left" Text="{Binding FrontPanel[Licensekey]}" Foreground="LightGoldenrodYellow" FontSize="14" FontWeight="DemiBold" Height="26" Width="283" />
+            </StatusBarItem>
+
+        </StatusBar>
+        <Image Source="images\bklogo.png" Margin="0,574,34.8,0" Height="92" VerticalAlignment="Top" HorizontalAlignment="Right" Width="504" Grid.Column="1"/>
+        <TextBlock Name="TXT_COTACT_HELP_LINE" TextAlignment="Left" Foreground="CornflowerBlue" Grid.Column="1" VerticalAlignment="Top"  Height="23" Margin="0,666,34.8,0" TextWrapping="Wrap" FontWeight="Bold" FontSize="15"  FontStyle="Italic"   Text="{Binding FrontPanel[Contact_Helpline]}" HorizontalAlignment="Right" Width="304"/>
+
+
+    </Grid>
+</Window>
